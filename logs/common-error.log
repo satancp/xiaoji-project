@@ -4432,3 +4432,481 @@ name: 'ClusterClientNoResponseError'
 pid: 7168
 hostname: Chriss-Laptop.local
 
+2018-04-03 13:06:40,596 ERROR 26388 [-/169.254.127.204/-/16ms GET /] nodejs.Error: read webpack memory file[/Users/pengcheng/xiaoji-project/app/view/home/home.js] content is empty, please check if the file exists
+    at /Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/pengcheng/xiaoji-project/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 26388
+hostname: Chriss-Laptop.local
+
+2018-04-03 13:08:28,150 ERROR 26421 [-/169.254.127.204/-/42ms GET /] nodejs.Error: read webpack memory file[/Users/pengcheng/xiaoji-project/app/view/home/home.js] content is empty, please check if the file exists
+    at /Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/pengcheng/xiaoji-project/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 26421
+hostname: Chriss-Laptop.local
+
+2018-04-03 14:54:05,383 ERROR 27426 [-/169.254.127.204/-/14ms GET /] nodejs.Error: read webpack memory file[/Users/pengcheng/xiaoji-project/app/view/home/home.js] content is empty, please check if the file exists
+    at /Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/pengcheng/xiaoji-project/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 27426
+hostname: Chriss-Laptop.local
+
+2018-04-03 14:57:57,052 ERROR 27551 [-/169.254.127.204/-/15ms GET /] nodejs.Error: read webpack memory file[/Users/pengcheng/xiaoji-project/app/view/home/home.js] content is empty, please check if the file exists
+    at /Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/pengcheng/xiaoji-project/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 27551
+hostname: Chriss-Laptop.local
+
+2018-04-03 15:01:49,979 ERROR 27689 [-/169.254.127.204/-/686ms GET /] nodejs.Error: read webpack memory file[/Users/pengcheng/xiaoji-project/app/view/home/home.js] content is empty, please check if the file exists
+    at /Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/pengcheng/xiaoji-project/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 27689
+hostname: Chriss-Laptop.local
+
+2018-04-03 16:32:18,891 ERROR 29786 [-/169.254.127.204/-/382ms GET /resource/add] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/pengcheng/.aws/credentials'
+    at Object.fs.openSync (fs.js:667:18)
+    at Object.fs.readFileSync (fs.js:572:33)
+    at Object.readFileSync (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/util.js:97:26)
+    at SharedIniFile.loadFile [as ensureFileLoaded] (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/shared_ini.js:19:18)
+    at SharedIniFile.loadProfile [as getProfile] (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/shared_ini.js:52:10)
+    at Config.region (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/node_loader.js:82:34)
+    at Config.set (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:448:39)
+    at Config.<anonymous> (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:283:12)
+    at Config.each (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/util.js:485:32)
+    at new Config (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:282:19)
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/pengcheng/.aws/credentials'
+name: 'ENOENTError'
+pid: 29786
+hostname: Chriss-Laptop.local
+
+2018-04-03 16:35:40,408 ERROR 29834 [-/169.254.127.204/-/336ms GET /resource/add] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/pengcheng/.aws/config'
+    at Object.fs.openSync (fs.js:667:18)
+    at Object.fs.readFileSync (fs.js:572:33)
+    at Object.readFileSync (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/util.js:97:26)
+    at SharedIniFile.loadFile [as ensureFileLoaded] (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/shared_ini.js:19:18)
+    at SharedIniFile.loadProfile [as getProfile] (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/shared_ini.js:52:10)
+    at Config.region (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/node_loader.js:82:34)
+    at Config.set (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:448:39)
+    at Config.<anonymous> (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:283:12)
+    at Config.each (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/util.js:485:32)
+    at new Config (/Users/pengcheng/xiaoji-project/node_modules/aws-sdk/lib/config.js:282:19)
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/pengcheng/.aws/config'
+name: 'ENOENTError'
+pid: 29834
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:27:29,136 ERROR 34724 [-/127.0.0.1/-/11ms POST /api/resource/upload] nodejs.ReferenceError: AWS is not defined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:30:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 34724
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:28:05,312 ERROR 34724 [-/127.0.0.1/-/2ms POST /api/resource/upload] nodejs.ReferenceError: AWS is not defined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:30:28)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 34724
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:28:43,418 ERROR 34937 [-/127.0.0.1/-/40ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:43:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 34937
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:31:45,115 ERROR 35112 [-/127.0.0.1/-/33ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:48:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35112
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:36:27,673 ERROR 35249 [-/127.0.0.1/-/35ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:49:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35249
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:39:25,972 ERROR 35391 [-/127.0.0.1/-/30ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:49:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35391
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:40:31,181 ERROR 35444 [-/127.0.0.1/-/32ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:49:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35444
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:45:57,363 ERROR 35673 [-/127.0.0.1/-/48ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:57:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35673
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:48:02,385 ERROR 35883 [-/127.0.0.1/-/46ms POST /api/resource/upload] nodejs.TypeError: Cannot read property 'url' of undefined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:59:29)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 35883
+hostname: Chriss-Laptop.local
+
+2018-04-03 17:54:29,320 ERROR 36235 [-/127.0.0.1/-/26ms POST /api/resource/upload] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "listener" argument must be of type Function
+    at _addListener (events.js:198:11)
+    at FileStream.addListener (events.js:258:10)
+    at FileStream.Readable.on (_stream_readable.js:779:35)
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:36:30)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 36235
+hostname: Chriss-Laptop.local
+
+2018-04-03 18:00:55,192 ERROR 36706 [-/127.0.0.1/-/15ms POST /api/resource/upload] nodejs.ReferenceError: AWS is not defined
+    at Promise (/Users/pengcheng/xiaoji-project/app/service/resourceService.js:19:28)
+    at new Promise (<anonymous>)
+    at ResourceService.uploadToAWS (/Users/pengcheng/xiaoji-project/app/service/resourceService.js:18:20)
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:32:60)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 36706
+hostname: Chriss-Laptop.local
+
+2018-04-03 18:01:48,988 ERROR 36802 [-/127.0.0.1/-/674ms POST /api/resource/upload] nodejs.ReferenceError: results is not defined
+    at ResourceApiController.upload (/Users/pengcheng/xiaoji-project/app/controller/resource/resourceApi.js:37:24)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+headers: { 'Access-Control-Allow-Origin': 'http://169.254.127.204:7001' }
+pid: 36802
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,408 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491896ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,409 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491881ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,411 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491866ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,412 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,412 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491866ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,413 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,413 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 19:28:10,413 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 3491854ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,404 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230983ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,409 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230984ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,409 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230984ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,410 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230983ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,411 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230982ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,412 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230983ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,412 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230982ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 21:29:01,412 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 7230982ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,787 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216652ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,819 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216652ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,819 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216652ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,819 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216637ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,828 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216637ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,829 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216620ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,829 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216637ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 22:52:21,829 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1216651ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,164 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,165 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,165 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,166 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,167 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163319ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,167 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,167 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+
+2018-04-03 23:12:05,167 ERROR 37421 nodejs.ClusterClientNoResponseError: client no response in 1163318ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 37421
+hostname: Chriss-Laptop.local
+

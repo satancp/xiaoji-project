@@ -1,4 +1,8 @@
 'use strict';
+const path = require('path');
+const sendToWormhole = require('stream-wormhole');
+const toArray = require('stream-to-array');
+
 module.exports = app => {
     return class ResourceApiController extends app.Controller {
         async index() {
@@ -13,9 +17,26 @@ module.exports = app => {
 
         async add() {
             const { ctx } = this;
-            console.log(ctx.request.body);
             const results = await app.mysql.insert('resources', ctx.request.body);
             ctx.body = results;
+        }
+
+        async upload() {
+            const { ctx } = this;
+            const stream = await ctx.getFileStream();
+            const name = path.basename(stream.filename);
+            const parts = await toArray(stream);
+            const buffer = Buffer.concat(parts);
+            console.log(buffer);
+            let result;
+            try {
+                result = await ctx.service.resourceService.uploadToAWS(buffer, name);
+            } catch (err) {
+                await sendToWormhole(stream);
+                throw err;
+            }
+            console.log(result);
+            ctx.body = result;
         }
 
         async update() {

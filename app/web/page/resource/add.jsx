@@ -11,6 +11,7 @@ import {
     Icon,
     Cascader,
     Select,
+    InputNumber,
     Modal,
     Row,
     Col,
@@ -18,9 +19,10 @@ import {
     Button,
     AutoComplete,
     Breadcrumb,
+    Spin,
     Radio
 } from 'antd';
-import { Editor, EditorState, RichUtils } from 'draft-js';
+import { Editor, EditorState, RichUtils, Modifier, AtomicBlockUtils } from 'draft-js';
 import { max } from 'moment';
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
@@ -28,10 +30,12 @@ const RadioButton = Radio.Button;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
 const RadioGroup = Radio.Group;
+
 let styleMap = {
     COLOR: {
         color: '#ff0000'
-    }
+    },
+    'FONT-SIZE': {}
 };
 const categorys = [
     {
@@ -66,6 +70,42 @@ const beforeUpload = file => {
     return isJPG && isLt2M;
 };
 
+const styles = {
+    media: {
+        width: '100%',
+        height: '100%'
+    }
+};
+
+const Audio = props => {
+    return <audio controls src={props.src} style={styles.media} />;
+};
+
+const Image = props => {
+    return <img src={props.src} style={styles.media} />;
+};
+
+const Video = props => {
+    return <video controls src={props.src} style={styles.media} />;
+};
+
+const Media = props => {
+    const entity = props.contentState.getEntity(props.block.getEntityAt(0));
+    const { src } = entity.getData();
+    const type = entity.getType();
+
+    let media;
+    if (type === 'audio') {
+        media = <Audio src={src} />;
+    } else if (type === 'image') {
+        media = <Image src={src} />;
+    } else if (type === 'video') {
+        media = <Video src={src} />;
+    }
+
+    return media;
+};
+
 let ResourceAdd = undefined;
 
 class ResourceCreateForm extends Component {
@@ -76,9 +116,13 @@ class ResourceCreateForm extends Component {
             canRenderEditor: false,
             autoCompleteResult: [],
             loading: false,
+            richTextLoading: false,
             editorState: EditorState.createEmpty(),
             visibleColorModal: false,
-            currentColor: '#595959'
+            currentColor: '#595959',
+            action: 'http://127.0.0.1:7001/api/resource/upload',
+            latestUploadImageUrl: '',
+            latestUploadVideoUrl: ''
         };
         this.handleSubmit = e => {
             e.preventDefault();
@@ -129,10 +173,9 @@ class ResourceCreateForm extends Component {
                 return;
             }
             if (info.file.status === 'done') {
-                // Get this url from response in real world.
                 getBase64(info.file.originFileObj, imageUrl =>
                     this.setState({
-                        imageUrl,
+                        imageUrl: 'https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/' + info.file.name,
                         loading: false
                     })
                 );
@@ -155,6 +198,68 @@ class ResourceCreateForm extends Component {
             styleMap.COLOR.color = color.hex;
             this.toggleInlineStyle('COLOR');
             this.setState({ currentColor: color.hex });
+        };
+        this.insertImage = () => {
+            const { editorState } = this.state;
+            const contentState = editorState.getCurrentContent();
+            const contentStateWithEntity = contentState.createEntity('image', 'IMMUTABLE', {
+                src: this.state.latestUploadImageUrl
+            });
+            const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
+            const newEditorState = EditorState.set(editorState, { currentContent: contentStateWithEntity });
+
+            this.setState({
+                editorState: AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, ' ')
+            });
+        };
+        this.insertVideo = () => {
+            const { editorState } = this.state;
+            const contentState = editorState.getCurrentContent();
+            const contentStateWithEntity = contentState.createEntity('video', 'IMMUTABLE', {
+                src: this.state.latestUploadVideoUrl
+            });
+            const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
+            const newEditorState = EditorState.set(editorState, { currentContent: contentStateWithEntity });
+
+            this.setState({
+                editorState: AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, ' ')
+            });
+        };
+        this.renderMedia = block => {
+            if (block.getType() === 'atomic') {
+                return {
+                    component: Media,
+                    editable: true
+                };
+            }
+            return null;
+        };
+        this.onImageUploadChange = info => {
+            if (info.file && info.file.status === 'uploading') {
+                this.setState({ richTextLoading: true });
+            }
+            if (info.file && info.file.status === 'done') {
+                this.setState({
+                    richTextLoading: false,
+                    latestUploadImageUrl: 'https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/' + info.file.name
+                });
+                this.insertImage();
+            }
+        };
+        this.onVideoUploadChange = info => {
+            if (info.file && info.file.status === 'uploading') {
+                this.setState({ richTextLoading: true });
+            }
+            if (info.file && info.file.status === 'done') {
+                this.setState({
+                    richTextLoading: false,
+                    latestUploadVideoUrl: 'https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/' + info.file.name
+                });
+                this.insertVideo();
+            }
+        };
+        this.fontSizeChange = value => {
+            this.toggleInlineStyle('FONT-SIZE');
         };
     }
 
@@ -269,7 +374,7 @@ class ResourceCreateForm extends Component {
                                     listType="picture-card"
                                     className="avatar-uploader"
                                     showUploadList={false}
-                                    action="//jsonplaceholder.typicode.com/posts/"
+                                    action={this.state.action}
                                     beforeUpload={beforeUpload}
                                     onChange={this.handleChange}
                                 >
@@ -321,6 +426,18 @@ class ResourceCreateForm extends Component {
                                     </Tooltip>
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item>
+                                    <Tooltip title="Font Size">
+                                        <InputNumber
+                                            min={1}
+                                            max={72}
+                                            size="small"
+                                            defaultValue={14}
+                                            step={0.5}
+                                            onChange={this.fontSizeChange}
+                                        />
+                                    </Tooltip>
+                                </Breadcrumb.Item>
+                                <Breadcrumb.Item>
                                     <Tooltip title="Font Color">
                                         <Button
                                             id="editor-btn"
@@ -338,12 +455,41 @@ class ResourceCreateForm extends Component {
                                         </Button>
                                     </Tooltip>
                                 </Breadcrumb.Item>
+                                <Breadcrumb.Item>
+                                    <Upload
+                                        action={this.state.action}
+                                        showUploadList={false}
+                                        onChange={this.onImageUploadChange}
+                                    >
+                                        <Tooltip title="Insert Image">
+                                            <Button id="editor-btn" size="small" onClick={() => {}}>
+                                                <i className="icon iconfont anticon">&#xe66b;</i>
+                                            </Button>
+                                        </Tooltip>
+                                    </Upload>
+                                </Breadcrumb.Item>
+                                <Breadcrumb.Item>
+                                    <Upload
+                                        action={this.state.action}
+                                        showUploadList={false}
+                                        onChange={this.onVideoUploadChange}
+                                    >
+                                        <Tooltip title="Insert Video">
+                                            <Button id="editor-btn" size="small" onClick={() => {}}>
+                                                <i className="icon iconfont anticon">&#xe661;</i>
+                                            </Button>{' '}
+                                        </Tooltip>
+                                    </Upload>
+                                </Breadcrumb.Item>
                             </Breadcrumb>
-                            <Editor
-                                editorState={this.state.editorState}
-                                onChange={this.onChange}
-                                customStyleMap={styleMap}
-                            />
+                            <Spin spinning={this.state.richTextLoading}>
+                                <Editor
+                                    editorState={this.state.editorState}
+                                    onChange={this.onChange}
+                                    customStyleMap={styleMap}
+                                    blockRendererFn={this.renderMedia}
+                                />
+                            </Spin>
                         </FormItem>
                     ) : null}
                     <FormItem {...tailFormItemLayout}>

@@ -168,8 +168,8 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/api/upload/upload",
-    "regexp": "/^\\/api\\/upload\\/upload(?:\\/(?=$))?$/",
+    "path": "/api/resource/upload",
+    "regexp": "/^\\/api\\/resource\\/upload(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

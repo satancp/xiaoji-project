@@ -12,5 +12,5 @@ module.exports = app => {
     app.post('/api/resource/add', app.controller.resource.resourceApi.add);
     app.post('/api/resource/update', app.controller.resource.resourceApi.update);
     app.post('/api/resource/delete', app.controller.resource.resourceApi.delete);
-    app.post('/api/upload/upload', app.controller.upload.upload.upload);
+    app.post('/api/resource/upload', app.controller.resource.resourceApi.upload);
 };

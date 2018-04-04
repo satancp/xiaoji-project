@@ -95,8 +95,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "multipart": {
@@ -126,7 +126,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "/Users/pengcheng/ssrProjectDemo/logs/ssrProjectDemo/egg-schedule.log"
+        "file": "/Users/pengcheng/xiaoji-project/logs/ssrProjectDemo/egg-schedule.log"
       }
     },
     "logrotator": {
@@ -140,7 +140,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/pengcheng/ssrProjectDemo/public",
+      "dir": "/Users/pengcheng/xiaoji-project/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
@@ -148,7 +148,7 @@
       "maxAge": 0
     },
     "view": {
-      "root": "/Users/pengcheng/ssrProjectDemo/app/view",
+      "root": "/Users/pengcheng/xiaoji-project/app/view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -159,8 +159,8 @@
     },
     "reactssr": {
       "doctype": "<!doctype html>",
-      "layout": "/Users/pengcheng/ssrProjectDemo/app/view/layout.js",
-      "manifest": "/Users/pengcheng/ssrProjectDemo/config/manifest.json",
+      "layout": "/Users/pengcheng/xiaoji-project/app/view/layout.js",
+      "manifest": "/Users/pengcheng/xiaoji-project/config/manifest.json",
       "injectHeadRegex": "/(<\\/head>)/i",
       "injectBodyRegex": "/(<\\/body>)/i",
       "injectCss": true,
@@ -198,55 +198,55 @@
       },
       "webpackConfigList": [
         {
-          "context": "/Users/pengcheng/ssrProjectDemo",
+          "context": "/Users/pengcheng/xiaoji-project",
           "entry": {
             "home/home": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/home/home.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/home.jsx"
             ],
             "resource/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/resource/add.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/add.jsx"
             ],
             "resource/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/resource/list.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/list.jsx"
             ],
             "user/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/add.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/add.jsx"
             ],
             "user/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/edit.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/edit.jsx"
             ],
             "user/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/client-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/list.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/list.jsx"
             ],
             "layout": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/utils/hot.js",
-              "/Users/pengcheng/ssrProjectDemo/app/web/framework/layout/layout.jsx"
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "/Users/pengcheng/xiaoji-project/app/web/framework/layout/layout.jsx"
             ]
           },
           "output": {
             "filename": "js/[name].js",
             "chunkFilename": "js/chunk/[name].js",
-            "path": "/Users/pengcheng/ssrProjectDemo/public",
+            "path": "/Users/pengcheng/xiaoji-project/public",
             "publicPath": "http://169.254.127.204:9000/public/"
           },
           "resolve": {
@@ -255,18 +255,18 @@
               ".jsx"
             ],
             "alias": {
-              "asset": "/Users/pengcheng/ssrProjectDemo/app/web/asset",
-              "component": "/Users/pengcheng/ssrProjectDemo/app/web/component",
-              "framework": "/Users/pengcheng/ssrProjectDemo/app/web/framework",
+              "asset": "/Users/pengcheng/xiaoji-project/app/web/asset",
+              "component": "/Users/pengcheng/xiaoji-project/app/web/component",
+              "framework": "/Users/pengcheng/xiaoji-project/app/web/framework",
               "store": "app/web/store"
             }
           },
           "externals": [],
           "resolveLoader": {
             "modules": [
-              "/Users/pengcheng/ssrProjectDemo/node_modules",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/node_modules",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack-react/node_modules"
+              "/Users/pengcheng/xiaoji-project/node_modules",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/node_modules",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack-react/node_modules"
             ]
           },
           "target": "web",
@@ -295,7 +295,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/ssrProjectDemo/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -320,7 +320,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/ssrProjectDemo/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -348,7 +348,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/ssrProjectDemo/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -445,7 +445,7 @@
                 "user/list",
                 "layout"
               ],
-              "ident": "/Users/pengcheng/ssrProjectDemo/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
+              "ident": "/Users/pengcheng/xiaoji-project/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
               "__plugin__": "CommonsChunkPlugin",
               "__lable__": "commonsChunk"
             },
@@ -473,14 +473,14 @@
                 "map": null,
                 "generate": null,
                 "sort": null,
-                "baseDir": "/Users/pengcheng/ssrProjectDemo",
+                "baseDir": "/Users/pengcheng/xiaoji-project",
                 "host": "http://169.254.127.204:9000",
                 "proxy": true,
-                "buildPath": "/Users/pengcheng/ssrProjectDemo/public",
+                "buildPath": "/Users/pengcheng/xiaoji-project/public",
                 "publicPath": "http://169.254.127.204:9000/public/",
                 "localPublicPath": "/public/",
                 "assets": false,
-                "filepath": "/Users/pengcheng/ssrProjectDemo/config/manifest.json",
+                "filepath": "/Users/pengcheng/xiaoji-project/config/manifest.json",
                 "dllConfig": [
                   {
                     "name": "vendor",
@@ -511,24 +511,128 @@
               },
               "__plugin__": "extract-text-webpack-plugin",
               "__lable__": "extract"
+            },
+            {
+              "options": {
+                "context": "/Users/pengcheng/xiaoji-project",
+                "manifest": {
+                  "name": "vendor",
+                  "content": {
+                    "./node_modules/fbjs/lib/containsNode.js": {
+                      "id": "./node_modules/fbjs/lib/containsNode.js",
+                      "meta": {}
+                    },
+                    "./node_modules/react-dom/index.js": {
+                      "id": "./node_modules/react-dom/index.js",
+                      "meta": {}
+                    },
+                    "./node_modules/react-dom/cjs/react-dom.development.js": {
+                      "id": "./node_modules/react-dom/cjs/react-dom.development.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/invariant.js": {
+                      "id": "./node_modules/fbjs/lib/invariant.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/warning.js": {
+                      "id": "./node_modules/fbjs/lib/warning.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/ExecutionEnvironment.js": {
+                      "id": "./node_modules/fbjs/lib/ExecutionEnvironment.js",
+                      "meta": {}
+                    },
+                    "./node_modules/object-assign/index.js": {
+                      "id": "./node_modules/object-assign/index.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/emptyFunction.js": {
+                      "id": "./node_modules/fbjs/lib/emptyFunction.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/EventListener.js": {
+                      "id": "./node_modules/fbjs/lib/EventListener.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/getActiveElement.js": {
+                      "id": "./node_modules/fbjs/lib/getActiveElement.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/shallowEqual.js": {
+                      "id": "./node_modules/fbjs/lib/shallowEqual.js",
+                      "meta": {}
+                    },
+                    "./node_modules/react/index.js": {
+                      "id": "./node_modules/react/index.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/focusNode.js": {
+                      "id": "./node_modules/fbjs/lib/focusNode.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/emptyObject.js": {
+                      "id": "./node_modules/fbjs/lib/emptyObject.js",
+                      "meta": {}
+                    },
+                    "./node_modules/prop-types/checkPropTypes.js": {
+                      "id": "./node_modules/prop-types/checkPropTypes.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/hyphenateStyleName.js": {
+                      "id": "./node_modules/fbjs/lib/hyphenateStyleName.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/camelizeStyleName.js": {
+                      "id": "./node_modules/fbjs/lib/camelizeStyleName.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/camelize.js": {
+                      "id": "./node_modules/fbjs/lib/camelize.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/hyphenate.js": {
+                      "id": "./node_modules/fbjs/lib/hyphenate.js",
+                      "meta": {}
+                    },
+                    "./node_modules/prop-types/lib/ReactPropTypesSecret.js": {
+                      "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/isTextNode.js": {
+                      "id": "./node_modules/fbjs/lib/isTextNode.js",
+                      "meta": {}
+                    },
+                    "./node_modules/fbjs/lib/isNode.js": {
+                      "id": "./node_modules/fbjs/lib/isNode.js",
+                      "meta": {}
+                    },
+                    "./node_modules/react/cjs/react.development.js": {
+                      "id": "./node_modules/react/cjs/react.development.js",
+                      "meta": {}
+                    }
+                  }
+                }
+              },
+              "__plugin__": "DllReferencePlugin",
+              "__lable__": "vendorDllReference"
             }
           ]
         },
         {
-          "context": "/Users/pengcheng/ssrProjectDemo",
+          "context": "/Users/pengcheng/xiaoji-project",
           "entry": {
-            "home/home": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/home/home.jsx",
-            "resource/add": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/resource/add.jsx",
-            "resource/list": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/resource/list.jsx",
-            "user/add": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/add.jsx",
-            "user/edit": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/edit.jsx",
-            "user/list": "babel-loader!/Users/pengcheng/ssrProjectDemo/app/web/framework/entry/server-loader.js!/Users/pengcheng/ssrProjectDemo/app/web/page/user/list.jsx",
-            "layout": "/Users/pengcheng/ssrProjectDemo/app/web/framework/layout/layout.jsx"
+            "home/home": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/home.jsx",
+            "resource/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/add.jsx",
+            "resource/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/list.jsx",
+            "user/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/add.jsx",
+            "user/edit": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/edit.jsx",
+            "user/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/list.jsx",
+            "layout": "/Users/pengcheng/xiaoji-project/app/web/framework/layout/layout.jsx"
           },
           "output": {
             "libraryTarget": "commonjs2",
             "filename": "[name].js",
-            "path": "/Users/pengcheng/ssrProjectDemo/app/view",
+            "path": "/Users/pengcheng/xiaoji-project/app/view",
             "publicPath": "http://169.254.127.204:9000/public/"
           },
           "resolve": {
@@ -537,9 +641,9 @@
               ".jsx"
             ],
             "alias": {
-              "asset": "/Users/pengcheng/ssrProjectDemo/app/web/asset",
-              "component": "/Users/pengcheng/ssrProjectDemo/app/web/component",
-              "framework": "/Users/pengcheng/ssrProjectDemo/app/web/framework",
+              "asset": "/Users/pengcheng/xiaoji-project/app/web/asset",
+              "component": "/Users/pengcheng/xiaoji-project/app/web/component",
+              "framework": "/Users/pengcheng/xiaoji-project/app/web/framework",
               "store": "app/web/store"
             }
           },
@@ -548,9 +652,9 @@
           ],
           "resolveLoader": {
             "modules": [
-              "/Users/pengcheng/ssrProjectDemo/node_modules",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack/node_modules",
-              "/Users/pengcheng/ssrProjectDemo/node_modules/easywebpack-react/node_modules"
+              "/Users/pengcheng/xiaoji-project/node_modules",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/node_modules",
+              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack-react/node_modules"
             ]
           },
           "target": "node",
@@ -704,7 +808,7 @@
             },
             {
               "resourceRegExp": {},
-              "newResource": "/Users/pengcheng/ssrProjectDemo/node_modules/node-noop/index.js",
+              "newResource": "/Users/pengcheng/xiaoji-project/node_modules/node-noop/index.js",
               "__plugin__": "NormalModuleReplacementPlugin",
               "__lable__": "modulereplacement"
             },
@@ -743,9 +847,11 @@
       },
       "dependencies": {
         "antd": "^3.0.3",
+        "aws-sdk": "^2.219.1",
         "axios": "^0.18.0",
         "create-react-class": "^15.6.3",
         "draft-js": "^0.10.5",
+        "draftjs-to-html": "^0.8.3",
         "egg": "^2.1.0",
         "egg-cors": "^2.0.0",
         "egg-logger": "^1.5.0",
@@ -760,7 +866,7 @@
         "lodash": "^4.17.5",
         "md5": "^2.2.1",
         "mockjs": "^1.0.1-beta3",
-        "moment": "^2.17.1",
+        "moment": "^2.22.0",
         "react": "^16.0.0",
         "react-color": "^2.14.0",
         "react-dom": "^16.0.0",
@@ -771,6 +877,7 @@
         "react-router-dom": "^4.2.2",
         "react-router-redux": "^4.0.8",
         "redux": "^3.7.2",
+        "stream-to-array": "^2.3.0",
         "stream-wormhole": "^1.0.3"
       },
       "devDependencies": {
@@ -788,8 +895,9 @@
         "easywebpack-react": "^3.6.0",
         "egg-webpack": "^3.2.4",
         "egg-webpack-react": "^2.0.0",
+        "eslint": "^4.19.1",
         "eslint-config-egg": "^5.1.1",
-        "eslint-plugin-react": "^7.1.0",
+        "eslint-plugin-react": "^7.7.0",
         "html-webpack-plugin": "^2.30.1",
         "imagemin-webpack-plugin": "^1.5.2",
         "ip": "^1.1.5",
@@ -809,9 +917,9 @@
       "license": "MIT",
       "homepage": "https://github.com/hubcarl/egg-react-webpack-boilerplate"
     },
-    "baseDir": "/Users/pengcheng/ssrProjectDemo",
+    "baseDir": "/Users/pengcheng/xiaoji-project",
     "HOME": "/Users/pengcheng",
-    "rundir": "/Users/pengcheng/ssrProjectDemo/run",
+    "rundir": "/Users/pengcheng/xiaoji-project/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -841,7 +949,7 @@
       }
     },
     "logger": {
-      "dir": "/Users/pengcheng/ssrProjectDemo/logs",
+      "dir": "/Users/pengcheng/xiaoji-project/logs",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -926,8 +1034,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-session",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -939,8 +1047,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-security",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-security",
       "version": "2.1.0"
     },
     "jsonp": {
@@ -952,8 +1060,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-jsonp",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -965,8 +1073,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-onerror",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-onerror",
       "version": "2.0.0"
     },
     "i18n": {
@@ -976,8 +1084,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-i18n",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n",
       "version": "2.0.0"
     },
     "watcher": {
@@ -987,8 +1095,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-watcher",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher",
       "version": "3.0.0"
     },
     "multipart": {
@@ -998,8 +1106,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-multipart",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart",
       "version": "2.0.0"
     },
     "development": {
@@ -1013,8 +1121,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-development",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-development",
       "version": "2.2.0"
     },
     "schedule": {
@@ -1024,8 +1132,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-schedule",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-schedule",
       "version": "3.3.0"
     },
     "logrotator": {
@@ -1037,8 +1145,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-logrotator",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator",
       "version": "3.0.2"
     },
     "static": {
@@ -1048,8 +1156,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-static",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-static",
       "version": "2.1.0"
     },
     "view": {
@@ -1059,8 +1167,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-view",
+      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-view",
       "version": "2.1.0"
     },
     "reactssr": {
@@ -1070,8 +1178,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-view-react-ssr",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr",
       "version": "2.2.4"
     },
     "mysql": {
@@ -1081,8 +1189,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-mysql",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-mysql",
       "version": "3.0.0"
     },
     "cors": {
@@ -1093,8 +1201,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.local.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-cors",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.local.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-cors",
       "version": "2.0.0"
     },
     "webpack": {
@@ -1106,8 +1214,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.local.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-webpack",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.local.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack",
       "version": "3.3.2"
     },
     "webpackreact": {
@@ -1119,8 +1227,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/ssrProjectDemo/config/plugin.local.js",
-      "path": "/Users/pengcheng/ssrProjectDemo/node_modules/egg-webpack-react",
+      "from": "/Users/pengcheng/xiaoji-project/config/plugin.local.js",
+      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react",
       "version": "2.0.2"
     }
   }
