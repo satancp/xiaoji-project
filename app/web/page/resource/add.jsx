@@ -4,6 +4,7 @@ import './add.css';
 import axios from 'axios';
 let BraftEditor;
 import 'braft-editor/dist/braft.css';
+import config from '../../config/config';
 import {
     Form,
     Input,
@@ -61,7 +62,7 @@ class ResourceCreateForm extends Component {
             autoCompleteResult: [],
             loading: false,
             richTextLoading: false,
-            action: 'http://127.0.0.1:9999/api/resource/upload',
+            action: `${config.server_url}resource/upload`,
             height: 0,
             contentFormat: 'html',
             onChange: this.handleRichChange,
@@ -120,7 +121,7 @@ class ResourceCreateForm extends Component {
                     values.category_id = values.category[0];
                     delete values.category;
                     console.log(values);
-                    axios.post('http://127.0.0.1:9999/api/resource/add', values).then(response => {
+                    axios.post(`${config.server_url}resource/add`, values).then(response => {
                         this.setState({ data: response.data, loading: false });
                         window.location = '/resource/list';
                     });
@@ -152,13 +153,13 @@ class ResourceCreateForm extends Component {
 
     componentDidMount() {
         BraftEditor = require('braft-editor').default;
-        axios.get('http://127.0.0.1:9999/api/category/list').then(response => {
+        axios.get(`${config.server_url}category/list`).then(response => {
             categorys = response.data.map(v => {
                 v.value = v.id;
                 v.label = v.display_name;
                 return v;
             });
-            axios.get('http://127.0.0.1:9999/api/tag/list').then(response => {
+            axios.get(`${config.server_url}tag/list`).then(response => {
                 tags = response.data.map(v => {
                     return <Option key={v.id}>{v.name}</Option>;
                 });

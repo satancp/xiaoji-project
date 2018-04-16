@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add webpack-manifest-plugin
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -88,6 +88,7 @@ npm manifest:
       "eslint": "^4.19.1",
       "eslint-config-egg": "^5.1.1",
       "eslint-plugin-react": "^7.7.0",
+      "flightplan": "^0.6.17",
       "html-webpack-plugin": "^2.30.1",
       "imagemin-webpack-plugin": "^1.5.2",
       "ip": "^1.1.5",
@@ -10552,13 +10553,30 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/ylru/-/ylru-1.2.0.tgz#8337f5e1475228df7ba8cc590cf76ac27b665095"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
+  Error: /Users/pengcheng/xiaoji-project/node_modules/fibers: Command failed.
+  Exit code: 127
   Command: sh
-  Arguments: -c node index.js
-  Directory: /Users/pengcheng/xiaoji-project
+  Arguments: -c node build.js || nodejs build.js
+  Directory: /Users/pengcheng/xiaoji-project/node_modules/fibers
   Output:
+  module.js:545
+      throw err;
+      ^
   
+  Error: Cannot find module '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js'
+      at Function.Module._resolveFilename (module.js:543:15)
+      at Function.Module._load (module.js:470:25)
+      at Function.Module.runMain (module.js:690:10)
+      at startup (bootstrap_node.js:194:16)
+      at bootstrap_node.js:666:3
+  node-gyp exited with code: 1
+  Please make sure you are using a supported platform and node version. If you
+  would like to compile fibers on this machine please make sure you have setup your
+  build environment--
+  Windows + OS X instructions here: https://github.com/nodejs/node-gyp
+  Ubuntu users please run: `sudo apt-get install g++ build-essential`
+  Alpine users please run: `sudo apk add python make g++`
+  sh: nodejs: command not found
       at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
       at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
       at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)

@@ -2,7 +2,7 @@ var plan = require('flightplan');
 
 var appName = 'xiaoji';
 var username = 'ec2-user';
-var startFile = 'index.js';
+var startFile = 'npm --name \'xiaoji\' -- start';
 var privateKey = '/Users/pengcheng/.ssh/xiaojiproject.pem';
 var tmpDir = appName + '-' + new Date().getTime();
 
@@ -33,9 +33,6 @@ plan.local(function(local) {
 
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
-    remote.log('Install yarn');
-    remote.sudo('curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo');
-    remote.sudo('sudo yum install yarn');
     remote.log('Move folder to root');
     remote.sudo('cp -R /tmp/' + tmpDir + ' ~', { user: username });
     remote.rm('-rf /tmp/' + tmpDir);

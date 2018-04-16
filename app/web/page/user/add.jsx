@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomeLayout from 'component/homelayout/homelayout.jsx';
 import './add.css';
 import axios from 'axios';
+import config from '../../config/config';
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -78,7 +79,7 @@ class RegistrationForm extends Component {
                     postValues.phone = '+' + postValues.prefix + ' ' + postValues.phone;
                     postValues.location = postValues.location.join('-');
                     delete postValues.prefix;
-                    axios.post('http://127.0.0.1:9999/api/user/add', postValues).then(response => {
+                    axios.post(`${config.server_url}user/add`, postValues).then(response => {
                         this.setState({ data: response.data, loading: false });
                         window.location = '/user/list';
                     });
@@ -196,7 +197,7 @@ class RegistrationForm extends Component {
                         {...formItemLayout}
                         label={
                             <span>
-								Nickname&nbsp;
+                                Nickname&nbsp;
                                 <Tooltip title="What do you want others to call you?">
                                     <Icon type="question-circle-o" />
                                 </Tooltip>
@@ -220,7 +221,7 @@ class RegistrationForm extends Component {
                     </FormItem>
                     <FormItem {...tailFormItemLayout}>
                         <Button type="primary" htmlType="submit">
-							Create
+                            Create
                         </Button>
                     </FormItem>
                 </Form>

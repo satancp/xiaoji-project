@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './add.css';
 import axios from 'axios';
+import config from '../../config/config';
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -79,7 +80,7 @@ class RegistrationForm extends Component {
                         postValues.location = postValues.location.join('-');
                         delete postValues.prefix;
                         console.log(postValues);
-                        axios.post('http://127.0.0.1:9999/api/user/update', postValues).then(response => {
+                        axios.post(`${config.server_url}user/update`, postValues).then(response => {
                             this.setState({ data: response.data, loading: false });
                             resolve();
                         });
@@ -215,7 +216,7 @@ class RegistrationForm extends Component {
                     {...formItemLayout}
                     label={
                         <span>
-							Nickname&nbsp;
+                            Nickname&nbsp;
                             <Tooltip title="What do you want others to call you?">
                                 <Icon type="question-circle-o" />
                             </Tooltip>

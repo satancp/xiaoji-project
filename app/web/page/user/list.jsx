@@ -3,6 +3,7 @@ import HomeLayout from 'component/homelayout/homelayout.jsx';
 import EditPage from './edit.jsx';
 import './list.css';
 import axios from 'axios';
+import config from '../../config/config';
 import { Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider } from 'antd';
 const FormItem = Form.Item;
 
@@ -172,7 +173,7 @@ export default class UserList extends Component {
                         visibleEditModal: false
                     });
                     axios
-                        .get('http://127.0.0.1:9999/api/user/list')
+                        .get(`${config.server_url}user/list`)
                         .then(response => this.setState({ data: response.data, loading: false }));
                 })
                 .catch(err => {
@@ -222,7 +223,7 @@ export default class UserList extends Component {
         };
         this.deleteData = id => {
             axios
-                .post('http://127.0.0.1:9999/api/user/delete', {
+                .post(`${config.server_url}user/delete`, {
                     id: id
                 })
                 .then(response => {
@@ -231,13 +232,13 @@ export default class UserList extends Component {
                         deleteLoading: false
                     });
                     axios
-                        .get('http://127.0.0.1:9999/api/user/list')
+                        .get(`${config.server_url}user/list`)
                         .then(response => this.setState({ data: response.data, loading: false }));
                 });
         };
         this.switchStatus = (id, status) => {
             axios
-                .post('http://127.0.0.1:9999/api/user/update', {
+                .post(`${config.server_url}user/update`, {
                     id: id,
                     status: 1 - status
                 })
@@ -247,7 +248,7 @@ export default class UserList extends Component {
                         banLoading: false
                     });
                     axios
-                        .get('http://127.0.0.1:9999/api/user/list')
+                        .get(`${config.server_url}user/list`)
                         .then(response => this.setState({ data: response.data, loading: false }));
                 });
         };
@@ -255,7 +256,7 @@ export default class UserList extends Component {
 
     componentWillMount() {
         axios
-            .get('http://127.0.0.1:9999/api/user/list')
+            .get(`${config.server_url}user/list`)
             .then(response => this.setState({ data: response.data, loading: false }));
     }
 

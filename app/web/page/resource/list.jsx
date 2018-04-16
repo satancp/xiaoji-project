@@ -3,6 +3,7 @@ import HomeLayout from 'component/homelayout/homelayout.jsx';
 import './list.css';
 import EditPage from './edit.jsx';
 import axios from 'axios';
+import config from '../../config/config';
 import { Table, Icon, Switch, Radio, Form, Divider, Tag, Tooltip, Button, Modal } from 'antd';
 import HtmlToReact from 'html-to-react';
 const HtmlToReactParser = HtmlToReact.Parser;
@@ -132,7 +133,7 @@ export default class ResourceList extends Component {
                         editLoading: false,
                         visibleEditModal: false
                     });
-                    axios.get('http://127.0.0.1:9999/api/resource/list').then(response => {
+                    axios.get(`${config.server_url}resource/list`).then(response => {
                         for (let x = 0; x < response.data.length; x++) {
                             let temp = [];
                             for (let i = 0; i < response.data[x].tags.length; i++) {
@@ -166,7 +167,7 @@ export default class ResourceList extends Component {
         };
         this.deleteData = id => {
             axios
-                .post('http://127.0.0.1:9999/api/resource/delete', {
+                .post(`${config.server_url}resource/delete`, {
                     id: id
                 })
                 .then(response => {
@@ -174,7 +175,7 @@ export default class ResourceList extends Component {
                         visibleDeleteModal: false,
                         deleteLoading: false
                     });
-                    axios.get('http://127.0.0.1:9999/api/resource/list').then(response => {
+                    axios.get(`${config.server_url}resource/list`).then(response => {
                         for (let x = 0; x < response.data.length; x++) {
                             let temp = [];
                             for (let i = 0; i < response.data[x].tags.length; i++) {
@@ -193,7 +194,7 @@ export default class ResourceList extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:9999/api/resource/list').then(response => {
+        axios.get(`${config.server_url}resource/list`).then(response => {
             for (let x = 0; x < response.data.length; x++) {
                 let temp = [];
                 for (let i = 0; i < response.data[x].tags.length; i++) {
