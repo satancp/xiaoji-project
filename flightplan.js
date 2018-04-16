@@ -1,6 +1,6 @@
 var plan = require('flightplan');
 
-var appName = 'xiangx-api';
+var appName = 'xiaoji';
 var username = 'ec2-user';
 var startFile = 'index.js';
 var privateKey = '/Users/pengcheng/.ssh/xiaojiproject.pem';
@@ -34,9 +34,8 @@ plan.local(function(local) {
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
     remote.log('Install yarn');
-    remote.sudo('curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -');
-    remote.sudo('echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list');
-    remote.sudo('apt-get update && apt-get install yarn');
+    remote.sudo('curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo');
+    remote.sudo('sudo yum install yarn');
     remote.log('Move folder to root');
     remote.sudo('cp -R /tmp/' + tmpDir + ' ~', { user: username });
     remote.rm('-rf /tmp/' + tmpDir);
