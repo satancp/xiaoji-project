@@ -1,10 +1,12 @@
 {
-  "resource/add.js": "/public/js/resource/add.js",
-  "resource/add.css": "/public/css/resource/add.css",
-  "user/list.js": "/public/js/user/list.js",
-  "user/list.css": "/public/css/user/list.css",
   "resource/list.js": "/public/js/resource/list.js",
   "resource/list.css": "/public/css/resource/list.css",
+  "resource/add.js": "/public/js/resource/add.js",
+  "resource/add.css": "/public/css/resource/add.css",
+  "resource/edit.js": "/public/js/resource/edit.js",
+  "resource/edit.css": "/public/css/resource/edit.css",
+  "user/list.js": "/public/js/user/list.js",
+  "user/list.css": "/public/css/user/list.css",
   "user/add.js": "/public/js/user/add.js",
   "user/add.css": "/public/css/user/add.css",
   "user/edit.js": "/public/js/user/edit.js",
@@ -15,6 +17,16 @@
   "common.js": "/public/js/common.js",
   "vendor.js": "/public/js/vendor.js",
   "deps": {
+    "resource/list.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/common.js",
+        "/public/js/resource/list.js"
+      ],
+      "css": [
+        "/public/css/resource/list.css"
+      ]
+    },
     "resource/add.js": {
       "js": [
         "/public/js/vendor.js",
@@ -25,6 +37,16 @@
         "/public/css/resource/add.css"
       ]
     },
+    "resource/edit.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/common.js",
+        "/public/js/resource/edit.js"
+      ],
+      "css": [
+        "/public/css/resource/edit.css"
+      ]
+    },
     "user/list.js": {
       "js": [
         "/public/js/vendor.js",
@@ -33,16 +55,6 @@
       ],
       "css": [
         "/public/css/user/list.css"
-      ]
-    },
-    "resource/list.js": {
-      "js": [
-        "/public/js/vendor.js",
-        "/public/js/common.js",
-        "/public/js/resource/list.js"
-      ],
-      "css": [
-        "/public/css/resource/list.css"
       ]
     },
     "user/add.js": {

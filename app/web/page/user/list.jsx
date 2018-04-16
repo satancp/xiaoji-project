@@ -172,7 +172,7 @@ export default class UserList extends Component {
                         visibleEditModal: false
                     });
                     axios
-                        .get('http://localhost:7001/api/user/list')
+                        .get('http://127.0.0.1:9999/api/user/list')
                         .then(response => this.setState({ data: response.data, loading: false }));
                 })
                 .catch(err => {
@@ -222,7 +222,7 @@ export default class UserList extends Component {
         };
         this.deleteData = id => {
             axios
-                .post('http://localhost:7001/api/user/delete', {
+                .post('http://127.0.0.1:9999/api/user/delete', {
                     id: id
                 })
                 .then(response => {
@@ -231,13 +231,13 @@ export default class UserList extends Component {
                         deleteLoading: false
                     });
                     axios
-                        .get('http://localhost:7001/api/user/list')
+                        .get('http://127.0.0.1:9999/api/user/list')
                         .then(response => this.setState({ data: response.data, loading: false }));
                 });
         };
         this.switchStatus = (id, status) => {
             axios
-                .post('http://localhost:7001/api/user/update', {
+                .post('http://127.0.0.1:9999/api/user/update', {
                     id: id,
                     status: 1 - status
                 })
@@ -247,7 +247,7 @@ export default class UserList extends Component {
                         banLoading: false
                     });
                     axios
-                        .get('http://localhost:7001/api/user/list')
+                        .get('http://127.0.0.1:9999/api/user/list')
                         .then(response => this.setState({ data: response.data, loading: false }));
                 });
         };
@@ -255,7 +255,7 @@ export default class UserList extends Component {
 
     componentWillMount() {
         axios
-            .get('http://localhost:7001/api/user/list')
+            .get('http://127.0.0.1:9999/api/user/list')
             .then(response => this.setState({ data: response.data, loading: false }));
     }
 

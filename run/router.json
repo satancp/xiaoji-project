@@ -120,6 +120,32 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/resource/getResources",
+    "regexp": "/^\\/api\\/resource\\/getResources(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/resource/getResource",
+    "regexp": "/^\\/api\\/resource\\/getResource(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/resource/add",
     "regexp": "/^\\/resource\\/add(?:\\/(?=$))?$/",
     "stack": [
@@ -170,6 +196,58 @@
     "paramNames": [],
     "path": "/api/resource/upload",
     "regexp": "/^\\/api\\/resource\\/upload(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/category/list",
+    "regexp": "/^\\/api\\/category\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/tag/list",
+    "regexp": "/^\\/api\\/tag\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/star/list",
+    "regexp": "/^\\/api\\/star\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/comment/list",
+    "regexp": "/^\\/api\\/comment\\/list(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

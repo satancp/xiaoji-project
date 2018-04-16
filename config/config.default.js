@@ -13,6 +13,11 @@ module.exports = app => {
         }
     };
 
+    exports.cors = {
+        origin: '*',
+        allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    };
+
     exports.static = {
         prefix: '/public/',
         dir: path.join(app.baseDir, 'app/public'),

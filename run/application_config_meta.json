@@ -50,6 +50,10 @@
       "policy": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
     }
   },
+  "cors": {
+    "origin": "/Users/pengcheng/xiaoji-project/config/config.default.js",
+    "allowMethods": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+  },
   "static": {
     "prefix": "/Users/pengcheng/xiaoji-project/config/config.default.js",
     "dir": "/Users/pengcheng/xiaoji-project/config/config.default.js",
@@ -194,7 +198,6 @@
       ".jsx": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js"
     }
   },
-  "cors": "/Users/pengcheng/xiaoji-project/node_modules/egg-cors/config/config.default.js",
   "webpackreact": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/config/config.default.js",
   "env": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
   "name": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
@@ -222,8 +225,11 @@
       "antd": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "aws-sdk": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "axios": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "braft-editor": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "create-react-class": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "draft-js": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draft-js-export-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draft-js-import-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "draftjs-to-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "egg": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "egg-cors": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
@@ -235,6 +241,7 @@
       "extend": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "history": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "hmacsha1": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "html-to-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "js-base64": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "lodash": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "md5": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
@@ -250,6 +257,7 @@
       "react-router-dom": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "react-router-redux": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "redux": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "sharp": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "stream-to-array": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "stream-wormhole": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
     },

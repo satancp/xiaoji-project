@@ -78,7 +78,7 @@ class RegistrationForm extends Component {
                     postValues.phone = '+' + postValues.prefix + ' ' + postValues.phone;
                     postValues.location = postValues.location.join('-');
                     delete postValues.prefix;
-                    axios.post('http://localhost:7001/api/user/add', postValues).then(response => {
+                    axios.post('http://127.0.0.1:9999/api/user/add', postValues).then(response => {
                         this.setState({ data: response.data, loading: false });
                         window.location = '/user/list';
                     });

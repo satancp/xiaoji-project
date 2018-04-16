@@ -23,8 +23,6 @@ import {
     Spin,
     Radio
 } from 'antd';
-import { Editor, EditorState, RichUtils, Modifier, AtomicBlockUtils, convertToRaw, convertFromHTML } from 'draft-js';
-import { stateToHTML } from 'draft-js-export-html';
 import { max } from 'moment';
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
@@ -51,9 +49,9 @@ const beforeUpload = file => {
     return isLt2M;
 };
 
-let ResourceAdd = undefined;
+let ResourceEdit = undefined;
 
-class ResourceCreateForm extends Component {
+class ResourceEditForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -76,6 +74,7 @@ class ResourceCreateForm extends Component {
                     video: false
                 }
             },
+            currentTags: [],
             excludeControls: ['code']
         };
         this.handleRichChange = content => {
@@ -114,13 +113,17 @@ class ResourceCreateForm extends Component {
             e.preventDefault();
             this.props.form.validateFieldsAndScroll((err, values) => {
                 if (!err) {
-                    values.preview_image = values.preview_image[0].response;
+                    if (values.preview_image) {
+                        values.preview_image = values.preview_image[0].response;
+                    } else if (this.state.imageUrl) {
+                        values.preview_image = this.state.imageUrl;
+                    }
                     let html = this.editorInstance.getContent('html');
                     values.content = html;
                     values.category_id = values.category[0];
                     delete values.category;
                     console.log(values);
-                    axios.post('http://127.0.0.1:9999/api/resource/add', values).then(response => {
+                    axios.post('http://127.0.0.1:9999/api/resource/update', values).then(response => {
                         this.setState({ data: response.data, loading: false });
                         window.location = '/resource/list';
                     });
@@ -152,22 +155,40 @@ class ResourceCreateForm extends Component {
 
     componentDidMount() {
         BraftEditor = require('braft-editor').default;
-        axios.get('http://127.0.0.1:9999/api/category/list').then(response => {
-            categorys = response.data.map(v => {
+        axios.get('http://127.0.0.1:9999/api/category/list').then(response1 => {
+            categorys = response1.data.map(v => {
                 v.value = v.id;
                 v.label = v.display_name;
                 return v;
             });
-            axios.get('http://127.0.0.1:9999/api/tag/list').then(response => {
-                tags = response.data.map(v => {
+            axios.get('http://127.0.0.1:9999/api/tag/list').then(response2 => {
+                tags = response2.data.map(v => {
                     return <Option key={v.id}>{v.name}</Option>;
                 });
-                this.setState({ canRenderEditor: true });
+                let currentCategory = undefined;
+                for (let i = 0; i < response1.data.length; i++) {
+                    if (response1.data[i].id === this.props.exist.category_id) {
+                        currentCategory = response1.data[i].display_name;
+                        break;
+                    }
+                }
+                this.props.onRef(this);
+                this.setState({
+                    canRenderEditor: true,
+                    imageUrl: this.props.exist.preview_image,
+                    currentTags: this.props.exist.tags.map(v => v.display_name)
+                });
+                this.props.form.setFieldsValue({
+                    name: this.props.exist.name,
+                    desc: this.props.exist.desc,
+                    category: [this.props.exist.category_id]
+                });
             });
         });
     }
 
     componentWillUnmount() {
+        this.props.onRef(undefined);
         this.setState({ canRenderEditor: false });
     }
 
@@ -211,95 +232,85 @@ class ResourceCreateForm extends Component {
             else return true;
         };
         return (
-            <HomeLayout>
-                <Form onSubmit={this.handleSubmit}>
-                    <FormItem
-                        {...formItemLayout}
-                        label={
-                            <span>
-                                Resource Name&nbsp;
-                                <Tooltip title="What do you want others to call it?">
-                                    <Icon type="question-circle-o" />
-                                </Tooltip>
-                            </span>
-                        }
-                    >
-                        {getFieldDecorator('name', {
-                            rules: [{ required: true, message: 'Please input the name!', whitespace: true }]
-                        })(<Input />)}
-                    </FormItem>
-                    <FormItem {...formItemLayout} label="Category">
-                        {getFieldDecorator('category', {
-                            initialValue: ['art'],
-                            rules: [{ type: 'array', required: true, message: 'Please select the category!' }]
-                        })(<Cascader options={categorys} />)}
-                    </FormItem>
-                    <FormItem {...formItemLayout} label="Tags">
-                        {getFieldDecorator('tags', {
-                            rules: [{ required: true, message: 'Please select tags for the resource!', type: 'array' }]
+            <Form onSubmit={this.handleSubmit}>
+                <FormItem
+                    {...formItemLayout}
+                    label={
+                        <span>
+                            Resource Name&nbsp;
+                            <Tooltip title="What do you want others to call it?">
+                                <Icon type="question-circle-o" />
+                            </Tooltip>
+                        </span>
+                    }
+                >
+                    {getFieldDecorator('name', {
+                        rules: [{ required: true, message: 'Please input the name!', whitespace: true }]
+                    })(<Input />)}
+                </FormItem>
+                <FormItem {...formItemLayout} label="Category">
+                    {getFieldDecorator('category', {
+                        initialValue: ['art'],
+                        rules: [{ type: 'array', required: true, message: 'Please select the category!' }]
+                    })(<Cascader options={categorys} />)}
+                </FormItem>
+                <FormItem {...formItemLayout} label="Tags">
+                    {getFieldDecorator('tags', {
+                        rules: [{ required: true, message: 'Please select tags for the resource!', type: 'array' }]
+                    })(
+                        <Select mode="multiple" placeholder="Please select tags" defaultValue={this.state.currentTags}>
+                            {tags}
+                        </Select>
+                    )}
+                </FormItem>
+                <FormItem {...formItemLayout} label={<span>Brief Introduction</span>}>
+                    {getFieldDecorator('desc', {
+                        rules: [{ required: true, message: 'Please input the description!', whitespace: true }]
+                    })(<TextArea autosize={true} row={20} />)}
+                </FormItem>
+                <FormItem {...formItemLayout} label="Preview Image">
+                    <div className="dropbox">
+                        {getFieldDecorator('preview_image', {
+                            rules: [{ required: true, message: 'Please select a file!' }],
+                            valuePropName: 'fileList',
+                            getValueFromEvent: this.normFile
                         })(
-                            <Select mode="multiple" placeholder="Please select tags">
-                                {tags}
-                            </Select>
+                            <Upload
+                                name="avatar"
+                                listType="picture-card"
+                                className="avatar-uploader"
+                                showUploadList={false}
+                                action={this.state.action}
+                                beforeUpload={beforeUpload}
+                                onChange={this.handleChange}
+                                data={{ fileType: 'thumbnail' }}
+                            >
+                                {imageUrl ? <img src={imageUrl} alt="" /> : uploadButton}
+                            </Upload>
                         )}
-                    </FormItem>
-                    <FormItem {...formItemLayout} label={<span>Brief Introduction</span>}>
-                        {getFieldDecorator('desc', {
-                            rules: [{ required: true, message: 'Please input the description!', whitespace: true }]
-                        })(<TextArea autosize={true} row={20} />)}
-                    </FormItem>
-                    <FormItem {...formItemLayout} label="Preview Image">
-                        <div className="dropbox">
-                            {getFieldDecorator('preview_image', {
-                                rules: [{ required: true, message: 'Please select a file!' }],
-                                valuePropName: 'fileList',
-                                getValueFromEvent: this.normFile
-                            })(
-                                <Upload
-                                    name="avatar"
-                                    listType="picture-card"
-                                    className="avatar-uploader"
-                                    showUploadList={false}
-                                    action={this.state.action}
-                                    beforeUpload={beforeUpload}
-                                    onChange={this.handleChange}
-                                    data={{ fileType: 'thumbnail' }}
-                                >
-                                    {imageUrl ? <img src={imageUrl} alt="" /> : uploadButton}
-                                </Upload>
-                            )}
+                    </div>
+                </FormItem>
+                {this.state.canRenderEditor ? (
+                    <FormItem {...formItemLayout} label="Content">
+                        <div
+                            style={{
+                                borderStyle: 'solid',
+                                borderWidth: 'thin',
+                                borderColor: '#d8d8d8',
+                                borderRadius: 5
+                            }}
+                        >
+                            <Spin spinning={this.state.richTextLoading}>
+                                {BraftEditor !== undefined ? (
+                                    <BraftEditor {...this.state} ref={instance => (this.editorInstance = instance)} />
+                                ) : null}
+                            </Spin>
                         </div>
                     </FormItem>
-                    {this.state.canRenderEditor ? (
-                        <FormItem {...formItemLayout} label="Content">
-                            <div
-                                style={{
-                                    borderStyle: 'solid',
-                                    borderWidth: 'thin',
-                                    borderColor: '#d8d8d8',
-                                    borderRadius: 5
-                                }}
-                            >
-                                <Spin spinning={this.state.richTextLoading}>
-                                    {BraftEditor !== undefined ? (
-                                        <BraftEditor
-                                            {...this.state}
-                                            ref={instance => (this.editorInstance = instance)}
-                                        />
-                                    ) : null}
-                                </Spin>
-                            </div>
-                        </FormItem>
-                    ) : null}
-                    <FormItem {...tailFormItemLayout}>
-                        <Button type="primary" htmlType="submit">
-                            Create
-                        </Button>
-                    </FormItem>
-                </Form>
-            </HomeLayout>
+                ) : null}
+            </Form>
         );
     }
 }
 
-export default (ResourceAdd = Form.create()(ResourceCreateForm));
+export default (ResourceEdit = Form.create()(ResourceEditForm));

@@ -79,7 +79,7 @@ class RegistrationForm extends Component {
                         postValues.location = postValues.location.join('-');
                         delete postValues.prefix;
                         console.log(postValues);
-                        axios.post('http://localhost:7001/api/user/update', postValues).then(response => {
+                        axios.post('http://127.0.0.1:9999/api/user/update', postValues).then(response => {
                             this.setState({ data: response.data, loading: false });
                             resolve();
                         });
