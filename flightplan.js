@@ -9,8 +9,7 @@ var tmpDir = appName + '-' + new Date().getTime();
 // configuration
 plan.target('prod', [
     {
-        // host: 'dev.xiangx.net',
-        host: '13.231.202.132',
+        host: '54.238.75.163',
         username: username,
         privateKey: privateKey,
         agent: process.env.SSH_AUTH_SOCK,
