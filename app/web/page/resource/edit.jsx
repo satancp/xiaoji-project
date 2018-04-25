@@ -22,7 +22,8 @@ import {
     AutoComplete,
     Breadcrumb,
     Spin,
-    Radio
+    Radio,
+    Tag
 } from 'antd';
 import { max } from 'moment';
 import Cookies from 'universal-cookie';
@@ -77,6 +78,7 @@ class ResourceEditForm extends Component {
                     video: false
                 }
             },
+            data: {},
             currentTags: [],
             excludeControls: ['code']
         };
@@ -185,15 +187,58 @@ class ResourceEditForm extends Component {
                 this.setState({
                     canRenderEditor: true,
                     imageUrl: this.props.exist.preview_image,
-                    currentTags: this.props.exist.tags.map(v => v.display_name)
-                });
-                this.props.form.setFieldsValue({
-                    name: this.props.exist.name,
-                    desc: this.props.exist.desc,
-                    category: [this.props.exist.category_id]
+                    currentTags: this.props.exist.tags.map(v => {
+                        return v.tag;
+                    }),
+                    initialContent: this.props.exist.content,
+                    rid: this.props.exist.id,
+                    data: {
+                        name: this.props.exist.name,
+                        desc: this.props.exist.desc,
+                        category: [this.props.exist.category_id]
+                    }
                 });
             });
         });
+    }
+
+    componentDidUpdate() {
+        if (this.state.rid != this.props.exist.id) {
+            axios.get(`${config.server_url}category/list`).then(response1 => {
+                categorys = response1.data.map(v => {
+                    v.value = v.id;
+                    v.label = v.display_name;
+                    return v;
+                });
+                axios.get(`${config.server_url}tag/list`).then(response2 => {
+                    tags = response2.data.map(v => {
+                        return <Option key={v.id}>{v.name}</Option>;
+                    });
+                    let currentCategory = undefined;
+                    for (let i = 0; i < response1.data.length; i++) {
+                        if (response1.data[i].id === this.props.exist.category_id) {
+                            currentCategory = response1.data[i].display_name;
+                            break;
+                        }
+                    }
+                    this.props.onRef(this);
+                    this.setState({
+                        canRenderEditor: true,
+                        imageUrl: this.props.exist.preview_image,
+                        currentTags: this.props.exist.tags.map(v => {
+                            return v.tag;
+                        }),
+                        initialContent: this.props.exist.content,
+                        rid: this.props.exist.id,
+                        data: {
+                            name: this.props.exist.name,
+                            desc: this.props.exist.desc,
+                            category: [this.props.exist.category_id]
+                        }
+                    });
+                });
+            });
+        }
     }
 
     componentWillUnmount() {
@@ -254,27 +299,30 @@ class ResourceEditForm extends Component {
                     }
                 >
                     {getFieldDecorator('name', {
-                        rules: [{ required: true, message: 'Please input the name!', whitespace: true }]
+                        rules: [{ required: true, message: 'Please input the name!', whitespace: true }],
+                        initialValue: this.state.data.name
                     })(<Input />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Category">
                     {getFieldDecorator('category', {
-                        initialValue: ['art'],
+                        initialValue: this.state.data.category,
                         rules: [{ type: 'array', required: true, message: 'Please select the category!' }]
                     })(<Cascader options={categorys} />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Tags">
                     {getFieldDecorator('tags', {
-                        rules: [{ required: true, message: 'Please select tags for the resource!', type: 'array' }]
+                        rules: [{ required: true, message: 'Please select tags for the resource!', type: 'array' }],
+                        initialValue: this.state.currentTags
                     })(
-                        <Select mode="multiple" placeholder="Please select tags" defaultValue={this.state.currentTags}>
+                        <Select mode="multiple" placeholder="Please select tags">
                             {tags}
                         </Select>
                     )}
                 </FormItem>
                 <FormItem {...formItemLayout} label={<span>Brief Introduction</span>}>
                     {getFieldDecorator('desc', {
-                        rules: [{ required: true, message: 'Please input the description!', whitespace: true }]
+                        rules: [{ required: true, message: 'Please input the description!', whitespace: true }],
+                        initialValue: this.state.data.desc
                     })(<TextArea autosize={true} row={20} />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Preview Image">

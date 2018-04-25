@@ -67,7 +67,8 @@ class RegistrationForm extends Component {
         super();
         this.state = {
             confirmDirty: false,
-            autoCompleteResult: []
+            autoCompleteResult: [],
+            data: {}
         };
         this.handleSubmit = e => {
             return new Promise((resolve, reject) => {
@@ -131,15 +132,35 @@ class RegistrationForm extends Component {
             window.location = '/user/login';
         }
         this.props.onRef(this);
-        this.props.form.setFieldsValue({
-            id: this.props.exist.id,
-            email: this.props.exist.email,
-            password: this.props.exist.password,
-            nickname: this.props.exist.nickname,
-            location: this.props.exist.location.split('-'),
-            phone: this.props.exist.phone.split(' ')[1],
-            prefix: this.props.exist.phone.split(' ')[0].substring(1)
+        this.setState({
+            uid: this.props.exist.id,
+            data: {
+                id: this.props.exist.id,
+                email: this.props.exist.email,
+                password: this.props.exist.password,
+                nickname: this.props.exist.nickname,
+                location: this.props.exist.location.split('-'),
+                phone: this.props.exist.phone.split(' ')[1],
+                prefix: this.props.exist.phone.split(' ')[0].substring(1)
+            }
         });
+    }
+
+    componentDidUpdate() {
+        if (this.state.uid && this.state.uid != this.props.exist.id) {
+            this.setState({
+                uid: this.props.exist.id,
+                data: {
+                    id: this.props.exist.id,
+                    email: this.props.exist.email,
+                    password: this.props.exist.password,
+                    nickname: this.props.exist.nickname,
+                    location: this.props.exist.location.split('-'),
+                    phone: this.props.exist.phone.split(' ')[1],
+                    prefix: this.props.exist.phone.split(' ')[0].substring(1)
+                }
+            });
+        }
     }
 
     render() {
@@ -169,7 +190,7 @@ class RegistrationForm extends Component {
             }
         };
         const prefixSelector = getFieldDecorator('prefix', {
-            initialValue: '86'
+            initialValue: this.state.data.prefix
         })(
             <Select style={{ width: 70 }}>
                 <Option value="86">+86</Option>
@@ -190,7 +211,8 @@ class RegistrationForm extends Component {
                                 required: true,
                                 message: 'Please input your E-mail!'
                             }
-                        ]
+                        ],
+                        initialValue: this.state.data.email
                     })(<Input />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Password">
@@ -203,7 +225,8 @@ class RegistrationForm extends Component {
                             {
                                 validator: this.validateToNextPassword
                             }
-                        ]
+                        ],
+                        initialValue: this.state.data.password
                     })(<Input type="password" />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Confirm">
@@ -231,18 +254,20 @@ class RegistrationForm extends Component {
                     }
                 >
                     {getFieldDecorator('nickname', {
-                        rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }]
+                        rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                        initialValue: this.state.data.nickname
                     })(<Input />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Location">
                     {getFieldDecorator('location', {
-                        initialValue: ['zhejiang', 'hangzhou', 'xihu'],
+                        initialValue: this.state.data.location,
                         rules: [{ type: 'array', required: true, message: 'Please select your location!' }]
                     })(<Cascader options={location} />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Phone">
                     {getFieldDecorator('phone', {
-                        rules: [{ required: true, message: 'Please input your phone number!' }]
+                        rules: [{ required: true, message: 'Please input your phone number!' }],
+                        initialValue: this.state.data.phone
                     })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
                 </FormItem>
             </Form>
