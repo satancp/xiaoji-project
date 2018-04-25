@@ -15771,3 +15771,12 @@ name: 'EMESSAGEError'
 pid: 20661
 hostname: Chriss-Laptop.local
 
+2018-04-25 19:00:19,425 ERROR 31807 nodejs.ClusterClientNoResponseError: client no response in 62677ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 31807
+hostname: Chriss-Laptop.local
+

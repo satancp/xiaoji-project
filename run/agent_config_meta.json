@@ -61,8 +61,7 @@
       "host": "/Users/pengcheng/xiaoji-project/config/config.default.js"
     },
     "OTHER": {
-      "user": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "pass": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+      "sparkPostApiKey": "/Users/pengcheng/xiaoji-project/config/config.default.js"
     }
   },
   "static": {
@@ -261,6 +260,7 @@
       "moment": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "nodemailer": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "nodemailer-smtp-transport": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "nodemailer-sparkpost-transport": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "nodemailer-wellknown": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "prop-types": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "public-ip": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",

@@ -13,27 +13,46 @@
     },
     "security": {
       "domainWhiteList": [
+        "http://localhost:80",
+        "http://127.0.0.1:80",
+        "http://192.168.1.104:80",
+        "http://dashboard.goland.cool:80",
+        "http://13.114.130.41/:80",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "http://169.254.127.204:3000",
+        "http://192.168.1.104:3000",
+        "http://dashboard.goland.cool:3000",
+        "http://13.114.130.41/:3000",
         "http://localhost:7000",
         "http://127.0.0.1:7000",
-        "http://169.254.127.204:7000",
+        "http://192.168.1.104:7000",
+        "http://dashboard.goland.cool:7000",
+        "http://13.114.130.41/:7000",
         "http://localhost:7001",
         "http://127.0.0.1:7001",
-        "http://169.254.127.204:7001",
+        "http://192.168.1.104:7001",
+        "http://dashboard.goland.cool:7001",
+        "http://13.114.130.41/:7001",
         "http://localhost:9000",
         "http://127.0.0.1:9000",
-        "http://169.254.127.204:9000",
+        "http://192.168.1.104:9000",
+        "http://dashboard.goland.cool:9000",
+        "http://13.114.130.41/:9000",
         "http://localhost:9001",
         "http://127.0.0.1:9001",
-        "http://169.254.127.204:9001",
+        "http://192.168.1.104:9001",
+        "http://dashboard.goland.cool:9001",
+        "http://13.114.130.41/:9001",
         "http://localhost:9002",
         "http://127.0.0.1:9002",
-        "http://169.254.127.204:9002",
+        "http://192.168.1.104:9002",
+        "http://dashboard.goland.cool:9002",
+        "http://13.114.130.41/:9002",
         "http://localhost:9999",
         "http://127.0.0.1:9999",
-        "http://169.254.127.204:9999"
+        "http://192.168.1.104:9999",
+        "http://dashboard.goland.cool:9999",
+        "http://13.114.130.41/:9999"
       ],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
@@ -246,61 +265,61 @@
           "entry": {
             "home/home": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/home.jsx"
             ],
             "resource/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/add.jsx"
             ],
             "resource/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/edit.jsx"
             ],
             "resource/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/list.jsx"
             ],
             "user/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/add.jsx"
             ],
             "user/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/edit.jsx"
             ],
             "user/forget": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/forget.jsx"
             ],
             "user/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/list.jsx"
             ],
             "user/login": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/login.jsx"
             ],
             "layout": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.104:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
               "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
               "/Users/pengcheng/xiaoji-project/app/web/framework/layout/layout.jsx"
             ]
@@ -309,7 +328,7 @@
             "filename": "js/[name].js",
             "chunkFilename": "js/chunk/[name].js",
             "path": "/Users/pengcheng/xiaoji-project/public",
-            "publicPath": "http://169.254.127.204:9000/public/"
+            "publicPath": "http://192.168.1.104:9000/public/"
           },
           "resolve": {
             "extensions": [
@@ -488,8 +507,8 @@
                 "EASY_ENV_IS_BROWSER": true,
                 "EASY_ENV_IS_NODE": false,
                 "EASY_ENV_LOCAL_PUBLIC_PATH": "\"/public/\"",
-                "EASY_ENV_PUBLIC_PATH": "\"http://169.254.127.204:9000/public/\"",
-                "EASY_ENV_HOST_URL": "\"http://169.254.127.204:9000\""
+                "EASY_ENV_PUBLIC_PATH": "\"http://192.168.1.104:9000/public/\"",
+                "EASY_ENV_HOST_URL": "\"http://192.168.1.104:9000\""
               },
               "__plugin__": "DefinePlugin",
               "__lable__": "define"
@@ -539,10 +558,10 @@
                 "generate": null,
                 "sort": null,
                 "baseDir": "/Users/pengcheng/xiaoji-project",
-                "host": "http://169.254.127.204:9000",
+                "host": "http://192.168.1.104:9000",
                 "proxy": true,
                 "buildPath": "/Users/pengcheng/xiaoji-project/public",
-                "publicPath": "http://169.254.127.204:9000/public/",
+                "publicPath": "http://192.168.1.104:9000/public/",
                 "localPublicPath": "/public/",
                 "assets": false,
                 "filepath": "/Users/pengcheng/xiaoji-project/config/manifest.json",
@@ -701,7 +720,7 @@
             "libraryTarget": "commonjs2",
             "filename": "[name].js",
             "path": "/Users/pengcheng/xiaoji-project/app/view",
-            "publicPath": "http://169.254.127.204:9000/public/"
+            "publicPath": "http://192.168.1.104:9000/public/"
           },
           "resolve": {
             "extensions": [
@@ -860,8 +879,8 @@
                 "EASY_ENV_IS_BROWSER": false,
                 "EASY_ENV_IS_NODE": true,
                 "EASY_ENV_LOCAL_PUBLIC_PATH": "\"/public/\"",
-                "EASY_ENV_PUBLIC_PATH": "\"http://169.254.127.204:9000/public/\"",
-                "EASY_ENV_HOST_URL": "\"http://169.254.127.204:9000\""
+                "EASY_ENV_PUBLIC_PATH": "\"http://192.168.1.104:9000/public/\"",
+                "EASY_ENV_HOST_URL": "\"http://192.168.1.104:9000\""
               },
               "__plugin__": "DefinePlugin",
               "__lable__": "define"
