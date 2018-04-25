@@ -25,6 +25,8 @@ import {
     Radio
 } from 'antd';
 import { max } from 'moment';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
 const RadioButton = Radio.Button;
@@ -155,6 +157,12 @@ class ResourceEditForm extends Component {
     }
 
     componentDidMount() {
+        const cache = cookies.get('loginInfo');
+        if (!cache) {
+            this.props.onRef(undefined);
+            this.setState({ canRenderEditor: false });
+            window.location = '/user/login';
+        }
         BraftEditor = require('braft-editor').default;
         axios.get(`${config.server_url}category/list`).then(response1 => {
             categorys = response1.data.map(v => {

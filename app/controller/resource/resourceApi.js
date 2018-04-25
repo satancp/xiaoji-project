@@ -10,7 +10,7 @@ module.exports = app => {
         async index() {
             const { ctx } = this;
             const query1 =
-                'SELECT r.id, r.name, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category ' +
+                'SELECT r.id, r.name, r.status, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category ' +
                 'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id';
             let results = await app.mysql.query(query1);
             for (let i = 0; i < results.length; i++) {
@@ -26,8 +26,8 @@ module.exports = app => {
         async getResources() {
             const { ctx } = this;
             const query1 =
-                'SELECT r.id, r.name, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category, u.nickname as creator ' +
-                'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id INNER JOIN users AS u ON r.created_by = u.id WHERE r.category_id = ? AND r.id <> ? ORDER BY r.created_at';
+                'SELECT r.id, r.name, r.status, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category, u.nickname as creator ' +
+                'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id INNER JOIN users AS u ON r.created_by = u.id WHERE r.category_id = ? AND r.id <> ? AND r.status = 2 ORDER BY r.created_at';
             let queyrData = [ctx.query.category_id];
             if (ctx.query.resource_id) queyrData.push(ctx.query.resource_id);
             else queyrData.push(0);

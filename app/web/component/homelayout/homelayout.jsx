@@ -2,6 +2,8 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import './homelayout.css';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const { Header, Content, Footer, Sider } = Layout;
 
 export default class HomeLayout extends Component {
@@ -15,6 +17,11 @@ export default class HomeLayout extends Component {
             this.setState({
                 collapsed: !this.state.collapsed
             });
+        };
+        this.logout = () => {
+            cookies.remove('loginInfo');
+            cookies.remove('cacheInfo');
+            window.location = '/user/login';
         };
     }
 
@@ -63,6 +70,11 @@ export default class HomeLayout extends Component {
                                 </a>
                             </Menu.Item>
                         </Menu.SubMenu>
+                        <Menu.Item key="user-logout">
+                            <a onClick={this.logout.bind(this)}>
+                                <Icon type="logout" />Logout
+                            </a>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
@@ -76,7 +88,7 @@ export default class HomeLayout extends Component {
                             />
                         </span>
                         <span style={{ color: '#fff', paddingLeft: '2%', fontSize: '1.4em' }}>
-							Dashboard For Sharing
+                            Dashboard For Sharing
                         </span>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>

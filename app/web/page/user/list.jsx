@@ -5,6 +5,8 @@ import './list.css';
 import axios from 'axios';
 import config from '../../config/config';
 import { Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider } from 'antd';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const FormItem = Form.Item;
 
 export default class UserList extends Component {
@@ -257,7 +259,14 @@ export default class UserList extends Component {
     componentWillMount() {
         axios
             .get(`${config.server_url}user/list`)
-            .then(response => this.setState({ data: response.data, loading: false }));
+            .then(response => this.setState({ data: response.data.data, loading: false }));
+    }
+
+    componentDidMount() {
+        const cache = cookies.get('loginInfo');
+        if (!cache) {
+            window.location = '/user/login';
+        }
     }
 
     render() {

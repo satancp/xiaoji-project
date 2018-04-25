@@ -27,6 +27,8 @@ import {
 import { Editor, EditorState, RichUtils, Modifier, AtomicBlockUtils, convertToRaw, convertFromHTML } from 'draft-js';
 import { stateToHTML } from 'draft-js-export-html';
 import { max } from 'moment';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
 const RadioButton = Radio.Button;
@@ -152,6 +154,10 @@ class ResourceCreateForm extends Component {
     }
 
     componentDidMount() {
+        const cache = cookies.get('loginInfo');
+        if (!cache) {
+            window.location = '/user/login';
+        }
         BraftEditor = require('braft-editor').default;
         axios.get(`${config.server_url}category/list`).then(response => {
             categorys = response.data.map(v => {

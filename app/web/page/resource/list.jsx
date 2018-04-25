@@ -4,8 +4,10 @@ import './list.css';
 import EditPage from './edit.jsx';
 import axios from 'axios';
 import config from '../../config/config';
-import { Table, Icon, Switch, Radio, Form, Divider, Tag, Tooltip, Button, Modal } from 'antd';
+import { Table, Icon, Switch, Radio, Form, Divider, Tag, Tooltip, Button, Modal, Badge } from 'antd';
 import HtmlToReact from 'html-to-react';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const HtmlToReactParser = HtmlToReact.Parser;
 const FormItem = Form.Item;
 
@@ -47,6 +49,55 @@ export default class ResourceList extends Component {
                 width: 170
             },
             {
+                title: 'Status',
+                dataIndex: 'status',
+                key: 'status',
+                filters: [
+                    {
+                        text: 'Approved',
+                        value: 2
+                    },
+                    {
+                        text: 'Abandoned',
+                        value: 1
+                    },
+                    {
+                        text: 'Pending',
+                        value: 0
+                    }
+                ],
+                onFilter: (value, record) => {
+                    return record.status == value;
+                },
+                render: (text, record) => {
+                    if (record.status === 0) {
+                        return (
+                            <span>
+                                <Badge status="processing" />Pending
+                            </span>
+                        );
+                    } else if (record.status === 1) {
+                        return (
+                            <span>
+                                <Badge status="error" />Abandoned
+                            </span>
+                        );
+                    } else if (record.status === 2) {
+                        return (
+                            <span>
+                                <Badge status="success" />Approved
+                            </span>
+                        );
+                    } else {
+                        return (
+                            <span>
+                                <Badge status="warning" />Warning
+                            </span>
+                        );
+                    }
+                }
+            },
+            {
                 title: 'Tags',
                 dataIndex: 'adjustedTags',
                 key: 'adjustedTags'
@@ -54,7 +105,7 @@ export default class ResourceList extends Component {
             {
                 title: 'Action',
                 key: 'action',
-                width: 180,
+                width: 220,
                 render: (text, record) => (
                     <span>
                         <Tooltip title="Edit">
@@ -65,6 +116,30 @@ export default class ResourceList extends Component {
                                 onClick={() => this.showEditModal(record)}
                             />
                         </Tooltip>
+                        {record.status == 0 ? <Divider type="vertical" /> : null}
+                        {record.status == 0 ? (
+                            <Tooltip title="Approve">
+                                <Button
+                                    type="primary"
+                                    style={{ backgroundColor: '#65cc43', borderColor: '#65cc43' }}
+                                    shape="circle"
+                                    icon="check"
+                                    onClick={() => this.showEditModal(record)}
+                                />
+                            </Tooltip>
+                        ) : null}
+                        {record.status == 0 ? <Divider type="vertical" /> : null}
+                        {record.status == 0 ? (
+                            <Tooltip title="Abandon">
+                                <Button
+                                    type="primary"
+                                    style={{ backgroundColor: '#ff4949', borderColor: '#ff4949' }}
+                                    shape="circle"
+                                    icon="close"
+                                    onClick={() => this.showEditModal(record)}
+                                />
+                            </Tooltip>
+                        ) : null}
                         <Divider type="vertical" />
                         <Tooltip title="Delete">
                             <Button
@@ -208,6 +283,13 @@ export default class ResourceList extends Component {
             }
             this.setState({ data: response.data, loading: false });
         });
+    }
+
+    componentDidMount() {
+        const cache = cookies.get('loginInfo');
+        if (!cache) {
+            window.location = '/user/login';
+        }
     }
 
     render() {

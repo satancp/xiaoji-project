@@ -10,5 +10,15 @@ module.exports = app => {
             const { ctx } = this;
             await ctx.render('user/add.js', { message: 'react server side render!' });
         }
+
+        async login() {
+            const { ctx } = this;
+            await ctx.render('user/login.js', { message: 'react server side render!' });
+        }
+
+        async forget() {
+            const { ctx } = this;
+            await ctx.render('user/forget.js', { message: 'react server side render!' });
+        }
     };
 };

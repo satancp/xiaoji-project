@@ -19,8 +19,73 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/home/list",
+    "regexp": "/^\\/api\\/home\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/home/list_star",
+    "regexp": "/^\\/api\\/home\\/list_star(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/user/list",
     "regexp": "/^\\/user\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/user/login",
+    "regexp": "/^\\/user\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/user/forget",
+    "regexp": "/^\\/user\\/forget(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/user/add",
+    "regexp": "/^\\/user\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -41,12 +106,23 @@
   {
     "name": null,
     "methods": [
-      "HEAD",
-      "GET"
+      "POST"
     ],
     "paramNames": [],
-    "path": "/user/add",
-    "regexp": "/^\\/user\\/add(?:\\/(?=$))?$/",
+    "path": "/api/user/login",
+    "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/user/forget",
+    "regexp": "/^\\/api\\/user\\/forget(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -81,6 +157,18 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/api/user/reset_password",
+    "regexp": "/^\\/api\\/user\\/reset_password(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/api/user/delete",
     "regexp": "/^\\/api\\/user\\/delete(?:\\/(?=$))?$/",
     "stack": [
@@ -94,8 +182,34 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/category/list",
+    "regexp": "/^\\/api\\/category\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/resource/list",
     "regexp": "/^\\/resource\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/resource/add",
+    "regexp": "/^\\/resource\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -135,19 +249,6 @@
     "paramNames": [],
     "path": "/api/resource/getResource",
     "regexp": "/^\\/api\\/resource\\/getResource(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/resource/add",
-    "regexp": "/^\\/resource\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -207,34 +308,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/category/list",
-    "regexp": "/^\\/api\\/category\\/list(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
     "path": "/api/tag/list",
     "regexp": "/^\\/api\\/tag\\/list(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/star/list",
-    "regexp": "/^\\/api\\/star\\/list(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

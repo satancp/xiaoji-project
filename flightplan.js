@@ -9,7 +9,7 @@ var tmpDir = appName + '-' + new Date().getTime();
 // configuration
 plan.target('prod', [
     {
-        host: '54.238.75.163',
+        host: '13.114.130.41',
         username: username,
         privateKey: privateKey,
         agent: process.env.SSH_AUTH_SOCK,
@@ -48,7 +48,7 @@ plan.remote(function(remote) {
     remote.log('PM2 stop all app');
     remote.exec('pm2 stop all');
     remote.log('PM2 start app ~/' + appName + '/' + startFile);
-    remote.exec('pm2 start ~/' + appName + '/' + startFile);
+    remote.exec('cd ~/' + appName + ' && pm2 start ' + startFile);
     remote.log('PM2 list all');
     remote.exec('pm2 ls');
     remote.exec('pm2 show ' + appName);

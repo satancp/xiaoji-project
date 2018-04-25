@@ -18,6 +18,17 @@ module.exports = app => {
         allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     };
 
+    exports.serviceMail = {
+        CN: {
+            user: 'goland_service@163.com',
+            pass: 'wsx653019',
+            host: 'smtp.163.com'
+        },
+        OTHER: {
+            sparkPostApiKey: 'fe2728d228034960fc8032bbd7111b9d3d63608a'
+        }
+    };
+
     exports.static = {
         prefix: '/public/',
         dir: path.join(app.baseDir, 'app/public'),
@@ -40,7 +51,7 @@ module.exports = app => {
 
     exports.keys = '123456';
 
-    exports.middleware = ['access'];
+    exports.middleware = ['errorHandler', 'access'];
 
     exports.mysql = {
         // database configuration

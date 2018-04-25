@@ -3,6 +3,8 @@ import './add.css';
 import axios from 'axios';
 import config from '../../config/config';
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
@@ -123,6 +125,11 @@ class RegistrationForm extends Component {
     }
 
     componentDidMount() {
+        const cache = cookies.get('loginInfo');
+        if (!cache) {
+            this.props.onRef(undefined);
+            window.location = '/user/login';
+        }
         this.props.onRef(this);
         this.props.form.setFieldsValue({
             id: this.props.exist.id,

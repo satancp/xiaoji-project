@@ -1,22 +1,16 @@
+'use strict';
+
 module.exports = app => {
-    app.get('/', app.controller.home.home.index);
-    app.get('/user/list', app.controller.user.user.index);
-    app.get('/api/user/list', app.controller.user.userApi.index);
-    app.get('/user/add', app.controller.user.user.add);
-    app.post('/api/user/add', app.controller.user.userApi.add);
-    app.post('/api/user/update', app.controller.user.userApi.update);
-    app.post('/api/user/delete', app.controller.user.userApi.delete);
-    app.get('/resource/list', app.controller.resource.resource.index);
-    app.get('/api/resource/list', app.controller.resource.resourceApi.index);
-    app.get('/api/resource/getResources', app.controller.resource.resourceApi.getResources);
-    app.get('/api/resource/getResource', app.controller.resource.resourceApi.getResource);
-    app.get('/resource/add', app.controller.resource.resource.add);
-    app.post('/api/resource/add', app.controller.resource.resourceApi.add);
-    app.post('/api/resource/update', app.controller.resource.resourceApi.update);
-    app.post('/api/resource/delete', app.controller.resource.resourceApi.delete);
-    app.post('/api/resource/upload', app.controller.resource.resourceApi.upload);
-    app.get('/api/category/list', app.controller.category.categoryApi.index);
-    app.get('/api/tag/list', app.controller.tag.tagApi.index);
-    app.get('/api/star/list', app.controller.star.starApi.index);
-    app.get('/api/comment/list', app.controller.comment.commentApi.index);
+    // 主页相关
+    require('./router/homeRouter')(app);
+    // 用户相关
+    require('./router/userRouter')(app);
+    // 类别相关
+    require('./router/categoryRouter')(app);
+    // 资源相关
+    require('./router/resourceRouter')(app);
+    // 标签相关
+    require('./router/tagRouter')(app);
+    // 评论相关
+    require('./router/commentRouter')(app);
 };

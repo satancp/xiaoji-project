@@ -11,6 +11,10 @@
   "user/add.css": "/public/css/user/add.css",
   "user/edit.js": "/public/js/user/edit.js",
   "user/edit.css": "/public/css/user/edit.css",
+  "user/login.js": "/public/js/user/login.js",
+  "user/login.css": "/public/css/user/login.css",
+  "user/forget.js": "/public/js/user/forget.js",
+  "user/forget.css": "/public/css/user/forget.css",
   "home/home.js": "/public/js/home/home.js",
   "home/home.css": "/public/css/home/home.css",
   "layout.js": "/public/js/layout.js",
@@ -75,6 +79,26 @@
       ],
       "css": [
         "/public/css/user/edit.css"
+      ]
+    },
+    "user/login.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/common.js",
+        "/public/js/user/login.js"
+      ],
+      "css": [
+        "/public/css/user/login.css"
+      ]
+    },
+    "user/forget.js": {
+      "js": [
+        "/public/js/vendor.js",
+        "/public/js/common.js",
+        "/public/js/user/forget.js"
+      ],
+      "css": [
+        "/public/css/user/forget.css"
       ]
     },
     "home/home.js": {
