@@ -18,6 +18,11 @@ module.exports = app => {
         allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     };
 
+    exports.assets = {
+        enable: true,
+        package: 'egg-view-assets'
+    };
+
     exports.serviceMail = {
         CN: {
             user: 'goland_service@163.com',
@@ -25,7 +30,8 @@ module.exports = app => {
             host: 'smtp.163.com'
         },
         OTHER: {
-            sparkPostApiKey: 'fe2728d228034960fc8032bbd7111b9d3d63608a'
+            sparkPostApiKey: 'fe2728d228034960fc8032bbd7111b9d3d63608a',
+            user: 'service@mail.goland.cool'
         }
     };
 
