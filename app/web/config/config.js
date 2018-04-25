@@ -1,5 +1,5 @@
 const configs = {
-    server_url: 'http://localhost/api/'
+    server_url: 'http://dashboard.goland.cool/api/'
 };
 
 export default configs;

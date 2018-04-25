@@ -26,6 +26,8 @@ module.exports = () => {
         domainWhiteList.push(`http://localhost:${port}`);
         domainWhiteList.push(`http://127.0.0.1:${port}`);
         domainWhiteList.push(`http://${localIP}:${port}`);
+        domainWhiteList.push(`http://dashboard.goland.cool:${port}`);
+        domainWhiteList.push(`http://13.114.130.41/:${port}`);
     });
 
     exports.security = { domainWhiteList };
