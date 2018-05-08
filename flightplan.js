@@ -2,7 +2,7 @@ var plan = require('flightplan');
 
 var appName = 'xiaoji';
 var username = 'root';
-var startFile = 'npm --name \'xiaoji\' -- start';
+var startFile = 'yarn --name \'xiaoji-dashboard\' -- start';
 var buildScript = 'easywebpack --name \'xiaoji-dashboard-web-server\' -- server prod -b wmc';
 var startScript = 'yarn --name \'xiaoji-api-server\' -- start:prod';
 var privateKey = '/Users/pengcheng/.ssh/xiaoji_web.pem';
@@ -50,8 +50,7 @@ plan.remote(function(remote) {
     remote.log('PM2 delete all app');
     remote.exec('pm2 delete all');
     remote.log('PM2 start app ~/' + appName + '/' + startFile);
-    remote.exec('cd ~/' + appName + ' && pm2 start ' + buildScript);
-    remote.exec('cd ~/' + appName + ' && pm2 start ' + startScript);
+    remote.exec('cd ~/' + appName + ' && pm2 start ' + startFile);
     remote.log('PM2 list all');
     remote.exec('pm2 ls');
 });
