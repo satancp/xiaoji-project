@@ -17,7 +17,7 @@ module.exports = {
         store: 'app/web/store'
     },
     dll: ['react', 'react-dom'],
-    loaders: {},
+    loaders: [],
     plugins: {},
     done() {
         console.log('---webpack compile finish---');

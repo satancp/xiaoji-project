@@ -4,16 +4,24 @@ import './list.css';
 import EditPage from './edit.jsx';
 import axios from 'axios';
 import config from '../../config/config';
-import { Table, Icon, Switch, Radio, Form, Divider, Tag, Tooltip, Button, Modal, Badge } from 'antd';
+import { Table, Icon, Switch, Radio, Form, Divider, Tag, Tooltip, Button, Modal, Badge, notification } from 'antd';
 import HtmlToReact from 'html-to-react';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 const HtmlToReactParser = HtmlToReact.Parser;
 const FormItem = Form.Item;
+const confirm = Modal.confirm;
 
 export default class ResourceList extends Component {
     constructor() {
         super();
+        this.openNotification = (msg, desc) => {
+            notification.open({
+                message: msg,
+                description: desc,
+                placement: 'topLeft'
+            });
+        };
         this.columns = [
             {
                 title: 'ID',
@@ -47,6 +55,12 @@ export default class ResourceList extends Component {
                 dataIndex: 'desc',
                 key: 'desc',
                 width: 170
+            },
+            {
+                title: 'Creator',
+                dataIndex: 'creator',
+                key: 'creator',
+                width: 100
             },
             {
                 title: 'Status',
@@ -124,7 +138,7 @@ export default class ResourceList extends Component {
                                     style={{ backgroundColor: '#65cc43', borderColor: '#65cc43' }}
                                     shape="circle"
                                     icon="check"
-                                    onClick={() => this.showEditModal(record)}
+                                    onClick={() => this.showConfirmApprove(record)}
                                 />
                             </Tooltip>
                         ) : null}
@@ -136,7 +150,7 @@ export default class ResourceList extends Component {
                                     style={{ backgroundColor: '#ff4949', borderColor: '#ff4949' }}
                                     shape="circle"
                                     icon="close"
-                                    onClick={() => this.showEditModal(record)}
+                                    onClick={() => this.showConfirmAbandon(record)}
                                 />
                             </Tooltip>
                         ) : null}
@@ -161,7 +175,63 @@ export default class ResourceList extends Component {
             console.log(reactElement);
             return reactElement;
         };
-
+        this.init = () => {
+            axios.get(`${config.server_url}resource/list`).then(response => {
+                if (response.data.code == 0) response = response.data;
+                for (let x = 0; x < response.data.length; x++) {
+                    let temp = [];
+                    for (let i = 0; i < response.data[x].tags.length; i++) {
+                        temp.push(
+                            <Tag color={response.data[x].tags[i].color} key={response.data[x].tags[i].tag_id}>
+                                {response.data[x].tags[i].tag}
+                            </Tag>
+                        );
+                    }
+                    response.data[x].adjustedTags = temp;
+                }
+                this.setState({ data: response.data, loading: false });
+            });
+        };
+        this.showConfirmApprove = record => {
+            confirm({
+                title: 'Do you want to approve this resource?',
+                onOk: () => {
+                    return new Promise((resolve, reject) => {
+                        axios
+                            .post(`${config.server_url}resource/set_status`, {
+                                id: record.id,
+                                status: 2
+                            })
+                            .then(response => {
+                                this.openNotification('Success', 'Succeed to abandon it.');
+                                this.init();
+                                resolve();
+                            });
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                },
+                onCancel() {}
+            });
+        };
+        this.showConfirmAbandon = record => {
+            confirm({
+                title: 'Do you want to abandon this resource?',
+                onOk: () => {
+                    return new Promise((resolve, reject) => {
+                        axios
+                            .post(`${config.server_url}resource/set_status`, {
+                                id: record.id,
+                                status: 1
+                            })
+                            .then(response => {
+                                this.openNotification('Success', 'Succeed to abandon it.');
+                                this.init();
+                                resolve();
+                            });
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                },
+                onCancel() {}
+            });
+        };
         this.state = {
             bordered: true,
             loading: true,
@@ -209,6 +279,7 @@ export default class ResourceList extends Component {
                         visibleEditModal: false
                     });
                     axios.get(`${config.server_url}resource/list`).then(response => {
+                        if (response.data.code == 0) response = response.data;
                         for (let x = 0; x < response.data.length; x++) {
                             let temp = [];
                             for (let i = 0; i < response.data[x].tags.length; i++) {
@@ -251,6 +322,7 @@ export default class ResourceList extends Component {
                         deleteLoading: false
                     });
                     axios.get(`${config.server_url}resource/list`).then(response => {
+                        if (response.data.code == 0) response = response.data;
                         for (let x = 0; x < response.data.length; x++) {
                             let temp = [];
                             for (let i = 0; i < response.data[x].tags.length; i++) {
@@ -270,6 +342,7 @@ export default class ResourceList extends Component {
 
     componentWillMount() {
         axios.get(`${config.server_url}resource/list`).then(response => {
+            if (response.data.code == 0) response = response.data;
             for (let x = 0; x < response.data.length; x++) {
                 let temp = [];
                 for (let i = 0; i < response.data[x].tags.length; i++) {

@@ -176,7 +176,7 @@ export default class UserList extends Component {
                     });
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data, loading: false }));
+                        .then(response => this.setState({ data: response.data.data, loading: false }));
                 })
                 .catch(err => {
                     this.setState({
@@ -235,7 +235,7 @@ export default class UserList extends Component {
                     });
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data, loading: false }));
+                        .then(response => this.setState({ data: response.data.data, loading: false }));
                 });
         };
         this.switchStatus = (id, status) => {
@@ -251,15 +251,16 @@ export default class UserList extends Component {
                     });
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data, loading: false }));
+                        .then(response => this.setState({ data: response.data.data, loading: false }));
                 });
         };
     }
 
     componentWillMount() {
-        axios
-            .get(`${config.server_url}user/list`)
-            .then(response => this.setState({ data: response.data.data, loading: false }));
+        axios.get(`${config.server_url}user/list`).then(response => {
+            console.log(response.data);
+            this.setState({ data: response.data.data, loading: false });
+        });
     }
 
     componentDidMount() {

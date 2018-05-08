@@ -6,6 +6,7 @@ module.exports = options => {
         try {
             await next();
         } catch (e) {
+            console.log(e);
             ctx.body = generalFailure(e);
         }
     };

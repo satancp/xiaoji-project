@@ -82,7 +82,7 @@ class RegistrationForm extends Component {
                     postValues.location = postValues.location.join('-');
                     delete postValues.prefix;
                     axios.post(`${config.server_url}user/add`, postValues).then(response => {
-                        this.setState({ data: response.data, loading: false });
+                        this.setState({ data: response.data.data, loading: false });
                         window.location = '/user/list';
                     });
                 }

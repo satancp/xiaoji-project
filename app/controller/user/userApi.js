@@ -80,7 +80,11 @@ class UserApiController extends Controller {
 
     async add() {
         const { ctx, app } = this;
-        const results = await app.mysql.insert('users', ctx.request.body);
+        const results = await app.mysql.beginTransactionScope(async conn => {
+            const result = await conn.insert('users', ctx.request.body);
+            await conn.insert('histories', { h_type: 3, created_at: app.mysql.literals.now });
+            return result;
+        });
         this.success(results);
     }
 

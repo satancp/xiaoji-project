@@ -19,6 +19,19 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/home/star",
+    "regexp": "/^\\/home\\/star(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/api/home/list",
     "regexp": "/^\\/api\\/home\\/list(?:\\/(?=$))?$/",
     "stack": [
@@ -34,6 +47,31 @@
     "paramNames": [],
     "path": "/api/home/list_star",
     "regexp": "/^\\/api\\/home\\/list_star(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/home/list_history",
+    "regexp": "/^\\/api\\/home\\/list_history(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/home/update_star",
+    "regexp": "/^\\/api\\/home\\/update_star(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -182,8 +220,58 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/category/list",
+    "regexp": "/^\\/category\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/category/add",
+    "regexp": "/^\\/category\\/add(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/api/category/list",
     "regexp": "/^\\/api\\/category\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/category/upload",
+    "regexp": "/^\\/api\\/category\\/upload(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/category/update",
+    "regexp": "/^\\/api\\/category\\/update(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -304,12 +392,74 @@
   {
     "name": null,
     "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/resource/set_status",
+    "regexp": "/^\\/api\\/resource\\/set_status(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/tag/list",
+    "regexp": "/^\\/tag\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/tag/add",
+    "regexp": "/^\\/tag\\/add(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "HEAD",
       "GET"
     ],
     "paramNames": [],
     "path": "/api/tag/list",
     "regexp": "/^\\/api\\/tag\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/tag/update",
+    "regexp": "/^\\/api\\/tag\\/update(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/tag/add",
+    "regexp": "/^\\/api\\/tag\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

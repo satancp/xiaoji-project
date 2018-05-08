@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './add.css';
+import './edit.css';
 import axios from 'axios';
 import config from '../../config/config';
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';

@@ -23,13 +23,21 @@ export default class HomeLayout extends Component {
             cookies.remove('cacheInfo');
             window.location = '/user/login';
         };
+        this.gethome = () => {
+            window.location = '/';
+        };
     }
 
     render() {
         return (
             <Layout>
                 <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['user']}>
+                    <Menu theme="dark" mode="inline">
+                        <Menu.Item key="home">
+                            <a onClick={this.gethome.bind(this)}>
+                                <Icon type="home" />Home
+                            </a>
+                        </Menu.Item>
                         <Menu.SubMenu
                             key="user"
                             title={
@@ -70,6 +78,61 @@ export default class HomeLayout extends Component {
                                 </a>
                             </Menu.Item>
                         </Menu.SubMenu>
+                        <Menu.SubMenu
+                            key="tag"
+                            title={
+                                <span>
+                                    <Icon type="tags-o" />
+                                    <span>Tag</span>
+                                </span>
+                            }
+                        >
+                            <Menu.Item key="tag-list">
+                                <a href="/tag/list">
+                                    <Icon type="tags-o" />Tag List
+                                </a>
+                            </Menu.Item>
+                            <Menu.Item key="tag-add">
+                                <a href="/tag/add">
+                                    <Icon type="tag-o" />Add New Tag
+                                </a>
+                            </Menu.Item>
+                        </Menu.SubMenu>
+                        <Menu.SubMenu
+                            key="category"
+                            title={
+                                <span>
+                                    <Icon type="database" />
+                                    <span>Category</span>
+                                </span>
+                            }
+                        >
+                            <Menu.Item key="category-list">
+                                <a href="/category/list">
+                                    <Icon type="switcher" />Category List
+                                </a>
+                            </Menu.Item>
+                            <Menu.Item key="category-add">
+                                <a href="/category/add">
+                                    <Icon type="form" />Add New Category
+                                </a>
+                            </Menu.Item>
+                        </Menu.SubMenu>
+                        <Menu.SubMenu
+                            key="mainpage"
+                            title={
+                                <span>
+                                    <Icon type="appstore-o" />
+                                    <span>Mainpage</span>
+                                </span>
+                            }
+                        >
+                            <Menu.Item key="home-star-list">
+                                <a href="/home/star">
+                                    <Icon type="star-o" />Star Project List
+                                </a>
+                            </Menu.Item>
+                        </Menu.SubMenu>
                         <Menu.Item key="user-logout">
                             <a onClick={this.logout.bind(this)}>
                                 <Icon type="logout" />Logout
@@ -88,13 +151,13 @@ export default class HomeLayout extends Component {
                             />
                         </span>
                         <span style={{ color: '#fff', paddingLeft: '2%', fontSize: '1.4em' }}>
-                            Dashboard For Sharing
+                            Dashboard For goLand
                         </span>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>{this.props.children}</div>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Dashboard For Sharing ©2018 Created by Chris</Footer>
+                    <Footer style={{ textAlign: 'center' }}>Dashboard For goLand ©2018 Created by Chris</Footer>
                 </Layout>
             </Layout>
         );

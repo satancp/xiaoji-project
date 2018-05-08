@@ -1,15 +1,17 @@
 var plan = require('flightplan');
 
 var appName = 'xiaoji';
-var username = 'ec2-user';
+var username = 'root';
 var startFile = 'npm --name \'xiaoji\' -- start';
-var privateKey = '/Users/pengcheng/.ssh/xiaojiproject.pem';
+var buildScript = 'easywebpack --name \'xiaoji-dashboard-web-server\' -- server -b wmc';
+var startScript = 'npm --name \'xiaoji-api-server\' -- start';
+var privateKey = '/Users/pengcheng/.ssh/xiaoji_web.pem';
 var tmpDir = appName + '-' + new Date().getTime();
 
 // configuration
 plan.target('prod', [
     {
-        host: '13.114.130.41',
+        host: '47.75.183.198',
         username: username,
         privateKey: privateKey,
         agent: process.env.SSH_AUTH_SOCK,
@@ -41,15 +43,15 @@ plan.remote(function(remote) {
     remote.log('Reload application');
     remote.sudo('ln -snf ~/' + tmpDir + ' ~/' + appName, { user: username });
 
-    remote.log('Build js files');
-    remote.sudo('cd ~/' + tmpDir + ' && yarn build && mkdir upload', { user: username });
+    // remote.log('Build js files');
+    // remote.sudo('cd ~/' + tmpDir + ' && yarn build && mkdir upload', { user: username });
     // remote.log('Cleaning up old deploys...');
     // remote.sudo('rm -rf `ls -1dt ~/' + appName + '-* | tail -n 1`', { user: username });
     remote.log('PM2 stop all app');
     remote.exec('pm2 stop all');
     remote.log('PM2 start app ~/' + appName + '/' + startFile);
-    remote.exec('cd ~/' + appName + ' && pm2 start ' + startFile);
+    remote.exec('cd ~/' + appName + ' && pm2 start ' + buildScript);
+    remote.exec('cd ~/' + appName + ' && pm2 start ' + startScript);
     remote.log('PM2 list all');
     remote.exec('pm2 ls');
-    remote.exec('pm2 show ' + appName);
 });

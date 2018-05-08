@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeLayout from 'component/homelayout/homelayout.jsx';
-import './add.css';
+import './edit.css';
 import axios from 'axios';
 let BraftEditor;
 import 'braft-editor/dist/braft.css';
@@ -40,7 +40,10 @@ let tags = [];
 
 const getBase64 = (img, callback) => {
     const reader = new FileReader();
-    reader.addEventListener('load', () => callback(reader.result));
+    reader.addEventListener('load', () => {
+        console.log(reader.result);
+        callback(reader.result);
+    });
     reader.readAsDataURL(img);
 };
 
@@ -93,6 +96,7 @@ class ResourceEditForm extends Component {
             const xhr = new XMLHttpRequest();
             const fd = new FormData();
             const successFn = response => {
+                console.log(response);
                 param.success({
                     url: xhr.responseText
                 });
@@ -118,6 +122,7 @@ class ResourceEditForm extends Component {
             e.preventDefault();
             this.props.form.validateFieldsAndScroll((err, values) => {
                 if (!err) {
+                    console.log(values.preview_image);
                     if (values.preview_image) {
                         values.preview_image = values.preview_image[0].response;
                     } else if (this.state.imageUrl) {
@@ -128,9 +133,10 @@ class ResourceEditForm extends Component {
                     values.category_id = values.category[0];
                     delete values.category;
                     console.log(values);
+                    values.id = this.state.rid;
                     axios.post(`${config.server_url}resource/update`, values).then(response => {
-                        this.setState({ data: response.data, loading: false });
-                        window.location = '/resource/list';
+                        this.setState({ data: response.data.data, loading: false });
+                        // window.location = '/resource/list';
                     });
                 }
             });
@@ -167,19 +173,19 @@ class ResourceEditForm extends Component {
         }
         BraftEditor = require('braft-editor').default;
         axios.get(`${config.server_url}category/list`).then(response1 => {
-            categorys = response1.data.map(v => {
+            categorys = response1.data.data.map(v => {
                 v.value = v.id;
                 v.label = v.display_name;
                 return v;
             });
             axios.get(`${config.server_url}tag/list`).then(response2 => {
-                tags = response2.data.map(v => {
+                tags = response2.data.data.map(v => {
                     return <Option key={v.id}>{v.name}</Option>;
                 });
                 let currentCategory = undefined;
-                for (let i = 0; i < response1.data.length; i++) {
-                    if (response1.data[i].id === this.props.exist.category_id) {
-                        currentCategory = response1.data[i].display_name;
+                for (let i = 0; i < response1.data.data.length; i++) {
+                    if (response1.data.data[i].id === this.props.exist.category_id) {
+                        currentCategory = response1.data.data[i].display_name;
                         break;
                     }
                 }
@@ -205,19 +211,19 @@ class ResourceEditForm extends Component {
     componentDidUpdate() {
         if (this.state.rid != this.props.exist.id) {
             axios.get(`${config.server_url}category/list`).then(response1 => {
-                categorys = response1.data.map(v => {
+                categorys = response1.data.data.map(v => {
                     v.value = v.id;
                     v.label = v.display_name;
                     return v;
                 });
                 axios.get(`${config.server_url}tag/list`).then(response2 => {
-                    tags = response2.data.map(v => {
+                    tags = response2.data.data.map(v => {
                         return <Option key={v.id}>{v.name}</Option>;
                     });
                     let currentCategory = undefined;
-                    for (let i = 0; i < response1.data.length; i++) {
-                        if (response1.data[i].id === this.props.exist.category_id) {
-                            currentCategory = response1.data[i].display_name;
+                    for (let i = 0; i < response1.data.data.length; i++) {
+                        if (response1.data.data[i].id === this.props.exist.category_id) {
+                            currentCategory = response1.data.data[i].display_name;
                             break;
                         }
                     }

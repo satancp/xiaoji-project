@@ -4,14 +4,15 @@ const sendToWormhole = require('stream-wormhole');
 const toArray = require('stream-to-array');
 const moment = require('moment');
 const sharp = require('sharp');
+const Controller = require('../baseController');
 
 module.exports = app => {
-    return class ResourceApiController extends app.Controller {
+    return class ResourceApiController extends Controller {
         async index() {
             const { ctx } = this;
             const query1 =
-                'SELECT r.id, r.name, r.status, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category ' +
-                'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id';
+                'SELECT r.id, r.name, r.status, r.preview_image, r.category_id, r.desc, r.content, r.created_at, c.display_name as category, u.nickname as creator ' +
+                'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id INNER JOIN users AS u ON r.created_by = u.id';
             let results = await app.mysql.query(query1);
             for (let i = 0; i < results.length; i++) {
                 const query =
@@ -20,7 +21,7 @@ module.exports = app => {
                 const tags = await app.mysql.query(query, results[i].id);
                 results[i].tags = tags;
             }
-            ctx.body = results;
+            this.success(results);
         }
 
         async getResources() {
@@ -39,7 +40,7 @@ module.exports = app => {
                 const tags = await app.mysql.query(query, results[i].id);
                 results[i].tags = tags;
             }
-            ctx.body = results;
+            this.success(results);
         }
 
         async getResource() {
@@ -70,21 +71,21 @@ module.exports = app => {
             const result = await app.mysql.beginTransactionScope(async conn => {
                 const tags = ctx.request.body.tags;
                 delete ctx.request.body.tags;
+                ctx.request.body.status = 0;
                 const results = await conn.insert('resources', ctx.request.body);
-                console.log(results);
                 for (let i = 0; i < tags.length; i++) {
                     await conn.insert('resource_tag', { tag_id: tags[i], resource_id: results.insertId });
                 }
+                await conn.insert('histories', { h_type: 0, created_at: app.mysql.literals.now });
                 return results;
             }, ctx);
-            ctx.body = result;
+            this.success(result);
         }
 
         async upload() {
             const { ctx } = this;
             const stream = await ctx.getFileStream();
             const filename = stream.filename;
-            console.log(stream);
             let extName = '';
             if (filename.indexOf('.') > -1) extName = filename.substring(filename.indexOf('.'));
             const prefix = stream.fields.fileType + 's/';
@@ -118,21 +119,57 @@ module.exports = app => {
                 throw err;
             }
             const url = 'https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/' + name;
-            ctx.body = url;
+            this.success(url);
         }
 
         async update() {
             const { ctx } = this;
-            const row = { ...ctx.request.body };
-            row.updated_at = app.mysql.literals.now;
-            const result = await app.mysql.update('resources', row);
-            ctx.body = result;
+            console.log(ctx.request.body);
+            const result = await app.mysql.beginTransactionScope(async conn => {
+                const tags = ctx.request.body.tags;
+                delete ctx.request.body.tags;
+                const results = await conn.update('resources', ctx.request.body);
+                for (let i = 0; i < tags.length; i++) {
+                    const checkTag = await conn.select('tags', { where: { name: tags[i] } });
+                    if (checkTag.length > 0) {
+                        const checkTagResource = await conn.select('resource_tag', {
+                            where: { tag_id: checkTag[0].id, resource_id: ctx.request.body.id }
+                        });
+                        if (checkTagResource.length == 0) {
+                            await conn.insert('resource_tag', {
+                                tag_id: checkTag[0].id,
+                                resource_id: ctx.request.body.id
+                            });
+                        }
+                    } else {
+                        const temp = await conn.insert('tags', { name: tags[i], color: '#4e43cc' });
+                        await conn.insert('resource_tag', { tag_id: temp.insertId, resource_id: ctx.request.body.id });
+                    }
+                }
+                return results;
+            }, ctx);
+            this.success(result);
+        }
+
+        async setStatus() {
+            const { ctx } = this;
+            let data = {
+                id: ctx.request.body.id,
+                status: ctx.request.body.status
+            };
+            data.updated_at = app.mysql.literals.now;
+            const result = await app.mysql.beginTransactionScope(async conn => {
+                const result = await conn.update('resources', data);
+                await conn.insert('histories', { h_type: data.status, created_at: app.mysql.literals.now });
+                return result;
+            });
+            this.success(result);
         }
 
         async delete() {
             const { ctx } = this;
             const result = await app.mysql.delete('resources', ctx.request.body);
-            ctx.body = result;
+            this.success(result);
         }
     };
 };

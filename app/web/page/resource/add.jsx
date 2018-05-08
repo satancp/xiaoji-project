@@ -122,9 +122,11 @@ class ResourceCreateForm extends Component {
                     values.content = html;
                     values.category_id = values.category[0];
                     delete values.category;
+                    const cache = cookies.get('loginInfo');
+                    values.created_by = cache.id;
                     console.log(values);
                     axios.post(`${config.server_url}resource/add`, values).then(response => {
-                        this.setState({ data: response.data, loading: false });
+                        this.setState({ data: response.data.data, loading: false });
                         window.location = '/resource/list';
                     });
                 }
@@ -160,12 +162,14 @@ class ResourceCreateForm extends Component {
         }
         BraftEditor = require('braft-editor').default;
         axios.get(`${config.server_url}category/list`).then(response => {
+            if (response.data.code == 0) response = response.data;
             categorys = response.data.map(v => {
                 v.value = v.id;
                 v.label = v.display_name;
                 return v;
             });
             axios.get(`${config.server_url}tag/list`).then(response => {
+                if (response.data.code == 0) response = response.data;
                 tags = response.data.map(v => {
                     return <Option key={v.id}>{v.name}</Option>;
                 });
