@@ -106,7 +106,7 @@ class Star extends Component {
         };
         this.init = () => {
             axios.get(`${config.server_url}resource/list`).then(response1 => {
-                if (response1.code == 0) response1 = response1.data;
+                if (response1.data.code == 0) response1 = response1.data;
                 let allResources = [];
                 for (let i = 0; i < response1.data.length; i++) {
                     allResources.push(

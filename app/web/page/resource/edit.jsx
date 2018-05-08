@@ -96,9 +96,8 @@ class ResourceEditForm extends Component {
             const xhr = new XMLHttpRequest();
             const fd = new FormData();
             const successFn = response => {
-                console.log(response);
                 param.success({
-                    url: xhr.responseText
+                    url: JSON.parse(xhr.responseText).data
                 });
             };
             const progressFn = event => {
@@ -124,7 +123,7 @@ class ResourceEditForm extends Component {
                 if (!err) {
                     console.log(values.preview_image);
                     if (values.preview_image) {
-                        values.preview_image = values.preview_image[0].response;
+                        values.preview_image = values.preview_image[0].response.data;
                     } else if (this.state.imageUrl) {
                         values.preview_image = this.state.imageUrl;
                     }
@@ -156,7 +155,7 @@ class ResourceEditForm extends Component {
             if (info.file.status === 'done') {
                 getBase64(info.file.originFileObj, imageUrl =>
                     this.setState({
-                        imageUrl: info.file.response,
+                        imageUrl: info.file.response.data,
                         loading: false
                     })
                 );

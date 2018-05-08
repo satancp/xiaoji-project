@@ -79,5 +79,23 @@ module.exports = app => {
         agent: false
     };
 
+    exports.aliyun = {
+        accessKeyId: 'LTAIJ7yOsaEW7vMG',
+        accessKeySecret: '5rDmRvEEwRSHkVNoXnmswts1uznKfv',
+        apiVersion: '2015-04-01',
+        bucket: 'xiaoji-web',
+        region: 'oss-cn-hangzhou'
+    };
+
+    exports.oss = {
+        client: {
+            accessKeyId: 'LTAIJ7yOsaEW7vMG',
+            accessKeySecret: '5rDmRvEEwRSHkVNoXnmswts1uznKfv',
+            bucket: 'xiaoji-web',
+            endpoint: 'oss-cn-hangzhou.aliyuncs.com',
+            timeout: '60s'
+        }
+    };
+
     return exports;
 };

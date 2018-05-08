@@ -270,6 +270,18 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/api/category/add",
+    "regexp": "/^\\/api\\/category\\/add(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/api/category/update",
     "regexp": "/^\\/api\\/category\\/update(?:\\/(?=$))?$/",
     "stack": [

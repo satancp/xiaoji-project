@@ -93,7 +93,7 @@ class ResourceCreateForm extends Component {
             const fd = new FormData();
             const successFn = response => {
                 param.success({
-                    url: xhr.responseText
+                    url: JSON.parse(xhr.responseText).data
                 });
             };
             const progressFn = event => {
@@ -117,7 +117,7 @@ class ResourceCreateForm extends Component {
             e.preventDefault();
             this.props.form.validateFieldsAndScroll((err, values) => {
                 if (!err) {
-                    values.preview_image = values.preview_image[0].response;
+                    values.preview_image = values.preview_image[0].response.data;
                     let html = this.editorInstance.getContent('html');
                     values.content = html;
                     values.category_id = values.category[0];
@@ -147,7 +147,7 @@ class ResourceCreateForm extends Component {
             if (info.file.status === 'done') {
                 getBase64(info.file.originFileObj, imageUrl =>
                     this.setState({
-                        imageUrl: info.file.response,
+                        imageUrl: info.file.response.data,
                         loading: false
                     })
                 );

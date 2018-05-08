@@ -67,7 +67,7 @@ class RegistrationForm extends Component {
                 getBase64(info.file.originFileObj, imageUrl => {
                     console.log(info.file.response);
                     this.setState({
-                        imageUrl: info.file.response,
+                        imageUrl: info.file.response.data,
                         loading: false
                     });
                 });
@@ -168,7 +168,7 @@ class RegistrationForm extends Component {
                 <FormItem {...formItemLayout} label="Preview Image">
                     <div className="dropbox">
                         {getFieldDecorator('icon', {
-                            rules: [{ required: true, message: 'Please select a file!' }],
+                            rules: [],
                             valuePropName: 'fileList',
                             getValueFromEvent: this.normFile
                         })(

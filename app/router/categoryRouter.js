@@ -8,5 +8,6 @@ module.exports = app => {
     // 服务端路由
     router.get('/api/category/list', controller.category.categoryApi.index);
     router.post('/api/category/upload', controller.category.categoryApi.upload);
+    router.post('/api/category/add', controller.category.categoryApi.add);
     router.post('/api/category/update', controller.category.categoryApi.update);
 };

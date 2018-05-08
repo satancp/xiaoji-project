@@ -15,3 +15,8 @@ exports.cors = {
     package: 'egg-cors',
     origin: '*'
 };
+
+exports.oss = {
+    enable: true,
+    package: 'egg-oss'
+};

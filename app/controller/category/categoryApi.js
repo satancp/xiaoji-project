@@ -1,6 +1,9 @@
 'use strict';
 const path = require('path');
+const sendToWormhole = require('stream-wormhole');
 const Controller = require('../baseController');
+const toArray = require('stream-to-array');
+const sharp = require('sharp');
 
 module.exports = app => {
     return class CategoryApiController extends Controller {
@@ -18,14 +21,6 @@ module.exports = app => {
             const filename = stream.filename;
             let extName = '';
             if (filename.indexOf('.') > -1) extName = filename.substring(filename.indexOf('.'));
-            const prefix = stream.fields.fileType + 's/';
-            const name =
-                prefix +
-                Math.floor(Math.random() * 10000).toString() +
-                moment()
-                    .unix()
-                    .toString() +
-                extName;
             const parts = await toArray(stream);
             let buffer = Buffer.concat(parts);
             let imageData = undefined;
@@ -43,13 +38,19 @@ module.exports = app => {
             }
             let result;
             try {
-                result = await ctx.service.resourceService.uploadToAWS(buffer, name);
+                result = await ctx.service.categoryService.uploadToALIOSS(buffer, extName);
+                console.log(result);
             } catch (err) {
                 await sendToWormhole(stream);
                 throw err;
             }
-            const url = 'https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/' + name;
-            ctx.body = url;
+            this.success(result);
+        }
+
+        async add() {
+            const { ctx } = this;
+            const result = await app.mysql.insert('categories', ctx.request.body);
+            this.success(result);
         }
 
         async update() {
