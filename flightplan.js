@@ -3,8 +3,8 @@ var plan = require('flightplan');
 var appName = 'xiaoji';
 var username = 'root';
 var startFile = 'npm --name \'xiaoji\' -- start';
-var buildScript = 'easywebpack --name \'xiaoji-dashboard-web-server\' -- server -b wmc';
-var startScript = 'npm --name \'xiaoji-api-server\' -- start';
+var buildScript = 'easywebpack --name \'xiaoji-dashboard-web-server\' -- server prod';
+var startScript = 'yarn --name \'xiaoji-api-server\' -- start:prod';
 var privateKey = '/Users/pengcheng/.ssh/xiaoji_web.pem';
 var tmpDir = appName + '-' + new Date().getTime();
 
@@ -47,8 +47,8 @@ plan.remote(function(remote) {
     // remote.sudo('cd ~/' + tmpDir + ' && yarn build && mkdir upload', { user: username });
     // remote.log('Cleaning up old deploys...');
     // remote.sudo('rm -rf `ls -1dt ~/' + appName + '-* | tail -n 1`', { user: username });
-    remote.log('PM2 stop all app');
-    remote.exec('pm2 stop all');
+    remote.log('PM2 delete all app');
+    remote.exec('pm2 delete all');
     remote.log('PM2 start app ~/' + appName + '/' + startFile);
     remote.exec('cd ~/' + appName + ' && pm2 start ' + buildScript);
     remote.exec('cd ~/' + appName + ' && pm2 start ' + startScript);

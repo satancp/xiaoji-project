@@ -209,6 +209,7 @@
       "start": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "start:test": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "start:prod": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+      "start-prod": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "kill-port": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "lint": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
       "fix": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
