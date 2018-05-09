@@ -10,7 +10,9 @@ module.exports = app => {
     // 服务端路由
     router.get('/api/user/list', controller.user.userApi.index);
     router.post('/api/user/login', controller.user.userApi.login);
+    router.post('/api/user/login_dashboard', controller.user.userApi.loginDashboard);
     router.post('/api/user/forget', controller.user.userApi.forget);
+    router.post('/api/user/upload', controller.user.userApi.upload);
     router.post('/api/user/add', controller.user.userApi.add);
     router.post('/api/user/update', controller.user.userApi.update);
     router.post('/api/user/reset_password', controller.user.userApi.resetPwd);

@@ -5,36 +5,13 @@ import axios from 'axios';
 let BraftEditor;
 import 'braft-editor/dist/braft.css';
 import config from '../../config/config';
-import {
-    Form,
-    Input,
-    Tooltip,
-    Upload,
-    Icon,
-    Cascader,
-    Select,
-    InputNumber,
-    Modal,
-    Row,
-    Col,
-    Checkbox,
-    Button,
-    AutoComplete,
-    Breadcrumb,
-    Spin,
-    Radio
-} from 'antd';
-import { Editor, EditorState, RichUtils, Modifier, AtomicBlockUtils, convertToRaw, convertFromHTML } from 'draft-js';
-import { stateToHTML } from 'draft-js-export-html';
+import { Form, Input, Tooltip, Upload, Icon, Cascader, Select, Button, Spin } from 'antd';
 import { max } from 'moment';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
-const RadioButton = Radio.Button;
 const Option = Select.Option;
-const AutoCompleteOption = AutoComplete.Option;
-const RadioGroup = Radio.Group;
 
 let categorys = [];
 let tags = [];
@@ -61,7 +38,6 @@ class ResourceCreateForm extends Component {
         super(props);
         this.state = {
             canRenderEditor: false,
-            autoCompleteResult: [],
             loading: false,
             richTextLoading: false,
             action: `${config.server_url}resource/upload`,

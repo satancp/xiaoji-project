@@ -3,29 +3,15 @@ import HomeLayout from 'component/homelayout/homelayout.jsx';
 import './add.css';
 import axios from 'axios';
 import config from '../../config/config';
-import { Form, Input, Upload, Icon, Button } from 'antd';
+import { Form, Input, Upload, Icon, Button, notification } from 'antd';
 import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
 const FormItem = Form.Item;
-const getBase64 = (img, callback) => {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => callback(reader.result));
-    reader.readAsDataURL(img);
-};
-
-const beforeUpload = file => {
-    console.log(file);
-    const isLt2M = file.size / 1024 / 1024 < 2;
-    if (!isLt2M) {
-        console.log('Image must smaller than 2MB!');
-    }
-    return isLt2M;
-};
 
 let CategoryAdd = undefined;
 
-class RegistrationForm extends Component {
+class CategoryAddForm extends Component {
     constructor() {
         super();
         this.state = {
@@ -57,7 +43,7 @@ class RegistrationForm extends Component {
                 return;
             }
             if (info.file.status === 'done') {
-                getBase64(info.file.originFileObj, imageUrl =>
+                this.getBase64(info.file.originFileObj, imageUrl =>
                     this.setState({
                         imageUrl: info.file.response.data,
                         loading: false
@@ -66,12 +52,33 @@ class RegistrationForm extends Component {
             }
         };
         this.normFile = e => {
-            console.log('Upload event:', e);
             if (Array.isArray(e)) {
                 return e;
             }
             return e && e.fileList;
         };
+    }
+
+    openNotification(msg, desc) {
+        notification.open({
+            message: msg,
+            description: desc,
+            placement: 'topLeft'
+        });
+    }
+
+    getBase64(img, callback) {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => callback(reader.result));
+        reader.readAsDataURL(img);
+    }
+
+    beforeUpload(file) {
+        const isLt2M = file.size / 1024 / 1024 < 2;
+        if (!isLt2M) {
+            this.openNotification('Error', 'The image must be less than 2MB');
+        }
+        return isLt2M;
     }
 
     componentDidMount() {
@@ -140,7 +147,7 @@ class RegistrationForm extends Component {
                                     className="avatar-uploader"
                                     showUploadList={false}
                                     action={this.state.action}
-                                    beforeUpload={beforeUpload}
+                                    beforeUpload={this.beforeUpload}
                                     onChange={this.handleChange}
                                     data={{ fileType: 'thumbnail' }}
                                 >
@@ -160,4 +167,4 @@ class RegistrationForm extends Component {
     }
 }
 
-export default (CategoryAdd = Form.create()(RegistrationForm));
+export default (CategoryAdd = Form.create()(CategoryAddForm));

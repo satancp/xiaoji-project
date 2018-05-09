@@ -1,10 +1,19 @@
 'use strict';
 
 const Exception = require('../../exception/exception');
-const { LOGIN_INFO_MISMATCH, ACCOUNT_BANNED, CODE_NOT_EXIST } = require('../../exception/exceptionCode');
+const {
+    LOGIN_INFO_MISMATCH,
+    ACCOUNT_BANNED,
+    CODE_NOT_EXIST,
+    NO_ACCESS,
+    EMAIL_HAS_EXIST
+} = require('../../exception/exceptionCode');
 const Controller = require('../baseController');
 const { generateRandomString } = require('../../utils/tools');
 const { sendMail } = require('../../utils/mailer');
+const sendToWormhole = require('stream-wormhole');
+const toArray = require('stream-to-array');
+const sharp = require('sharp');
 
 class UserApiController extends Controller {
     async index() {
@@ -19,9 +28,10 @@ class UserApiController extends Controller {
 
     async login() {
         const { ctx, app } = this;
+        console.log(ctx.request.body);
         let results = await app.mysql.select('users', {
             where: { email: ctx.request.body.email, password: ctx.request.body.password },
-            columns: ['id', 'status', 'nickname']
+            columns: ['id', 'status', 'nickname', 'avatar']
         });
         if (results.length > 0) {
             results = results[0];
@@ -30,11 +40,25 @@ class UserApiController extends Controller {
         this.success(results);
     }
 
+    async loginDashboard() {
+        const { ctx, app } = this;
+        let results = await app.mysql.select('users', {
+            where: { email: ctx.request.body.email, password: ctx.request.body.password },
+            columns: ['id', 'status', 'nickname', 'avatar']
+        });
+        if (results.length > 0) {
+            results = results[0];
+            if (results.status === 0) throw new Exception(ACCOUNT_BANNED);
+            if (results.permission === 0) throw new Exception(NO_ACCESS);
+        } else throw new Exception(LOGIN_INFO_MISMATCH);
+        this.success(results);
+    }
+
     async forget() {
         const { ctx, app } = this;
         let results = await app.mysql.select('users', {
             where: { email: ctx.request.body.email },
-            columns: ['id']
+            columns: ['id', 'nickname']
         });
         if (results.length > 0) {
             let rd = '0';
@@ -56,7 +80,7 @@ class UserApiController extends Controller {
                     created_at: app.mysql.literals.now
                 });
             }
-            await sendMail(rd, ctx.request.body.email, app);
+            await sendMail(rd, ctx.request.body.email, results[0].nickname);
             this.success(true);
         } else this.success(true);
     }
@@ -69,10 +93,17 @@ class UserApiController extends Controller {
             where: { email: ctx.request.body.email, content: ctx.request.body.content }
         });
         if (check.length > 0) {
-            const result = await app.mysql.update('users', {
-                id: check[0].id,
-                email: ctx.request.body.email,
-                password: ctx.request.body.password
+            const results = await app.mysql.beginTransactionScope(async conn => {
+                const result = await conn.update('users', {
+                    id: check[0].id,
+                    email: ctx.request.body.email,
+                    password: ctx.request.body.password
+                });
+                await conn.delete('confirms', {
+                    email: ctx.request.body.email,
+                    content: ctx.request.body.content
+                });
+                return result;
             });
             this.success(true);
         } else throw new Exception(CODE_NOT_EXIST);
@@ -80,6 +111,11 @@ class UserApiController extends Controller {
 
     async add() {
         const { ctx, app } = this;
+        let check = await app.mysql.select('users', {
+            where: { email: ctx.request.body.email },
+            columns: ['id']
+        });
+        if (check.length > 0) throw new Exception(EMAIL_HAS_EXIST);
         const results = await app.mysql.beginTransactionScope(async conn => {
             const result = await conn.insert('users', ctx.request.body);
             await conn.insert('histories', { h_type: 3, created_at: app.mysql.literals.now });
@@ -99,6 +135,33 @@ class UserApiController extends Controller {
     async delete() {
         const { ctx, app } = this;
         const result = await app.mysql.delete('users', ctx.request.body);
+        this.success(result);
+    }
+
+    async upload() {
+        const { ctx } = this;
+        const stream = await ctx.getFileStream();
+        const filename = stream.filename;
+        let extName = '';
+        if (filename.indexOf('.') > -1) extName = filename.substring(filename.indexOf('.'));
+        const parts = await toArray(stream);
+        let buffer = Buffer.concat(parts);
+        let imageData = undefined;
+        if (stream.fields.fileType !== 'video') {
+            imageData = await sharp(buffer).metadata();
+        }
+        if (stream.fields.fileType === 'thumbnail' && imageData && (imageData.width > 200 || imageData.height > 200)) {
+            buffer = await sharp(buffer)
+                .resize(200, 200)
+                .toBuffer();
+        }
+        let result;
+        try {
+            result = await ctx.service.userService.uploadToALIOSS(buffer, extName);
+        } catch (err) {
+            await sendToWormhole(stream);
+            throw err;
+        }
         this.success(result);
     }
 }

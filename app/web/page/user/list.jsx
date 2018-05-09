@@ -34,6 +34,13 @@ export default class UserList extends Component {
                 width: 170
             },
             {
+                title: 'Avatar',
+                dataIndex: 'avatar',
+                key: 'avatar',
+                width: 30,
+                render: text => <img src={text} style={{ width: 100, height: 100 }} />
+            },
+            {
                 title: 'Location',
                 dataIndex: 'location',
                 key: 'location',

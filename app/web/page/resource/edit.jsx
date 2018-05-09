@@ -118,26 +118,28 @@ class ResourceEditForm extends Component {
             xhr.send(fd);
         };
         this.handleSubmit = e => {
-            e.preventDefault();
-            this.props.form.validateFieldsAndScroll((err, values) => {
-                if (!err) {
-                    console.log(values.preview_image);
-                    if (values.preview_image) {
-                        values.preview_image = values.preview_image[0].response.data;
-                    } else if (this.state.imageUrl) {
-                        values.preview_image = this.state.imageUrl;
-                    }
-                    let html = this.editorInstance.getContent('html');
-                    values.content = html;
-                    values.category_id = values.category[0];
-                    delete values.category;
-                    console.log(values);
-                    values.id = this.state.rid;
-                    axios.post(`${config.server_url}resource/update`, values).then(response => {
-                        this.setState({ data: response.data.data, loading: false });
-                        // window.location = '/resource/list';
-                    });
-                }
+            return new Promise((resolve, reject) => {
+                e.preventDefault();
+                this.props.form.validateFieldsAndScroll((err, values) => {
+                    if (!err) {
+                        console.log(values.preview_image);
+                        if (values.preview_image) {
+                            values.preview_image = values.preview_image[0].response.data;
+                        } else if (this.state.imageUrl) {
+                            values.preview_image = this.state.imageUrl;
+                        }
+                        let html = this.editorInstance.getContent('html');
+                        values.content = html;
+                        values.category_id = values.category[0];
+                        delete values.category;
+                        console.log(values);
+                        values.id = this.state.rid;
+                        axios.post(`${config.server_url}resource/update`, values).then(response => {
+                            this.setState({ data: response.data.data, loading: false });
+                            resolve();
+                        });
+                    } else reject();
+                });
             });
         };
         this.normFile = e => {
@@ -333,7 +335,7 @@ class ResourceEditForm extends Component {
                 <FormItem {...formItemLayout} label="Preview Image">
                     <div className="dropbox">
                         {getFieldDecorator('preview_image', {
-                            rules: [{ required: true, message: 'Please select a file!' }],
+                            rules: [],
                             valuePropName: 'fileList',
                             getValueFromEvent: this.normFile
                         })(

@@ -20,11 +20,21 @@ const CODE_NOT_EXIST = {
     code: 100004,
     msg: 'The Confirm Code Does Not Exist'
 };
+const NO_ACCESS = {
+    code: 100005,
+    msg: 'You have No Access To This Operation'
+};
+const EMAIL_HAS_EXIST = {
+    code: 100006,
+    msg: 'The Email Exists'
+};
 
 module.exports = {
     SYSTEM_ERROR,
     PARAMETER_ERROR,
     LOGIN_INFO_MISMATCH,
     ACCOUNT_BANNED,
-    CODE_NOT_EXIST
+    CODE_NOT_EXIST,
+    NO_ACCESS,
+    EMAIL_HAS_EXIST
 };

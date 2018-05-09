@@ -31,7 +31,7 @@ class NormalLoginForm extends Component {
                     delete values.remember;
                     delete values.loginBtn;
                     delete values.forget;
-                    axios.post(`${config.server_url}user/login`, values).then(response => {
+                    axios.post(`${config.server_url}user/login_dashboard`, values).then(response => {
                         if (response.data && response.data.code !== 0) {
                             this.setState({
                                 alertText: response.data.msg,

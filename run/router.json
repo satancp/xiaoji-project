@@ -159,8 +159,32 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/api/user/login_dashboard",
+    "regexp": "/^\\/api\\/user\\/login_dashboard(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/api/user/forget",
     "regexp": "/^\\/api\\/user\\/forget(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/user/upload",
+    "regexp": "/^\\/api\\/user\\/upload(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -334,8 +358,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/resource/getResources",
-    "regexp": "/^\\/api\\/resource\\/getResources(?:\\/(?=$))?$/",
+    "path": "/api/resource/get_resources",
+    "regexp": "/^\\/api\\/resource\\/get_resources(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -347,8 +371,21 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/resource/getResource",
-    "regexp": "/^\\/api\\/resource\\/getResource(?:\\/(?=$))?$/",
+    "path": "/api/resource/get_resources_by_user",
+    "regexp": "/^\\/api\\/resource\\/get_resources_by_user(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/resource/get_resource",
+    "regexp": "/^\\/api\\/resource\\/get_resource(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

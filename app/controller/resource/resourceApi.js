@@ -42,6 +42,16 @@ module.exports = app => {
             this.success(results);
         }
 
+        async getResourcesByUser() {
+            const { ctx } = this;
+            const query1 =
+                'SELECT r.id, r.name, r.status, r.preview_image, r.category_id, r.desc, r.content, r.created_at, r.updated_at, r.created_by, c.display_name as category ' +
+                'FROM resources AS r INNER JOIN categories AS c ON r.category_id = c.id INNER JOIN users AS u ON r.created_by = u.id WHERE r.created_by = ? ORDER BY r.created_at';
+            let queyrData = [ctx.query.user_id];
+            let results = await app.mysql.query(query1, queyrData);
+            this.success(results);
+        }
+
         async getResource() {
             const { ctx } = this;
             const query1 =
@@ -114,7 +124,6 @@ module.exports = app => {
 
         async update() {
             const { ctx } = this;
-            console.log(ctx.request.body);
             const result = await app.mysql.beginTransactionScope(async conn => {
                 const tags = ctx.request.body.tags;
                 delete ctx.request.body.tags;

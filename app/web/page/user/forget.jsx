@@ -82,7 +82,7 @@ class NormalLoginForm extends Component {
                         className="login-form"
                     >
                         <h1 style={{ textAlign: 'center', alignItems: 'center' }}>
-                            <img src="https://s3-ap-northeast-1.amazonaws.com/xiaojibucket/web/logo.png" style={{}} />
+                            <img src="https://xiaoji-web.oss-cn-hangzhou.aliyuncs.com/web/logo.png" style={{}} />
                             <br />Reset your password
                         </h1>
 

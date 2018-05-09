@@ -3,12 +3,12 @@ import HomeLayout from 'component/homelayout/homelayout.jsx';
 import './add.css';
 import axios from 'axios';
 import config from '../../config/config';
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Button, notification, Upload } from 'antd';
 import Cookies from 'universal-cookie';
+
 const cookies = new Cookies();
 const FormItem = Form.Item;
 const Option = Select.Option;
-const AutoCompleteOption = AutoComplete.Option;
 
 const location = [
     {
@@ -68,14 +68,16 @@ class RegistrationForm extends Component {
         super();
         this.state = {
             confirmDirty: false,
-            autoCompleteResult: []
+            loading: false,
+            action: `${config.server_url}user/upload/`,
+            imageUrl: ''
         };
         this.handleSubmit = e => {
             e.preventDefault();
             this.props.form.validateFieldsAndScroll((err, values) => {
                 if (!err) {
                     console.log('Received values of form: ', values);
-                    const postValues = { ...values };
+                    const postValues = { ...values, avatar: values.avatar[0].response.data };
                     postValues.status = 1;
                     delete postValues.confirm;
                     postValues.phone = '+' + postValues.prefix + ' ' + postValues.phone;
@@ -107,15 +109,48 @@ class RegistrationForm extends Component {
             }
             callback();
         };
-        this.handleWebsiteChange = value => {
-            let autoCompleteResult;
-            if (!value) {
-                autoCompleteResult = [];
-            } else {
-                autoCompleteResult = ['.com', '.org', '.net'].map(domain => `${value}${domain}`);
+        this.normFile = e => {
+            if (Array.isArray(e)) {
+                return e;
             }
-            this.setState({ autoCompleteResult });
+            return e && e.fileList;
         };
+        this.handleChange = info => {
+            if (info.file.status === 'uploading') {
+                this.setState({ loading: true });
+                return;
+            }
+            if (info.file.status === 'done') {
+                this.getBase64(info.file.originFileObj, imageUrl =>
+                    this.setState({
+                        imageUrl: info.file.response.data,
+                        loading: false
+                    })
+                );
+            }
+        };
+    }
+
+    openNotification(msg, desc) {
+        notification.open({
+            message: msg,
+            description: desc,
+            placement: 'topLeft'
+        });
+    }
+
+    getBase64(img, callback) {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => callback(reader.result));
+        reader.readAsDataURL(img);
+    }
+
+    beforeUpload(file) {
+        const isLt2M = file.size / 1024 / 1024 < 2;
+        if (!isLt2M) {
+            this.openNotification('Error', 'The image must be less than 2MB');
+        }
+        return isLt2M;
     }
 
     componentDidMount() {
@@ -127,8 +162,13 @@ class RegistrationForm extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        const { autoCompleteResult } = this.state;
-
+        const uploadButton = (
+            <div>
+                <Icon type={this.state.loading ? 'loading' : 'plus'} />
+                <div className="ant-upload-text" />
+            </div>
+        );
+        const imageUrl = this.state.imageUrl;
         const formItemLayout = {
             labelCol: {
                 xs: { span: 24 },
@@ -217,6 +257,28 @@ class RegistrationForm extends Component {
                         {getFieldDecorator('nickname', {
                             rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }]
                         })(<Input />)}
+                    </FormItem>
+                    <FormItem {...formItemLayout} label="Avatar">
+                        <div className="dropbox">
+                            {getFieldDecorator('avatar', {
+                                rules: [{ required: true, message: 'Please select a file!' }],
+                                valuePropName: 'fileList',
+                                getValueFromEvent: this.normFile
+                            })(
+                                <Upload
+                                    name="avatar"
+                                    listType="picture-card"
+                                    className="avatar-uploader"
+                                    showUploadList={false}
+                                    action={this.state.action}
+                                    beforeUpload={this.beforeUpload}
+                                    onChange={this.handleChange}
+                                    data={{ fileType: 'thumbnail' }}
+                                >
+                                    {imageUrl ? <img src={imageUrl} alt="" /> : uploadButton}
+                                </Upload>
+                            )}
+                        </div>
                     </FormItem>
                     <FormItem {...formItemLayout} label="Location">
                         {getFieldDecorator('location', {
