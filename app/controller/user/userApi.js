@@ -44,7 +44,7 @@ class UserApiController extends Controller {
         const { ctx, app } = this;
         let results = await app.mysql.select('users', {
             where: { email: ctx.request.body.email, password: ctx.request.body.password },
-            columns: ['id', 'status', 'nickname', 'avatar']
+            columns: ['id', 'status', 'nickname', 'avatar', 'permission']
         });
         if (results.length > 0) {
             results = results[0];
