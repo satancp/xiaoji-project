@@ -52,7 +52,8 @@ class ResourceCreateForm extends Component {
                 externalMedias: {
                     image: false,
                     audio: false,
-                    video: false
+                    video: false,
+                    embed: false
                 }
             },
             excludeControls: ['code']
