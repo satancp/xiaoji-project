@@ -28,6 +28,18 @@ const EMAIL_HAS_EXIST = {
     code: 100006,
     msg: 'The Email Exists'
 };
+const OPERATION_EXIST = {
+    code: 100007,
+    msg: 'Operation Has Been Submitted Before'
+};
+const BOARD_EXIST = {
+    code: 100008,
+    msg: 'You have created this board before'
+};
+const BOARD_INFO_EXIST = {
+    code: 100009,
+    msg: 'You have pinned the info at this board before'
+};
 
 module.exports = {
     SYSTEM_ERROR,
@@ -36,5 +48,8 @@ module.exports = {
     ACCOUNT_BANNED,
     CODE_NOT_EXIST,
     NO_ACCESS,
-    EMAIL_HAS_EXIST
+    EMAIL_HAS_EXIST,
+    OPERATION_EXIST,
+    BOARD_EXIST,
+    BOARD_INFO_EXIST
 };

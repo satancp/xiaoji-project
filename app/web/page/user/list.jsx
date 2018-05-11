@@ -4,7 +4,7 @@ import EditPage from './edit.jsx';
 import './list.css';
 import axios from 'axios';
 import config from '../../config/config';
-import { Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider } from 'antd';
+import { Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider, notification } from 'antd';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 const FormItem = Form.Item;
@@ -123,13 +123,165 @@ export default class UserList extends Component {
                 )
             }
         ];
-
+        this.getOperationText = data => {
+            let content = '';
+            let action = '';
+            if (data.status === 0) {
+                action = 'still is waiting for being reviewed';
+            } else if (data.status === 1) {
+                action = 'was approved by ' + data.operator_name;
+            } else if (data.status === 2) {
+                action = 'was abandoned by ' + data.operator_name;
+            }
+            // 1:add resource, 2:approve resource, 3:abandon resource, 4:delete resource, 5:apply to delete resource
+            switch (data.operation_type) {
+            case 1:
+                content = `Add resource '${data.operation_relevant_data_name}'`;
+                break;
+            case 2:
+                content = `Resource '${data.operation_relevant_data_name} was approved by ${data.operator_name}'`;
+                break;
+            case 3:
+                content = `Resource '${data.operation_relevant_data_name} was abandoned by ${data.operator_name}'`;
+                break;
+            case 4:
+                content = `Delete resource '${data.operation_relevant_data_name}'`;
+                break;
+            case 5:
+                content = `Apply to delete resource '${data.operation_relevant_data_name} and ${action}`;
+                break;
+            }
+            return content;
+        };
         this.expandedRowRender = record => {
             const columns = [
-                { title: 'Operation Content', dataIndex: 'operation_content', key: 'operation_content' },
-                { title: 'Operation Date', dataIndex: 'operation_date', key: 'operation_date' }
+                {
+                    title: 'Operation Content',
+                    dataIndex: 'operation_content',
+                    key: 'operation_content',
+                    render: (text, record) => {
+                        return <p>{this.getOperationText(record)}</p>;
+                    }
+                },
+                { title: 'Operation Date', dataIndex: 'created_at', key: 'created_at' },
+                { title: 'Reviewd Date', dataIndex: 'updated_at', key: 'updated_at' },
+                {
+                    title: 'Status',
+                    dataIndex: 'status',
+                    key: 'status',
+                    render: (text, record) => {
+                        if (record.status === 0) {
+                            return (
+                                <span>
+                                    <Badge status="processing" />Pending
+                                </span>
+                            );
+                        } else if (record.status === 1) {
+                            return (
+                                <span>
+                                    <Badge status="success" />Approved
+                                </span>
+                            );
+                        } else if (record.status === 2) {
+                            return (
+                                <span>
+                                    <Badge status="error" />Abandoned
+                                </span>
+                            );
+                        } else {
+                            return (
+                                <span>
+                                    <Badge status="warning" />Warning
+                                </span>
+                            );
+                        }
+                    }
+                },
+                {
+                    title: 'Action',
+                    key: 'action',
+                    render: (text, record) => (
+                        <span>
+                            {record.status == 0 ? (
+                                <Tooltip title="Approve">
+                                    <Button
+                                        type="primary"
+                                        style={{ backgroundColor: '#65cc43', borderColor: '#65cc43' }}
+                                        shape="circle"
+                                        icon="check"
+                                        onClick={() => this.showConfirmApprove(record)}
+                                    />
+                                </Tooltip>
+                            ) : null}
+                            {record.status == 0 ? <Divider type="vertical" /> : null}
+                            {record.status == 0 ? (
+                                <Tooltip title="Abandon">
+                                    <Button
+                                        type="primary"
+                                        style={{ backgroundColor: '#ff4949', borderColor: '#ff4949' }}
+                                        shape="circle"
+                                        icon="close"
+                                        onClick={() => this.showConfirmAbandon(record)}
+                                    />
+                                </Tooltip>
+                            ) : null}
+                            {record.status != 0 ? <p>N/A</p> : null}
+                        </span>
+                    )
+                }
             ];
             return <Table columns={columns} dataSource={record.operations} pagination={false} rowKey="id" />;
+        };
+        this.showConfirmApprove = record => {
+            confirm({
+                title: 'Do you want to approve this operation?',
+                onOk: () => {
+                    return new Promise((resolve, reject) => {
+                        const cache = cookies.get('loginInfo');
+                        axios
+                            .post(`${config.server_url}user/solve_operation`, {
+                                id: record.id,
+                                status: 1,
+                                operator: cache.id
+                            })
+                            .then(response => {
+                                this.openNotification('Success', 'Succeed to abandon it.');
+                                this.init();
+                                resolve();
+                            });
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                },
+                onCancel() {}
+            });
+        };
+        this.showConfirmAbandon = record => {
+            confirm({
+                title: 'Do you want to abandon this operation?',
+                onOk: () => {
+                    return new Promise((resolve, reject) => {
+                        const cache = cookies.get('loginInfo');
+                        axios
+                            .post(`${config.server_url}user/solve_operation`, {
+                                id: record.id,
+                                status: 2,
+                                operator: cache.id
+                            })
+                            .then(response => {
+                                this.openNotification('Success', 'Succeed to abandon it.');
+                                this.init();
+                                resolve();
+                            });
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                },
+                onCancel() {}
+            });
+        };
+        this.openNotification = (msg, desc) => {
+            notification.open({
+                message: msg,
+                description: desc,
+                placement: 'topLeft'
+            });
         };
         this.state = {
             bordered: true,

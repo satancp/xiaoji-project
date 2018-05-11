@@ -240,6 +240,18 @@
   {
     "name": null,
     "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/user/solve_operation",
+    "regexp": "/^\\/api\\/user\\/solve_operation(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "HEAD",
       "GET"
     ],
@@ -308,6 +320,18 @@
     "paramNames": [],
     "path": "/api/category/update",
     "regexp": "/^\\/api\\/category\\/update(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/category/delete",
+    "regexp": "/^\\/api\\/category\\/delete(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -453,6 +477,18 @@
   {
     "name": null,
     "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/resource/apply_to_delete",
+    "regexp": "/^\\/api\\/resource\\/apply_to_delete(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "HEAD",
       "GET"
     ],
@@ -516,12 +552,37 @@
   {
     "name": null,
     "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/tag/delete",
+    "regexp": "/^\\/api\\/tag\\/delete(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "HEAD",
       "GET"
     ],
     "paramNames": [],
     "path": "/api/comment/list",
     "regexp": "/^\\/api\\/comment\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/board/list",
+    "regexp": "/^\\/api\\/board\\/list(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

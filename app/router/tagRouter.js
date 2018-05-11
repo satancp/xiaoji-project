@@ -9,4 +9,5 @@ module.exports = app => {
     router.get('/api/tag/list', controller.tag.tagApi.index);
     router.post('/api/tag/update', controller.tag.tagApi.update);
     router.post('/api/tag/add', controller.tag.tagApi.add);
+    router.post('/api/tag/delete', controller.tag.tagApi.delete);
 };

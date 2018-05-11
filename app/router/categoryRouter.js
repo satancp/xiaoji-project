@@ -10,4 +10,5 @@ module.exports = app => {
     router.post('/api/category/upload', controller.category.categoryApi.upload);
     router.post('/api/category/add', controller.category.categoryApi.add);
     router.post('/api/category/update', controller.category.categoryApi.update);
+    router.post('/api/category/delete', controller.category.categoryApi.delete);
 };

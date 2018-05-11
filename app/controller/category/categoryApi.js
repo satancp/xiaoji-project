@@ -10,7 +10,8 @@ module.exports = app => {
         async index() {
             const { ctx } = this;
             const results = await app.mysql.select('categories', {
-                orders: [['display_name', 'asc']]
+                orders: [['display_name', 'asc']],
+                where: { is_delete: 0 }
             });
             this.success(results);
         }
@@ -61,6 +62,12 @@ module.exports = app => {
                 icon: ctx.request.body.icon
             };
             const result = await app.mysql.update('categories', row);
+            this.success(result);
+        }
+
+        async delete() {
+            const { ctx } = this;
+            const result = await app.mysql.update('categories', { id: ctx.request.body.id, is_delete: 1 });
             this.success(result);
         }
     };

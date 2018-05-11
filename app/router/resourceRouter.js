@@ -15,4 +15,5 @@ module.exports = app => {
     router.post('/api/resource/delete', controller.resource.resourceApi.delete);
     router.post('/api/resource/upload', controller.resource.resourceApi.upload);
     router.post('/api/resource/set_status', controller.resource.resourceApi.setStatus);
+    router.post('/api/resource/apply_to_delete', controller.resource.resourceApi.applyToDelete);
 };

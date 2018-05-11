@@ -18,19 +18,45 @@ const sharp = require('sharp');
 class UserApiController extends Controller {
     async index() {
         const { ctx, app } = this;
-        const results = await app.mysql.select('users', {
+        let results = await app.mysql.select('users', {
             orders: [['created_at', 'desc'], ['id', 'desc']],
-            limit: 10,
-            offset: 0
+            where: { is_delete: 0 }
         });
+        for (let i = 0; i < results.length; i++) {
+            let operations = await app.mysql.select('operations', {
+                orders: [['updated_at', 'desc'], ['created_at', 'desc']],
+                where: { user_id: results[i].id }
+            });
+            for (let a = 0; a < operations.length; a++) {
+                if (operations[a].operator) {
+                    const operator = await app.mysql.select('users', {
+                        where: { id: operations[a].operator }
+                    });
+                    if (operator.length > 0) {
+                        operations[a].operator_name = operator[0].nickname;
+                    }
+                }
+                if (operations[a].operation_relevant_type) {
+                    if (operations[a].operation_relevant_type === 1) {
+                        const relevantResource = await app.mysql.select('resources', {
+                            where: { id: operations[a].operation_relevant_id }
+                        });
+                        if (relevantResource.length > 0) {
+                            operations[a].operation_relevant_type_name = 'Resource';
+                            operations[a].operation_relevant_data_name = relevantResource[0].name;
+                        }
+                    }
+                }
+            }
+            results[i].operations = operations;
+        }
         this.success(results);
     }
 
     async login() {
         const { ctx, app } = this;
-        console.log(ctx.request.body);
         let results = await app.mysql.select('users', {
-            where: { email: ctx.request.body.email, password: ctx.request.body.password },
+            where: { email: ctx.request.body.email, password: ctx.request.body.password, is_delete: 0 },
             columns: ['id', 'status', 'nickname', 'avatar']
         });
         if (results.length > 0) {
@@ -43,7 +69,7 @@ class UserApiController extends Controller {
     async loginDashboard() {
         const { ctx, app } = this;
         let results = await app.mysql.select('users', {
-            where: { email: ctx.request.body.email, password: ctx.request.body.password },
+            where: { email: ctx.request.body.email, password: ctx.request.body.password, is_delete: 0 },
             columns: ['id', 'status', 'nickname', 'avatar', 'permission']
         });
         if (results.length > 0) {
@@ -57,7 +83,7 @@ class UserApiController extends Controller {
     async forget() {
         const { ctx, app } = this;
         let results = await app.mysql.select('users', {
-            where: { email: ctx.request.body.email },
+            where: { email: ctx.request.body.email, is_delete: 0 },
             columns: ['id', 'nickname']
         });
         if (results.length > 0) {
@@ -133,8 +159,8 @@ class UserApiController extends Controller {
     }
 
     async delete() {
-        const { ctx, app } = this;
-        const result = await app.mysql.delete('users', ctx.request.body);
+        const { ctx } = this;
+        const result = await app.mysql.update('users', { id: ctx.request.body.id, is_delete: 1 });
         this.success(result);
     }
 
@@ -162,6 +188,33 @@ class UserApiController extends Controller {
             await sendToWormhole(stream);
             throw err;
         }
+        this.success(result);
+    }
+
+    async solveOperation() {
+        const { ctx, app } = this;
+        const results = await app.mysql.beginTransactionScope(async conn => {
+            const row = {
+                id: ctx.request.body.id,
+                status: ctx.request.body.status,
+                operator: ctx.request.body.operator,
+                updated_at: app.mysql.literals.now
+            };
+            const result = await conn.update('operations', row);
+            const exist = await conn.select('operations', { id: ctx.request.body.id });
+            if (exist.length > 0) {
+                if (exist[0].status === 1) {
+                    if (exist[0].operation_type === 5) {
+                        await conn.update('resources', {
+                            id: exist[0].operation_relevant_id,
+                            is_delete: 1,
+                            updated_at: app.mysql.literals.now
+                        });
+                    }
+                }
+            }
+            return result;
+        });
         this.success(result);
     }
 }

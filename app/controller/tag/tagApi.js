@@ -6,7 +6,8 @@ module.exports = app => {
         async index() {
             const { ctx } = this;
             const results = await app.mysql.select('tags', {
-                orders: [['id', 'asc']]
+                orders: [['id', 'asc']],
+                where: { is_delete: 0 }
             });
             this.success(results);
         }
@@ -29,6 +30,12 @@ module.exports = app => {
                 return result;
             });
             this.success(results);
+        }
+
+        async delete() {
+            const { ctx } = this;
+            const result = await app.mysql.update('tags', { id: ctx.request.body.id, is_delete: 1 });
+            this.success(result);
         }
     };
 };

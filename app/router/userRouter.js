@@ -17,4 +17,5 @@ module.exports = app => {
     router.post('/api/user/update', controller.user.userApi.update);
     router.post('/api/user/reset_password', controller.user.userApi.resetPwd);
     router.post('/api/user/delete', controller.user.userApi.delete);
+    router.post('/api/user/solve_operation', controller.user.userApi.solveOperation);
 };

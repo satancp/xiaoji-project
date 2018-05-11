@@ -13,4 +13,6 @@ module.exports = app => {
     require('./router/tagRouter')(app);
     // 评论相关
     require('./router/commentRouter')(app);
+    // 资料板相关
+    require('./router/boardRouter')(app);
 };

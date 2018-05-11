@@ -1123,3 +1123,291 @@ name: 'ClusterClientNoResponseError'
 pid: 34875
 hostname: Chriss-Laptop.local
 
+2018-05-11 05:25:48,602 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427622ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,603 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427561ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,603 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427550ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,603 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427510ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,603 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427490ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,604 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427524ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,604 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427455ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 05:25:48,604 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6427443ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,104 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461496ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,104 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461496ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,106 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461496ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,106 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461496ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,106 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461495ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,107 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461495ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,107 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461495ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:13:30,108 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6461495ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,728 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,744 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,744 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,745 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,746 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833614ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,746 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833614ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,747 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833614ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 07:44:03,751 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 1833614ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,172 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714411ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,187 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714411ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,187 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714411ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,188 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714411ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,188 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714411ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,189 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714408ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,190 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714408ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+
+2018-05-11 09:36:18,190 ERROR 56287 nodejs.ClusterClientNoResponseError: client no response in 6714407ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/pengcheng/xiaoji-project/node_modules/cluster-client/lib/leader.js:73:23)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:267:5)
+name: 'ClusterClientNoResponseError'
+pid: 56287
+hostname: Chriss-Laptop.local
+

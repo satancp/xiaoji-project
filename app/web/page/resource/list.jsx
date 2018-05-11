@@ -197,10 +197,12 @@ export default class ResourceList extends Component {
                 title: 'Do you want to approve this resource?',
                 onOk: () => {
                     return new Promise((resolve, reject) => {
+                        const cache = cookies.get('loginInfo');
                         axios
                             .post(`${config.server_url}resource/set_status`, {
                                 id: record.id,
-                                status: 2
+                                status: 2,
+                                user_id: cache.id
                             })
                             .then(response => {
                                 this.openNotification('Success', 'Succeed to abandon it.');
@@ -217,10 +219,12 @@ export default class ResourceList extends Component {
                 title: 'Do you want to abandon this resource?',
                 onOk: () => {
                     return new Promise((resolve, reject) => {
+                        const cache = cookies.get('loginInfo');
                         axios
                             .post(`${config.server_url}resource/set_status`, {
                                 id: record.id,
-                                status: 1
+                                status: 1,
+                                user_id: cache.id
                             })
                             .then(response => {
                                 this.openNotification('Success', 'Succeed to abandon it.');
@@ -312,9 +316,11 @@ export default class ResourceList extends Component {
             });
         };
         this.deleteData = id => {
+            const cache = cookies.get('loginInfo');
             axios
                 .post(`${config.server_url}resource/delete`, {
-                    id: id
+                    id: id,
+                    user_id: cache.id
                 })
                 .then(response => {
                     this.setState({
