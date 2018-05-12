@@ -2,7 +2,7 @@
 const path = require('path');
 const Controller = require('../baseController');
 const Exception = require('../../exception/exception');
-const { BOARD_EXIST, BOARD_INFO_EXIST } = require('../../exception/exceptionCode');
+const { BOARD_EXIST, BOARD_INFO_EXIST, BOARD_NOT_EXIST } = require('../../exception/exceptionCode');
 
 module.exports = app => {
     return class BoardApiController extends Controller {
@@ -18,9 +18,19 @@ module.exports = app => {
                     orders: [['created_at', 'desc']]
                 });
                 for (let a = 0; a < board_resources.length; a++) {
-                    const resource = await app.mysql.select('resources', {
-                        where: { id: board_resources[i].resource_id }
+                    let resource = (await app.mysql.select('resources', {
+                        where: { id: board_resources[a].resource_id }
+                    }))[0];
+                    let tags = await app.mysql.select('resource_tag', {
+                        where: { resource_id: resource.id }
                     });
+                    for (let b = 0; b < tags.length; b++) {
+                        const tag = (await app.mysql.select('tags', {
+                            where: { id: tags[b].tag_id }
+                        }))[0];
+                        tags[b].tag = tag;
+                    }
+                    resource.tags = tags;
                     board_resources[a].resource = resource;
                 }
                 results[i].resources = board_resources;
@@ -41,6 +51,22 @@ module.exports = app => {
                 name: ctx.request.body.name,
                 created_by: ctx.request.body.user_id,
                 created_at: app.mysql.literals.now,
+                updated_at: app.mysql.literals.now
+            });
+            this.success(result);
+        }
+
+        async update() {
+            const { ctx } = this;
+            const check = await app.mysql.select('boards', {
+                where: {
+                    id: ctx.request.body.id
+                }
+            });
+            if (check.length === 0) throw new Exception(BOARD_NOT_EXIST);
+            const result = await app.mysql.update('boards', {
+                id: ctx.request.body.id,
+                name: ctx.request.body.name,
                 updated_at: app.mysql.literals.now
             });
             this.success(result);

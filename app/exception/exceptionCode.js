@@ -34,11 +34,15 @@ const OPERATION_EXIST = {
 };
 const BOARD_EXIST = {
     code: 100008,
-    msg: 'You have created this board before'
+    msg: 'You Have Created This Board Before'
 };
 const BOARD_INFO_EXIST = {
     code: 100009,
-    msg: 'You have pinned the info at this board before'
+    msg: 'You Have Pinned The Info At This Board Before'
+};
+const BOARD_NOT_EXIST = {
+    code: 100010,
+    msg: 'This Board Has Existed Already'
 };
 
 module.exports = {
@@ -51,5 +55,6 @@ module.exports = {
     EMAIL_HAS_EXIST,
     OPERATION_EXIST,
     BOARD_EXIST,
-    BOARD_INFO_EXIST
+    BOARD_INFO_EXIST,
+    BOARD_NOT_EXIST
 };

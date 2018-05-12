@@ -16,3 +16,5 @@
 2018-05-10 19:15:12,844 INFO 53697 [Timer] /Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-05-11 00:00:01.000
 2018-05-10 21:59:16,043 INFO 56287 [Timer] /Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-05-11 00:00:00.000
 2018-05-10 21:59:16,043 INFO 56287 [Timer] /Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-05-11 00:00:01.000
+2018-05-11 13:26:18,810 INFO 63738 [Timer] /Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute at 2018-05-12 00:00:00.000
+2018-05-11 13:26:18,811 INFO 63738 [Timer] /Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute at 2018-05-12 00:00:01.000
