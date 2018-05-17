@@ -15,42 +15,42 @@
       "domainWhiteList": [
         "http://localhost:80",
         "http://127.0.0.1:80",
-        "http://169.254.127.204:80",
+        "http://192.168.1.109:80",
         "http://dashboard.goland.cool:80",
         "http://13.114.130.41/:80",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "http://169.254.127.204:3000",
+        "http://192.168.1.109:3000",
         "http://dashboard.goland.cool:3000",
         "http://13.114.130.41/:3000",
         "http://localhost:7000",
         "http://127.0.0.1:7000",
-        "http://169.254.127.204:7000",
+        "http://192.168.1.109:7000",
         "http://dashboard.goland.cool:7000",
         "http://13.114.130.41/:7000",
         "http://localhost:7001",
         "http://127.0.0.1:7001",
-        "http://169.254.127.204:7001",
+        "http://192.168.1.109:7001",
         "http://dashboard.goland.cool:7001",
         "http://13.114.130.41/:7001",
         "http://localhost:9000",
         "http://127.0.0.1:9000",
-        "http://169.254.127.204:9000",
+        "http://192.168.1.109:9000",
         "http://dashboard.goland.cool:9000",
         "http://13.114.130.41/:9000",
         "http://localhost:9001",
         "http://127.0.0.1:9001",
-        "http://169.254.127.204:9001",
+        "http://192.168.1.109:9001",
         "http://dashboard.goland.cool:9001",
         "http://13.114.130.41/:9001",
         "http://localhost:9002",
         "http://127.0.0.1:9002",
-        "http://169.254.127.204:9002",
+        "http://192.168.1.109:9002",
         "http://dashboard.goland.cool:9002",
         "http://13.114.130.41/:9002",
         "http://localhost:9999",
         "http://127.0.0.1:9999",
-        "http://169.254.127.204:9999",
+        "http://192.168.1.109:9999",
         "http://dashboard.goland.cool:9999",
         "http://13.114.130.41/:9999"
       ],
@@ -124,26 +124,26 @@
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-session/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-onerror/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-development/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-schedule/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-static/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-view/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-mysql/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-cors/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-oss/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/config/locales",
-        "/Users/pengcheng/xiaoji-project/node_modules/egg/config/locales",
-        "/Users/pengcheng/xiaoji-project/config/locales"
+        "/Users/chris/xiaoji-project/node_modules/egg-session/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-security/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-jsonp/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-onerror/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-watcher/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-development/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-schedule/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-static/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-view/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-mysql/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-cors/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-oss/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg-webpack-react/config/locales",
+        "/Users/chris/xiaoji-project/node_modules/egg/config/locales",
+        "/Users/chris/xiaoji-project/config/locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -153,8 +153,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/Users/chris/xiaoji-project/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/chris/xiaoji-project/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "multipart": {
@@ -184,7 +184,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "/Users/pengcheng/xiaoji-project/logs/ssrProjectDemo/egg-schedule.log"
+        "file": "/Users/chris/xiaoji-project/logs/ssrProjectDemo/egg-schedule.log"
       }
     },
     "logrotator": {
@@ -198,7 +198,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/pengcheng/xiaoji-project/public",
+      "dir": "/Users/chris/xiaoji-project/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
@@ -208,7 +208,7 @@
     },
     "view": {
       "root": [
-        "/Users/pengcheng/xiaoji-project/app/view"
+        "/Users/chris/xiaoji-project/app/view"
       ],
       "cache": false,
       "defaultExtension": ".html",
@@ -220,8 +220,8 @@
     },
     "reactssr": {
       "doctype": "<!doctype html>",
-      "layout": "/Users/pengcheng/xiaoji-project/app/view/layout.js",
-      "manifest": "/Users/pengcheng/xiaoji-project/config/manifest.json",
+      "layout": "/Users/chris/xiaoji-project/app/view/layout.js",
+      "manifest": "/Users/chris/xiaoji-project/config/manifest.json",
       "injectHeadRegex": "/(<\\/head>)/i",
       "injectBodyRegex": "/(<\\/body>)/i",
       "injectCss": true,
@@ -275,116 +275,116 @@
       },
       "webpackConfigList": [
         {
-          "context": "/Users/pengcheng/xiaoji-project",
+          "context": "/Users/chris/xiaoji-project",
           "entry": {
             "category/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/add.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/category/add.jsx"
             ],
             "category/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/edit.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/category/edit.jsx"
             ],
             "category/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/list.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/category/list.jsx"
             ],
             "home/home": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/home.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/home/home.jsx"
             ],
             "home/star": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/star.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/home/star.jsx"
             ],
             "resource/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/add.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/add.jsx"
             ],
             "resource/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/edit.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/edit.jsx"
             ],
             "resource/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/list.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/list.jsx"
             ],
             "tag/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/add.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/add.jsx"
             ],
             "tag/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/edit.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/edit.jsx"
             ],
             "tag/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/list.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/list.jsx"
             ],
             "user/add": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/add.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/user/add.jsx"
             ],
             "user/edit": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/edit.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/user/edit.jsx"
             ],
             "user/forget": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/forget.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/user/forget.jsx"
             ],
             "user/list": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/list.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/user/list.jsx"
             ],
             "user/login": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/login.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/client-loader.js!/Users/chris/xiaoji-project/app/web/page/user/login.jsx"
             ],
             "layout": [
               "react-hot-loader/patch",
-              "/Users/pengcheng/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://169.254.127.204:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/utils/hot.js",
-              "/Users/pengcheng/xiaoji-project/app/web/framework/layout/layout.jsx"
+              "/Users/chris/xiaoji-project/node_modules/webpack-hot-middleware/client?path=http://192.168.1.109:9000/__webpack_hmr&noInfo=false&reload=false&quiet=false",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/utils/hot.js",
+              "/Users/chris/xiaoji-project/app/web/framework/layout/layout.jsx"
             ]
           },
           "output": {
             "filename": "js/[name].js",
             "chunkFilename": "js/chunk/[name].js",
-            "path": "/Users/pengcheng/xiaoji-project/public",
-            "publicPath": "http://169.254.127.204:9000/public/"
+            "path": "/Users/chris/xiaoji-project/public",
+            "publicPath": "http://192.168.1.109:9000/public/"
           },
           "resolve": {
             "extensions": [
@@ -392,18 +392,18 @@
               ".jsx"
             ],
             "alias": {
-              "asset": "/Users/pengcheng/xiaoji-project/app/web/asset",
-              "component": "/Users/pengcheng/xiaoji-project/app/web/component",
-              "framework": "/Users/pengcheng/xiaoji-project/app/web/framework",
+              "asset": "/Users/chris/xiaoji-project/app/web/asset",
+              "component": "/Users/chris/xiaoji-project/app/web/component",
+              "framework": "/Users/chris/xiaoji-project/app/web/framework",
               "store": "app/web/store"
             }
           },
           "externals": [],
           "resolveLoader": {
             "modules": [
-              "/Users/pengcheng/xiaoji-project/node_modules",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/node_modules",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack-react/node_modules"
+              "/Users/chris/xiaoji-project/node_modules",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/node_modules",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack-react/node_modules"
             ]
           },
           "target": "web",
@@ -432,7 +432,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/chris/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -457,7 +457,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/chris/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -485,7 +485,7 @@
                 "test": {},
                 "use": [
                   {
-                    "loader": "/Users/pengcheng/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
+                    "loader": "/Users/chris/xiaoji-project/node_modules/extract-text-webpack-plugin/dist/loader.js",
                     "options": {
                       "omit": 1,
                       "remove": true
@@ -555,7 +555,7 @@
             },
             {
               "definitions": {
-                "process.env.NODE_ENV": "\"product\"",
+                "process.env.NODE_ENV": "\"development\"",
                 "EASY_ENV": "\"dev\"",
                 "EASY_ENV_IS_DEV": true,
                 "EASY_ENV_IS_TEST": false,
@@ -563,8 +563,8 @@
                 "EASY_ENV_IS_BROWSER": true,
                 "EASY_ENV_IS_NODE": false,
                 "EASY_ENV_LOCAL_PUBLIC_PATH": "\"/public/\"",
-                "EASY_ENV_PUBLIC_PATH": "\"http://169.254.127.204:9000/public/\"",
-                "EASY_ENV_HOST_URL": "\"http://169.254.127.204:9000\""
+                "EASY_ENV_PUBLIC_PATH": "\"http://192.168.1.109:9000/public/\"",
+                "EASY_ENV_HOST_URL": "\"http://192.168.1.109:9000\""
               },
               "__plugin__": "DefinePlugin",
               "__lable__": "define"
@@ -592,7 +592,7 @@
                 "user/login",
                 "layout"
               ],
-              "ident": "/Users/pengcheng/xiaoji-project/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
+              "ident": "/Users/chris/xiaoji-project/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1",
               "__plugin__": "CommonsChunkPlugin",
               "__lable__": "commonsChunk"
             },
@@ -620,14 +620,14 @@
                 "map": null,
                 "generate": null,
                 "sort": null,
-                "baseDir": "/Users/pengcheng/xiaoji-project",
-                "host": "http://169.254.127.204:9000",
+                "baseDir": "/Users/chris/xiaoji-project",
+                "host": "http://192.168.1.109:9000",
                 "proxy": true,
-                "buildPath": "/Users/pengcheng/xiaoji-project/public",
-                "publicPath": "http://169.254.127.204:9000/public/",
+                "buildPath": "/Users/chris/xiaoji-project/public",
+                "publicPath": "http://192.168.1.109:9000/public/",
                 "localPublicPath": "/public/",
                 "assets": false,
-                "filepath": "/Users/pengcheng/xiaoji-project/config/manifest.json",
+                "filepath": "/Users/chris/xiaoji-project/config/manifest.json",
                 "dllConfig": [
                   {
                     "name": "vendor",
@@ -637,7 +637,7 @@
                     ]
                   }
                 ],
-                "dllDir": "/var/folders/zd/9vgg74_5439319w5cx38qp5h0000gn/T/easywebpack/ssrProjectDemo/dev"
+                "dllDir": "/var/folders/t5/rvn0pjwx24b9vdh_6h50vlrr0000gn/T/easywebpack/ssrProjectDemo/dev"
               },
               "__plugin__": "webpack-manifest-resource-plugin",
               "__lable__": "manifest"
@@ -661,7 +661,7 @@
             },
             {
               "options": {
-                "context": "/Users/pengcheng/xiaoji-project",
+                "context": "/Users/chris/xiaoji-project",
                 "manifest": {
                   "name": "vendor",
                   "content": {
@@ -766,31 +766,31 @@
           ]
         },
         {
-          "context": "/Users/pengcheng/xiaoji-project",
+          "context": "/Users/chris/xiaoji-project",
           "entry": {
-            "category/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/add.jsx",
-            "category/edit": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/edit.jsx",
-            "category/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/category/list.jsx",
-            "home/home": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/home.jsx",
-            "home/star": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/home/star.jsx",
-            "resource/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/add.jsx",
-            "resource/edit": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/edit.jsx",
-            "resource/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/resource/list.jsx",
-            "tag/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/add.jsx",
-            "tag/edit": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/edit.jsx",
-            "tag/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/tag/list.jsx",
-            "user/add": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/add.jsx",
-            "user/edit": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/edit.jsx",
-            "user/forget": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/forget.jsx",
-            "user/list": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/list.jsx",
-            "user/login": "babel-loader!/Users/pengcheng/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/pengcheng/xiaoji-project/app/web/page/user/login.jsx",
-            "layout": "/Users/pengcheng/xiaoji-project/app/web/framework/layout/layout.jsx"
+            "category/add": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/category/add.jsx",
+            "category/edit": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/category/edit.jsx",
+            "category/list": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/category/list.jsx",
+            "home/home": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/home/home.jsx",
+            "home/star": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/home/star.jsx",
+            "resource/add": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/add.jsx",
+            "resource/edit": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/edit.jsx",
+            "resource/list": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/resource/list.jsx",
+            "tag/add": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/add.jsx",
+            "tag/edit": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/edit.jsx",
+            "tag/list": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/tag/list.jsx",
+            "user/add": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/user/add.jsx",
+            "user/edit": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/user/edit.jsx",
+            "user/forget": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/user/forget.jsx",
+            "user/list": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/user/list.jsx",
+            "user/login": "babel-loader!/Users/chris/xiaoji-project/app/web/framework/entry/server-loader.js!/Users/chris/xiaoji-project/app/web/page/user/login.jsx",
+            "layout": "/Users/chris/xiaoji-project/app/web/framework/layout/layout.jsx"
           },
           "output": {
             "libraryTarget": "commonjs2",
             "filename": "[name].js",
-            "path": "/Users/pengcheng/xiaoji-project/app/view",
-            "publicPath": "http://169.254.127.204:9000/public/"
+            "path": "/Users/chris/xiaoji-project/app/view",
+            "publicPath": "http://192.168.1.109:9000/public/"
           },
           "resolve": {
             "extensions": [
@@ -798,9 +798,9 @@
               ".jsx"
             ],
             "alias": {
-              "asset": "/Users/pengcheng/xiaoji-project/app/web/asset",
-              "component": "/Users/pengcheng/xiaoji-project/app/web/component",
-              "framework": "/Users/pengcheng/xiaoji-project/app/web/framework",
+              "asset": "/Users/chris/xiaoji-project/app/web/asset",
+              "component": "/Users/chris/xiaoji-project/app/web/component",
+              "framework": "/Users/chris/xiaoji-project/app/web/framework",
               "store": "app/web/store"
             }
           },
@@ -809,9 +809,9 @@
           ],
           "resolveLoader": {
             "modules": [
-              "/Users/pengcheng/xiaoji-project/node_modules",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack/node_modules",
-              "/Users/pengcheng/xiaoji-project/node_modules/easywebpack-react/node_modules"
+              "/Users/chris/xiaoji-project/node_modules",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack/node_modules",
+              "/Users/chris/xiaoji-project/node_modules/easywebpack-react/node_modules"
             ]
           },
           "target": "node",
@@ -941,7 +941,7 @@
             },
             {
               "definitions": {
-                "process.env.NODE_ENV": "\"product\"",
+                "process.env.NODE_ENV": "\"development\"",
                 "EASY_ENV": "\"dev\"",
                 "EASY_ENV_IS_DEV": true,
                 "EASY_ENV_IS_TEST": false,
@@ -949,8 +949,8 @@
                 "EASY_ENV_IS_BROWSER": false,
                 "EASY_ENV_IS_NODE": true,
                 "EASY_ENV_LOCAL_PUBLIC_PATH": "\"/public/\"",
-                "EASY_ENV_PUBLIC_PATH": "\"http://169.254.127.204:9000/public/\"",
-                "EASY_ENV_HOST_URL": "\"http://169.254.127.204:9000\""
+                "EASY_ENV_PUBLIC_PATH": "\"http://192.168.1.109:9000/public/\"",
+                "EASY_ENV_HOST_URL": "\"http://192.168.1.109:9000\""
               },
               "__plugin__": "DefinePlugin",
               "__lable__": "define"
@@ -965,7 +965,7 @@
             },
             {
               "resourceRegExp": {},
-              "newResource": "/Users/pengcheng/xiaoji-project/node_modules/node-noop/index.js",
+              "newResource": "/Users/chris/xiaoji-project/node_modules/node-noop/index.js",
               "__plugin__": "NormalModuleReplacementPlugin",
               "__lable__": "modulereplacement"
             },
@@ -1095,9 +1095,9 @@
       "license": "MIT",
       "homepage": "https://github.com/hubcarl/egg-react-webpack-boilerplate"
     },
-    "baseDir": "/Users/pengcheng/xiaoji-project",
-    "HOME": "/Users/pengcheng",
-    "rundir": "/Users/pengcheng/xiaoji-project/run",
+    "baseDir": "/Users/chris/xiaoji-project",
+    "HOME": "/Users/chris",
+    "rundir": "/Users/chris/xiaoji-project/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -1128,7 +1128,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/pengcheng/xiaoji-project/logs",
+      "dir": "/Users/chris/xiaoji-project/logs",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -1262,8 +1262,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-session",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -1275,8 +1275,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-security",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-security",
       "version": "2.1.0"
     },
     "jsonp": {
@@ -1288,8 +1288,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -1301,8 +1301,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-onerror",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-onerror",
       "version": "2.0.0"
     },
     "i18n": {
@@ -1312,8 +1312,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-i18n",
       "version": "2.0.0"
     },
     "watcher": {
@@ -1323,8 +1323,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-watcher",
       "version": "3.0.0"
     },
     "multipart": {
@@ -1334,8 +1334,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-multipart",
       "version": "2.0.0"
     },
     "development": {
@@ -1349,8 +1349,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-development",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-development",
       "version": "2.2.0"
     },
     "schedule": {
@@ -1360,8 +1360,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-schedule",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-schedule",
       "version": "3.3.0"
     },
     "logrotator": {
@@ -1373,8 +1373,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-logrotator",
       "version": "3.0.2"
     },
     "static": {
@@ -1384,8 +1384,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-static",
+      "from": "/Users/chris/xiaoji-project/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-static",
       "version": "2.1.0"
     },
     "view": {
@@ -1395,8 +1395,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-view",
+      "from": "/Users/chris/xiaoji-project/node_modules/egg/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-view",
       "version": "2.1.0"
     },
     "reactssr": {
@@ -1406,8 +1406,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr",
+      "from": "/Users/chris/xiaoji-project/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr",
       "version": "2.2.4"
     },
     "mysql": {
@@ -1417,8 +1417,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-mysql",
+      "from": "/Users/chris/xiaoji-project/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-mysql",
       "version": "3.0.0"
     },
     "cors": {
@@ -1429,8 +1429,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-cors",
+      "from": "/Users/chris/xiaoji-project/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-cors",
       "version": "2.0.0"
     },
     "oss": {
@@ -1440,8 +1440,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-oss",
+      "from": "/Users/chris/xiaoji-project/config/plugin.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-oss",
       "version": "1.1.0"
     },
     "webpack": {
@@ -1453,8 +1453,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.local.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack",
+      "from": "/Users/chris/xiaoji-project/config/plugin.local.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-webpack",
       "version": "3.3.2"
     },
     "webpackreact": {
@@ -1466,8 +1466,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/pengcheng/xiaoji-project/config/plugin.local.js",
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react",
+      "from": "/Users/chris/xiaoji-project/config/plugin.local.js",
+      "path": "/Users/chris/xiaoji-project/node_modules/egg-webpack-react",
       "version": "2.0.2"
     }
   }

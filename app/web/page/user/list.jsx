@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import HomeLayout from 'component/homelayout/homelayout.jsx';
-import EditPage from './edit.jsx';
-import './list.css';
-import axios from 'axios';
-import config from '../../config/config';
-import { Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider, notification } from 'antd';
-import Cookies from 'universal-cookie';
-const cookies = new Cookies();
-const FormItem = Form.Item;
+import React, {Component} from 'react'
+import HomeLayout from 'component/homelayout/homelayout.jsx'
+import EditPage from './edit.jsx'
+import './list.css'
+import axios from 'axios'
+import config from '../../config/config'
+import {Table, Modal, Icon, Tooltip, Badge, Switch, Radio, Button, Form, Divider, notification} from 'antd'
+import Cookies from 'universal-cookie'
+const cookies = new Cookies()
+const FormItem = Form.Item
 
 export default class UserList extends Component {
     constructor() {
-        super();
+        super()
         this.columns = [
             {
                 title: 'ID',
@@ -38,7 +38,7 @@ export default class UserList extends Component {
                 dataIndex: 'avatar',
                 key: 'avatar',
                 width: 30,
-                render: text => <img src={text} style={{ width: 100, height: 100 }} />
+                render: text => <img src={text} style={{width: 100, height: 100}} />
             },
             {
                 title: 'Location',
@@ -122,37 +122,37 @@ export default class UserList extends Component {
                     </span>
                 )
             }
-        ];
+        ]
         this.getOperationText = data => {
-            let content = '';
-            let action = '';
+            let content = ''
+            let action = ''
             if (data.status === 0) {
-                action = 'still is waiting for being reviewed';
+                action = 'is still waiting for being reviewed'
             } else if (data.status === 1) {
-                action = 'was approved by ' + data.operator_name;
+                action = 'was approved by ' + data.operator_name
             } else if (data.status === 2) {
-                action = 'was abandoned by ' + data.operator_name;
+                action = 'was abandoned by ' + data.operator_name
             }
             // 1:add resource, 2:approve resource, 3:abandon resource, 4:delete resource, 5:apply to delete resource
             switch (data.operation_type) {
             case 1:
-                content = `Add resource '${data.operation_relevant_data_name}'`;
-                break;
+                content = `Add resource '${data.operation_relevant_data_name}'`
+                break
             case 2:
-                content = `Resource '${data.operation_relevant_data_name} was approved by ${data.operator_name}'`;
-                break;
+                content = `Resource '${data.operation_relevant_data_name}' was approved by '${data.operator_name}'`
+                break
             case 3:
-                content = `Resource '${data.operation_relevant_data_name} was abandoned by ${data.operator_name}'`;
-                break;
+                content = `Resource '${data.operation_relevant_data_name}' was abandoned by '${data.operator_name}'`
+                break
             case 4:
-                content = `Delete resource '${data.operation_relevant_data_name}'`;
-                break;
+                content = `Delete resource '${data.operation_relevant_data_name}'`
+                break
             case 5:
-                content = `Apply to delete resource '${data.operation_relevant_data_name} and ${action}`;
-                break;
+                content = `Apply to delete resource '${data.operation_relevant_data_name}' and ${action}`
+                break
             }
-            return content;
-        };
+            return content
+        }
         this.expandedRowRender = record => {
             const columns = [
                 {
@@ -160,11 +160,11 @@ export default class UserList extends Component {
                     dataIndex: 'operation_content',
                     key: 'operation_content',
                     render: (text, record) => {
-                        return <p>{this.getOperationText(record)}</p>;
+                        return <p>{this.getOperationText(record)}</p>
                     }
                 },
-                { title: 'Operation Date', dataIndex: 'created_at', key: 'created_at' },
-                { title: 'Reviewd Date', dataIndex: 'updated_at', key: 'updated_at' },
+                {title: 'Operation Date', dataIndex: 'created_at', key: 'created_at'},
+                {title: 'Reviewd Date', dataIndex: 'updated_at', key: 'updated_at'},
                 {
                     title: 'Status',
                     dataIndex: 'status',
@@ -175,25 +175,25 @@ export default class UserList extends Component {
                                 <span>
                                     <Badge status="processing" />Pending
                                 </span>
-                            );
+                            )
                         } else if (record.status === 1) {
                             return (
                                 <span>
                                     <Badge status="success" />Approved
                                 </span>
-                            );
+                            )
                         } else if (record.status === 2) {
                             return (
                                 <span>
                                     <Badge status="error" />Abandoned
                                 </span>
-                            );
+                            )
                         } else {
                             return (
                                 <span>
                                     <Badge status="warning" />Warning
                                 </span>
-                            );
+                            )
                         }
                     }
                 },
@@ -206,7 +206,7 @@ export default class UserList extends Component {
                                 <Tooltip title="Approve">
                                     <Button
                                         type="primary"
-                                        style={{ backgroundColor: '#65cc43', borderColor: '#65cc43' }}
+                                        style={{backgroundColor: '#65cc43', borderColor: '#65cc43'}}
                                         shape="circle"
                                         icon="check"
                                         onClick={() => this.showConfirmApprove(record)}
@@ -218,7 +218,7 @@ export default class UserList extends Component {
                                 <Tooltip title="Abandon">
                                     <Button
                                         type="primary"
-                                        style={{ backgroundColor: '#ff4949', borderColor: '#ff4949' }}
+                                        style={{backgroundColor: '#ff4949', borderColor: '#ff4949'}}
                                         shape="circle"
                                         icon="close"
                                         onClick={() => this.showConfirmAbandon(record)}
@@ -229,15 +229,15 @@ export default class UserList extends Component {
                         </span>
                     )
                 }
-            ];
-            return <Table columns={columns} dataSource={record.operations} pagination={false} rowKey="id" />;
-        };
+            ]
+            return <Table columns={columns} dataSource={record.operations} pagination={false} rowKey="id" />
+        }
         this.showConfirmApprove = record => {
             confirm({
                 title: 'Do you want to approve this operation?',
                 onOk: () => {
                     return new Promise((resolve, reject) => {
-                        const cache = cookies.get('loginInfo');
+                        const cache = cookies.get('loginInfo')
                         axios
                             .post(`${config.server_url}user/solve_operation`, {
                                 id: record.id,
@@ -245,21 +245,21 @@ export default class UserList extends Component {
                                 operator: cache.id
                             })
                             .then(response => {
-                                this.openNotification('Success', 'Succeed to abandon it.');
-                                this.init();
-                                resolve();
-                            });
-                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                                this.openNotification('Success', 'Succeed to abandon it.')
+                                this.init()
+                                resolve()
+                            })
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'))
                 },
                 onCancel() {}
-            });
-        };
+            })
+        }
         this.showConfirmAbandon = record => {
             confirm({
                 title: 'Do you want to abandon this operation?',
                 onOk: () => {
                     return new Promise((resolve, reject) => {
-                        const cache = cookies.get('loginInfo');
+                        const cache = cookies.get('loginInfo')
                         axios
                             .post(`${config.server_url}user/solve_operation`, {
                                 id: record.id,
@@ -267,22 +267,22 @@ export default class UserList extends Component {
                                 operator: cache.id
                             })
                             .then(response => {
-                                this.openNotification('Success', 'Succeed to abandon it.');
-                                this.init();
-                                resolve();
-                            });
-                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'));
+                                this.openNotification('Success', 'Succeed to abandon it.')
+                                this.init()
+                                resolve()
+                            })
+                    }).catch(() => this.openNotification('Error', 'Failed to abandon it.'))
                 },
                 onCancel() {}
-            });
-        };
+            })
+        }
         this.openNotification = (msg, desc) => {
             notification.open({
                 message: msg,
                 description: desc,
                 placement: 'topLeft'
-            });
-        };
+            })
+        }
         this.state = {
             bordered: true,
             loading: true,
@@ -292,7 +292,7 @@ export default class UserList extends Component {
             visibleStatusModal: false,
             visibleEditModal: false,
             banLoading: false,
-            pagination: { position: 'bottom', pageSize: 10 },
+            pagination: {position: 'bottom', pageSize: 10},
             size: 'default',
             expandedRowRender: this.expandedRowRender,
             title: undefined,
@@ -304,67 +304,67 @@ export default class UserList extends Component {
             currentStatus: undefined,
             currentData: undefined,
             data: []
-        };
+        }
         this.handleOkDeleteModal = () => {
             this.setState({
                 deleteLoading: true
-            });
-            this.deleteData(this.state.currentId);
-        };
+            })
+            this.deleteData(this.state.currentId)
+        }
         this.handleCancelDeleteModal = () => {
             this.setState({
                 visibleDeleteModal: false
-            });
-        };
+            })
+        }
         this.showDeleteModal = r => {
             this.setState({
                 visibleDeleteModal: true,
                 currentId: r.id
-            });
-        };
+            })
+        }
         this.handleOkEditModal = e => {
             this.setState({
                 editLoading: true
-            });
+            })
             this.editpage
                 .handleSubmit(e)
                 .then(() => {
                     this.setState({
                         editLoading: false,
                         visibleEditModal: false
-                    });
+                    })
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data.data, loading: false }));
+                        .then(response => this.setState({data: response.data.data, loading: false}))
                 })
                 .catch(err => {
                     this.setState({
                         editLoading: false
-                    });
-                });
-        };
+                    })
+                })
+        }
         this.handleCancelEditModal = () => {
             this.setState({
                 visibleEditModal: false
-            });
-        };
+            })
+        }
         this.showEditModal = r => {
             this.setState({
                 visibleEditModal: true,
                 currentData: r
-            });
-        };
+            })
+        }
         this.handleOkStatusModal = () => {
             this.setState({
                 banLoading: true
-            });
-            this.switchStatus(this.state.currentId, this.state.currentStatus);
-        };
+            })
+            this.switchStatus(this.state.currentId, this.state.currentStatus)
+        }
         this.handleCancelStatusModal = () => {
             this.setState({
                 visibleStatusModal: false
-            });
-        };
+            })
+        }
         this.showStatusModal = r => {
             if (!!r.status) {
                 this.setState({
@@ -372,16 +372,16 @@ export default class UserList extends Component {
                     statusText: 'Do you confirm to ban it?',
                     currentId: r.id,
                     currentStatus: r.status
-                });
+                })
             } else {
                 this.setState({
                     visibleStatusModal: true,
                     statusText: 'Do you confirm to unban it?',
                     currentId: r.id,
                     currentStatus: r.status
-                });
+                })
             }
-        };
+        }
         this.deleteData = id => {
             axios
                 .post(`${config.server_url}user/delete`, {
@@ -391,12 +391,12 @@ export default class UserList extends Component {
                     this.setState({
                         visibleDeleteModal: false,
                         deleteLoading: false
-                    });
+                    })
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data.data, loading: false }));
-                });
-        };
+                        .then(response => this.setState({data: response.data.data, loading: false}))
+                })
+        }
         this.switchStatus = (id, status) => {
             axios
                 .post(`${config.server_url}user/update`, {
@@ -407,30 +407,30 @@ export default class UserList extends Component {
                     this.setState({
                         visibleStatusModal: false,
                         banLoading: false
-                    });
+                    })
                     axios
                         .get(`${config.server_url}user/list`)
-                        .then(response => this.setState({ data: response.data.data, loading: false }));
-                });
-        };
+                        .then(response => this.setState({data: response.data.data, loading: false}))
+                })
+        }
     }
 
     componentWillMount() {
         axios.get(`${config.server_url}user/list`).then(response => {
-            console.log(response.data);
-            this.setState({ data: response.data.data, loading: false });
-        });
+            console.log(response.data)
+            this.setState({data: response.data.data, loading: false})
+        })
     }
 
     componentDidMount() {
-        const cache = cookies.get('loginInfo');
+        const cache = cookies.get('loginInfo')
         if (!cache) {
-            window.location = '/user/login';
+            window.location = '/user/login'
         }
     }
 
     render() {
-        const state = this.state;
+        const state = this.state
         return (
             <HomeLayout>
                 <Table {...this.state} columns={this.columns} dataSource={this.state.data} rowKey="id" />
@@ -442,8 +442,7 @@ export default class UserList extends Component {
                         confirmLoading={this.state.editLoading}
                         onCancel={this.handleCancelEditModal}
                         cancelText="Cancel"
-                        okText="Confirm"
-                    >
+                        okText="Confirm">
                         <EditPage onRef={ref => (this.editpage = ref)} exist={this.state.currentData} />
                     </Modal>
                 </div>
@@ -455,8 +454,7 @@ export default class UserList extends Component {
                         confirmLoading={this.state.banLoading}
                         onCancel={this.handleCancelStatusModal}
                         cancelText="Cancel"
-                        okText="Confirm"
-                    >
+                        okText="Confirm">
                         <p>{this.state.statusText}</p>
                     </Modal>
                 </div>
@@ -468,12 +466,11 @@ export default class UserList extends Component {
                         confirmLoading={this.state.deleteLoading}
                         onCancel={this.handleCancelDeleteModal}
                         cancelText="Cancel"
-                        okText="Confirm"
-                    >
+                        okText="Confirm">
                         <p>Do you confirm to delete it?</p>
                     </Modal>
                 </div>
             </HomeLayout>
-        );
+        )
     }
 }

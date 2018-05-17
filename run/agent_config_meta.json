@@ -1,416 +1,416 @@
 {
   "siteFile": {
-    "/favicon.ico": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+    "/favicon.ico": "/Users/chris/xiaoji-project/config/config.default.js"
   },
   "security": {
     "csrf": {
-      "enable": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "useSession": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "ignoreJSON": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "cookieName": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "sessionName": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "headerName": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "bodyName": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "queryName": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/config/config.default.js",
+      "useSession": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
-    "domainWhiteList": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "protocolWhiteList": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-    "defaultMiddleware": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
+    "domainWhiteList": "/Users/chris/xiaoji-project/config/config.local.js",
+    "protocolWhiteList": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
     "xframe": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "value": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "hsts": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.local.js",
-      "maxAge": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "includeSubdomains": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "dta": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "methodnoallow": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "noopen": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "nosniff": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "referrerPolicy": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "value": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "xssProtection": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "value": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     },
     "csp": {
-      "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js",
-      "policy": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+      "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     }
   },
   "cors": {
-    "origin": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "allowMethods": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+    "origin": "/Users/chris/xiaoji-project/config/config.default.js",
+    "allowMethods": "/Users/chris/xiaoji-project/config/config.default.js"
   },
   "assets": {
-    "enable": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "package": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+    "enable": "/Users/chris/xiaoji-project/config/config.default.js",
+    "package": "/Users/chris/xiaoji-project/config/config.default.js"
   },
   "serviceMail": {
     "CN": {
-      "user": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "pass": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "host": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+      "user": "/Users/chris/xiaoji-project/config/config.default.js",
+      "pass": "/Users/chris/xiaoji-project/config/config.default.js",
+      "host": "/Users/chris/xiaoji-project/config/config.default.js"
     },
     "OTHER": {
-      "sparkPostApiKey": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "user": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+      "sparkPostApiKey": "/Users/chris/xiaoji-project/config/config.default.js",
+      "user": "/Users/chris/xiaoji-project/config/config.default.js"
     }
   },
   "static": {
-    "prefix": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "dir": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "maxAge": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "dynamic": "/Users/pengcheng/xiaoji-project/node_modules/egg-static/config/config.default.js",
-    "preload": "/Users/pengcheng/xiaoji-project/node_modules/egg-static/config/config.default.js",
-    "buffer": "/Users/pengcheng/xiaoji-project/node_modules/egg-static/config/config.default.js",
-    "maxFiles": "/Users/pengcheng/xiaoji-project/node_modules/egg-static/config/config.default.js"
+    "prefix": "/Users/chris/xiaoji-project/config/config.default.js",
+    "dir": "/Users/chris/xiaoji-project/config/config.default.js",
+    "maxAge": "/Users/chris/xiaoji-project/config/config.local.js",
+    "dynamic": "/Users/chris/xiaoji-project/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/chris/xiaoji-project/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/chris/xiaoji-project/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/chris/xiaoji-project/node_modules/egg-static/config/config.default.js"
   },
   "logger": {
-    "consoleLevel": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "dir": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "encoding": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "env": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "level": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "disableConsoleAfterReady": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "outputJSON": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "buffer": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "appLogName": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "coreLogName": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "agentLogName": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "errorLogName": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/chris/xiaoji-project/config/config.default.js",
+    "dir": "/Users/chris/xiaoji-project/config/config.default.js",
+    "encoding": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "env": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "level": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
     "coreLogger": {
-      "consoleLevel": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.local.js"
+      "consoleLevel": "/Users/chris/xiaoji-project/node_modules/egg/config/config.local.js"
     },
-    "allowDebugAtProd": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "allowDebugAtProd": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
-  "keys": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-  "middleware": "/Users/pengcheng/xiaoji-project/config/config.default.js",
+  "keys": "/Users/chris/xiaoji-project/config/config.default.js",
+  "middleware": "/Users/chris/xiaoji-project/config/config.default.js",
   "mysql": {
     "client": {
-      "host": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "port": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "user": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "password": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "database": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+      "host": "/Users/chris/xiaoji-project/config/config.default.js",
+      "port": "/Users/chris/xiaoji-project/config/config.default.js",
+      "user": "/Users/chris/xiaoji-project/config/config.default.js",
+      "password": "/Users/chris/xiaoji-project/config/config.default.js",
+      "database": "/Users/chris/xiaoji-project/config/config.default.js"
     },
-    "app": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "agent": "/Users/pengcheng/xiaoji-project/config/config.default.js",
+    "app": "/Users/chris/xiaoji-project/config/config.default.js",
+    "agent": "/Users/chris/xiaoji-project/config/config.default.js",
     "default": {
-      "database": "/Users/pengcheng/xiaoji-project/node_modules/egg-mysql/config/config.default.js",
-      "connectionLimit": "/Users/pengcheng/xiaoji-project/node_modules/egg-mysql/config/config.default.js"
+      "database": "/Users/chris/xiaoji-project/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/chris/xiaoji-project/node_modules/egg-mysql/config/config.default.js"
     }
   },
   "aliyun": {
-    "accessKeyId": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "accessKeySecret": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "apiVersion": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "bucket": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-    "region": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+    "accessKeyId": "/Users/chris/xiaoji-project/config/config.default.js",
+    "accessKeySecret": "/Users/chris/xiaoji-project/config/config.default.js",
+    "apiVersion": "/Users/chris/xiaoji-project/config/config.default.js",
+    "bucket": "/Users/chris/xiaoji-project/config/config.default.js",
+    "region": "/Users/chris/xiaoji-project/config/config.default.js"
   },
   "oss": {
     "client": {
-      "accessKeyId": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "accessKeySecret": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "bucket": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "endpoint": "/Users/pengcheng/xiaoji-project/config/config.default.js",
-      "timeout": "/Users/pengcheng/xiaoji-project/config/config.default.js"
+      "accessKeyId": "/Users/chris/xiaoji-project/config/config.default.js",
+      "accessKeySecret": "/Users/chris/xiaoji-project/config/config.default.js",
+      "bucket": "/Users/chris/xiaoji-project/config/config.default.js",
+      "endpoint": "/Users/chris/xiaoji-project/config/config.default.js",
+      "timeout": "/Users/chris/xiaoji-project/config/config.default.js"
     },
     "default": {
-      "timeout": "/Users/pengcheng/xiaoji-project/node_modules/egg-oss/config/config.default.js"
+      "timeout": "/Users/chris/xiaoji-project/node_modules/egg-oss/config/config.default.js"
     },
-    "useAgent": "/Users/pengcheng/xiaoji-project/node_modules/egg-oss/config/config.default.js"
+    "useAgent": "/Users/chris/xiaoji-project/node_modules/egg-oss/config/config.default.js"
   },
   "development": {
-    "watchDirs": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "ignoreDirs": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "fastReady": "/Users/pengcheng/xiaoji-project/node_modules/egg-development/config/config.default.js",
-    "reloadOnDebug": "/Users/pengcheng/xiaoji-project/node_modules/egg-development/config/config.default.js",
-    "overrideDefault": "/Users/pengcheng/xiaoji-project/node_modules/egg-development/config/config.default.js"
+    "watchDirs": "/Users/chris/xiaoji-project/config/config.local.js",
+    "ignoreDirs": "/Users/chris/xiaoji-project/config/config.local.js",
+    "fastReady": "/Users/chris/xiaoji-project/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/chris/xiaoji-project/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/chris/xiaoji-project/node_modules/egg-development/config/config.default.js"
   },
   "reactssr": {
-    "injectCss": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "doctype": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "layout": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "manifest": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "injectHeadRegex": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "injectBodyRegex": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "injectJs": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "crossorigin": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "injectRes": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "fallbackToClient": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-    "afterRender": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js"
+    "injectCss": "/Users/chris/xiaoji-project/config/config.local.js",
+    "doctype": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "layout": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "manifest": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectHeadRegex": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectBodyRegex": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectJs": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "crossorigin": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectRes": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "fallbackToClient": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+    "afterRender": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js"
   },
   "webpack": {
-    "webpackConfigList": "/Users/pengcheng/xiaoji-project/config/config.local.js",
-    "port": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
-    "proxy": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+    "webpackConfigList": "/Users/chris/xiaoji-project/config/config.local.js",
+    "port": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+    "proxy": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
     "proxyMapping": {
-      "js": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
-      "css": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
-      "json": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
-      "html": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
-      "map": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack/config/config.default.js"
+      "js": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+      "css": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+      "json": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+      "html": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js",
+      "map": "/Users/chris/xiaoji-project/node_modules/egg-webpack/config/config.default.js"
     }
   },
   "session": {
-    "maxAge": "/Users/pengcheng/xiaoji-project/node_modules/egg-session/config/config.default.js",
-    "key": "/Users/pengcheng/xiaoji-project/node_modules/egg-session/config/config.default.js",
-    "httpOnly": "/Users/pengcheng/xiaoji-project/node_modules/egg-session/config/config.default.js",
-    "encrypt": "/Users/pengcheng/xiaoji-project/node_modules/egg-session/config/config.default.js"
+    "maxAge": "/Users/chris/xiaoji-project/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/chris/xiaoji-project/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/chris/xiaoji-project/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/chris/xiaoji-project/node_modules/egg-session/config/config.default.js"
   },
   "helper": {
-    "shtml": "/Users/pengcheng/xiaoji-project/node_modules/egg-security/config/config.default.js"
+    "shtml": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
   },
   "jsonp": {
-    "limit": "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp/config/config.default.js",
-    "callback": "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp/config/config.default.js",
-    "csrf": "/Users/pengcheng/xiaoji-project/node_modules/egg-jsonp/config/config.default.js"
+    "limit": "/Users/chris/xiaoji-project/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/chris/xiaoji-project/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/chris/xiaoji-project/node_modules/egg-jsonp/config/config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "/Users/pengcheng/xiaoji-project/node_modules/egg-onerror/config/config.default.js",
-    "appErrorFilter": "/Users/pengcheng/xiaoji-project/node_modules/egg-onerror/config/config.default.js"
+    "errorPageUrl": "/Users/chris/xiaoji-project/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/chris/xiaoji-project/node_modules/egg-onerror/config/config.default.js"
   },
   "i18n": {
-    "defaultLocale": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
-    "dirs": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
-    "queryField": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
-    "cookieField": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
-    "cookieMaxAge": "/Users/pengcheng/xiaoji-project/node_modules/egg-i18n/config/config.default.js"
+    "defaultLocale": "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/chris/xiaoji-project/node_modules/egg-i18n/config/config.default.js"
   },
   "watcher": {
-    "type": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/config/config.local.js",
+    "type": "/Users/chris/xiaoji-project/node_modules/egg-watcher/config/config.local.js",
     "eventSources": {
-      "default": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/config/config.default.js",
-      "development": "/Users/pengcheng/xiaoji-project/node_modules/egg-watcher/config/config.default.js"
+      "default": "/Users/chris/xiaoji-project/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/chris/xiaoji-project/node_modules/egg-watcher/config/config.default.js"
     }
   },
   "multipart": {
-    "autoFields": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "defaultCharset": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "fieldNameSize": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "fieldSize": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "fields": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "fileSize": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "files": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "fileExtensions": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
-    "whitelist": "/Users/pengcheng/xiaoji-project/node_modules/egg-multipart/config/config.default.js"
+    "autoFields": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/chris/xiaoji-project/node_modules/egg-multipart/config/config.default.js"
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "/Users/pengcheng/xiaoji-project/node_modules/egg-schedule/config/config.default.js",
-      "file": "/Users/pengcheng/xiaoji-project/node_modules/egg-schedule/config/config.default.js"
+      "consoleLevel": "/Users/chris/xiaoji-project/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/chris/xiaoji-project/node_modules/egg-schedule/config/config.default.js"
     }
   },
   "logrotator": {
-    "filesRotateByHour": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "hourDelimiter": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "filesRotateBySize": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "maxFileSize": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "maxFiles": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "rotateDuration": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
-    "maxDays": "/Users/pengcheng/xiaoji-project/node_modules/egg-logrotator/config/config.default.js"
+    "filesRotateByHour": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/chris/xiaoji-project/node_modules/egg-logrotator/config/config.default.js"
   },
   "view": {
-    "root": "/Users/pengcheng/xiaoji-project/node_modules/egg-view/config/config.default.js",
-    "cache": "/Users/pengcheng/xiaoji-project/node_modules/egg-view/config/config.local.js",
-    "defaultExtension": "/Users/pengcheng/xiaoji-project/node_modules/egg-view/config/config.default.js",
-    "defaultViewEngine": "/Users/pengcheng/xiaoji-project/node_modules/egg-view/config/config.default.js",
+    "root": "/Users/chris/xiaoji-project/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/chris/xiaoji-project/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/chris/xiaoji-project/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/chris/xiaoji-project/node_modules/egg-view/config/config.default.js",
     "mapping": {
-      ".js": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
-      ".jsx": "/Users/pengcheng/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js"
+      ".js": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js",
+      ".jsx": "/Users/chris/xiaoji-project/node_modules/egg-view-react-ssr/config/config.default.js"
     }
   },
-  "webpackreact": "/Users/pengcheng/xiaoji-project/node_modules/egg-webpack-react/config/config.default.js",
-  "env": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "name": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "proxy": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "protocolHeaders": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "ipHeaders": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "hostHeaders": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+  "webpackreact": "/Users/chris/xiaoji-project/node_modules/egg-webpack-react/config/config.default.js",
+  "env": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "name": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
   "pkg": {
-    "name": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "version": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "description": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+    "name": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "version": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "description": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
     "scripts": {
-      "build": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "build:test": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "build:prod": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "start": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "start:test": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "start:prod": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "start-prod": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "kill-port": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "lint": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "fix": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "ii": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "build": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "build:test": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "build:prod": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "start": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "start:test": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "start:prod": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "start-prod": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "kill-port": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "lint": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "fix": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "ii": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "dependencies": {
-      "antd": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "aws-sdk": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "axios": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "braft-editor": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "canvas": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "create-react-class": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "draft-js": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "draft-js-export-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "draft-js-import-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "draftjs-to-html": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-aliyun-utils": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-cors": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-logger": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-mysql": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-oss": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-static": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-validate": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-view-react-ssr": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "extend": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "geoip-lite": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "history": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "hmacsha1": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "html-to-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "js-base64": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "lodash": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "md5": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "mockjs": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "moment": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "node-loader": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "nodemailer": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "nodemailer-smtp-transport": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "nodemailer-sparkpost-transport": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "nodemailer-wellknown": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "prop-types": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "public-ip": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-color": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-cookie": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-dom": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-lz-editor": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-redux": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-router": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-router-config": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-router-dom": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-router-redux": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "react-sortable-hoc": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "redux": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "sharp": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "stream-to-array": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "stream-wormhole": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "universal-cookie": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "antd": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "aws-sdk": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "axios": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "braft-editor": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "canvas": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "create-react-class": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draft-js": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draft-js-export-html": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draft-js-import-html": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "draftjs-to-html": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-aliyun-utils": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-logger": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-oss": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-static": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-view-react-ssr": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "extend": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "geoip-lite": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "history": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "hmacsha1": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "html-to-react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "js-base64": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "lodash": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "md5": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "mockjs": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "moment": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "node-loader": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "nodemailer": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "nodemailer-smtp-transport": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "nodemailer-sparkpost-transport": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "nodemailer-wellknown": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "prop-types": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "public-ip": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-color": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-cookie": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-dom": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-lz-editor": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-redux": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-router": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-router-config": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-router-dom": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-router-redux": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "react-sortable-hoc": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "redux": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "sharp": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "stream-to-array": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "stream-wormhole": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "universal-cookie": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
-      "autod-egg": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "autoprefixer": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-plugin-add-module-exports": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-plugin-import": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-plugin-syntax-dynamic-import": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-plugin-transform-object-assign": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-plugin-transform-object-rest-spread": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-preset-env": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "babel-preset-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "cross-env": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "easywebpack-cli": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "easywebpack-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-webpack": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "egg-webpack-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "eslint": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "eslint-config-egg": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "eslint-plugin-react": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "flightplan": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "html-webpack-plugin": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "imagemin-webpack-plugin": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "ip": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "uglifyjs-webpack-plugin": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "autod-egg": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "autoprefixer": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-plugin-add-module-exports": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-plugin-import": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-plugin-syntax-dynamic-import": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-assign": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-rest-spread": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-preset-env": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "babel-preset-react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "cross-env": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "easywebpack-cli": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "easywebpack-react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-webpack": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "egg-webpack-react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "eslint-plugin-react": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "flightplan": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "html-webpack-plugin": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "imagemin-webpack-plugin": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "ip": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "uglifyjs-webpack-plugin": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "engines": {
-      "node": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "node": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "ci": {
-      "version": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "version": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "repository": {
-      "type": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "url": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "type": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "url": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
-    "author": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "license": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "homepage": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "author": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "license": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "homepage": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
-  "baseDir": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "HOME": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "rundir": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+  "baseDir": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
   "dump": {
-    "ignore": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "ignore": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "notFound": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "sitefile": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "middlewares": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "httpClient": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "bodyparser": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
   "notfound": {
-    "pageUrl": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "pageUrl": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
   "bodyParser": {
-    "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "encoding": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "formLimit": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "jsonLimit": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "strict": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+    "enable": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "strict": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
     "queryString": {
-      "arrayLimit": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "depth": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "parameterLimit": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "arrayLimit": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "depth": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     }
   },
   "httpclient": {
-    "enableDNSCache": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "dnsCacheMaxLength": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "dnsCacheMaxAge": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+    "enableDNSCache": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxAge": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
     "request": {
-      "timeout": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "timeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "freeSocketKeepAliveTimeout": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "maxSockets": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "maxFreeSockets": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "keepAlive": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "freeSocketKeepAliveTimeout": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "maxSockets": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "maxFreeSockets": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "keepAlive": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     }
   },
   "meta": {
-    "enable": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-    "logging": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "enable": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+    "logging": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   },
-  "coreMiddleware": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-  "workerStartTimeout": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
+  "coreMiddleware": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
   "cluster": {
     "listen": {
-      "path": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "port": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js",
-      "hostname": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+      "path": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "port": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
     }
   },
   "clusterClient": {
-    "responseTimeout": "/Users/pengcheng/xiaoji-project/node_modules/egg/config/config.default.js"
+    "responseTimeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
   }
 }
