@@ -48,6 +48,10 @@
     "csp": {
       "enable": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
       "policy": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/chris/xiaoji-project/node_modules/egg-security/config/config.default.js"
     }
   },
   "cors": {
@@ -411,6 +415,8 @@
     }
   },
   "clusterClient": {
+    "maxWaitTime": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js",
     "responseTimeout": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
-  }
+  },
+  "onClientError": "/Users/chris/xiaoji-project/node_modules/egg/config/config.default.js"
 }
