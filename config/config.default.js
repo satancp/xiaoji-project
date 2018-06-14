@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+const path = require('path')
+const fs = require('fs')
 
 module.exports = app => {
     return {
@@ -49,6 +49,13 @@ module.exports = app => {
         },
         keys: '123456',
         middleware: ['errorHandler', 'access'],
+        bodyParser: {
+            formLimit: '100000mb',
+            jsonLimit: '100000mb'
+        },
+        multipart: {
+            filesize: '100000mb'
+        },
         mysql: {
             client: {
                 host: 'localhost',
@@ -76,5 +83,5 @@ module.exports = app => {
                 timeout: '60s'
             }
         }
-    };
-};
+    }
+}
