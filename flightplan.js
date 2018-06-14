@@ -5,7 +5,7 @@ var username = 'root'
 var startFile = 'yarn --name \'xiaoji-dashboard\' -- start'
 var buildScript = 'easywebpack --name \'xiaoji-dashboard-web-server\' -- server prod -b wmc'
 var startScript = 'yarn --name \'xiaoji-api-server\' -- start:prod'
-var privateKey = '/Users/Chris/.ssh/xiaoji_web.pem'
+var privateKey = '/Users/pengcheng/.ssh/xiaoji_web.pem'
 var tmpDir = appName + '-' + new Date().getTime()
 
 // configuration
